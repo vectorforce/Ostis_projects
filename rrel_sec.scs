@@ -1,0 +1,51 @@
+rrel_sec <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр.(секунда')]  (* <- lang_ru;; *);;
+	<- definition;;
+    <= nrel_using_constants:...
+	(*
+        -> concept_unit_of_measurement;;
+	*);;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[<b>Секунда'</b> (русское обозначение: с; международное: s) — <sc_element sys_idtf="concept_unit_of_measurement">единица измерения</sc_element> времени, одна из основных единиц Международной системы единиц (СИ) и системы СГС.](* <- lang_ru;; => nrel_format: format_html;; *);;
+		*);;
+*);;
+
+rrel_sec <- rrel_key_sc_element:	 
+	...
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (секунда', система)]
+			(*
+			<- lang_ru;;
+			*);; 
+
+		<- rrel_axiom:concept_IHS_by_car;;
+		<-concept_statement_of_the_defining_type;;
+		->rrel_key_sc_element: concept_system;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Секунда'</b> является единицей времени и относится к числу основных единиц в системах МКС, МКСА , МКСК, МКСГ, МКСЛ, МСК, МСС, МКГСС и МТС.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://sec.jpg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);;
+

@@ -1,0 +1,64 @@
+concept_turbocharger
+	=> nrel_main_idtf:
+	[турбонагнетатель] (* <- lang_ru;; *);
+	[turbocharger] (* <- lang_en;; *);
+	=> nrel_idtf: [множество турбонагнетателей] (* <- lang_ru;; *);
+              [turbocharger] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_turbocharger_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (турбонагнетатель)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Турбонагнетатель</b> - это <sc_element sys_idtf="concept_compressor">компрессор</sc_element>, призванный нагнетать воздух, но его привод осуществляется не от <sc_element sys_idtf="concept_crankshaft">коленвала</sc_element> через ременную передачу, а используя энергию отработавших газов.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_compressor;; -> nrel_energy_of_gases;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_turbocharger
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (выхлопные газы, компрессор, цилиндр, топливо, мощность, турбонагнетатель)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_general_form_statement;;
+		->rrel_key_sc_element: concept_compressor; nrel_traffic_fumes; concept_engine_cylinder; concept_fuel; concept_power;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [Чем большей энергией обладают <sc_element sys_idtf="nrel_traffic_fumes">выхлопные газы</sc_element>, тем быстрее вращаются колеса <sc_element sys_idtf="concept_turbine">турбины</sc_element> и, соответственно, <sc_element sys_idtf="concept_compressor">компрессоры</sc_element>. Чем больше воздуха подается в <sc_element sys_idtf="concept_engine_cylinder">цилиндры</sc_element>, тем больше <sc_element sys_idtf="concept_fuel">топлива</sc_element> может сгореть, тем выше <sc_element sys_idtf="nrel_engine_power">мощность</sc_element>. При этом частота вращения <b>турбокомпрессора</b> может быть очень и очень высокой – 150 тыс. об/мин.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+	
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://turbocharger.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_compressor;
+=> nrel_composite_part: concept_turbine;
+=> nrel_composite_part: concept_shaft;
+
+<-sc_node_not_relation;;

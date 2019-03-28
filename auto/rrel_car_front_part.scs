@@ -1,0 +1,29 @@
+
+rrel_car_front_part <- binary_relation;;
+rrel_car_front_part <- oriented_relation;;
+rrel_car_front_part <- antisymmetric_relation;;
+rrel_car_front_part <- antitransitive_relation;;
+rrel_car_front_part <- antireflexive_relation;;
+
+rrel_car_front_part <- rrel_key_sc_element: ...
+(*
+->rrel_key_sc_element: concept_bonnet;;
+->rrel_key_sc_element: rrel_car_front_part;;
+<-statement;;
+<=nrel_sc_text_translation: ... 
+(* 
+->rrel_example: [В передней части автомобиля чаще всего расположен капот.](*<-lang_ru;;*);; 
+*);;
+=>nrel_main_idtf: [Утв.(передняя часть автомобиля', капот)](*<-lang_ru;;*);;
+<- rrel_axiom: concept_IHS_by_car;;
+<- concept_general_form_statement;;
+*);;
+    
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: rrel_car_front_part;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/rrel_car_front_part.jpg";;
+		*);;
+	*);;

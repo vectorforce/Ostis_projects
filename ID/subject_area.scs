@@ -1,0 +1,33 @@
+subject_domain_of_internal_combustion_engine
+	=> nrel_main_idtf:
+	[предметная область двигателя внутреннего сограния] (* <- lang_ru;; *);
+	[subject domain of internal combustion engine] (* <- lang_en;; *);
+	=> nrel_idtf: [предметная область двигателя внутреннего сограния] (* <- lang_ru;; *);
+           	      [subject domain_of_internal_combustion_engine] (* <- lang_en;; *);
+
+<- subject_domain;;
+
+subject_domain_of_exhaust_system
+	=> nrel_main_idtf:
+	[предметная область выхлопная система] (* <- lang_ru;; *);
+	[subject domain of exhaust system] (* <- lang_en;; *);
+	=> nrel_idtf: [предметная область выхлопная система] (* <- lang_ru;; *);
+           	      [subject_domain_of_exhaust_system] (* <- lang_en;; *);
+
+<- subject_domain;;
+
+subject_domain_of_transmission
+	=> nrel_main_idtf:
+	[предметная область трансмиссия] (* <- lang_ru;; *);
+	[subject domain of transmission] (* <- lang_en;; *);
+	=> nrel_idtf: [предметная область трансмиссия] (* <- lang_ru;; *);
+           	      [subject_domain_of_transmission] (* <- lang_en;; *);
+
+<- subject_domain;;
+
+//--------------------
+
+subject_area
+=> nrel_main_idtf: [предметная область]
+(* <- lang_ru;; *);;
+

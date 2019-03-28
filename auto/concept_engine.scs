@@ -1,0 +1,118 @@
+sc_node_not_relation -> concept_engine;;
+concept_engine => nrel_main_idtf:
+[двигатель](*<-lang_ru;;*);
+[engine](*<-lang_en;;*);
+[движок](*<-lang_ru;;*);
+[двигатель автомобиля](*<-lang_ru;;*);
+	 [мотор](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_device;;
+concept_device => nrel_main_idtf:
+[устройство](*<-lang_ru;;*);
+[device](*<-lang_en;;*);
+	[механизм](*<-lang_ru;;*);;
+sc_node_norole_relation -> nrel_energy;;
+nrel_energy => nrel_main_idtf:
+[энергия*](*<-lang_ru;;*);
+     [energy*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_work;;
+nrel_work => nrel_main_idtf:
+[работа*](*<-lang_ru;;*);
+[work*](*<-lang_en;;*);
+[механическая работа*](*<-lang_ru;;*);
+	 [mechanical work*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_piston_engine;;
+concept_piston_engine => nrel_main_idtf:
+[поршневой двигатель](*<-lang_ru;;*);
+[piston engine](*<-lang_en;;*);
+[поршневой двигатель внутреннего сгорания](*<-lang_ru;;*);
+	 [piston internal combustion engine](*<-lang_en;;*);;	 
+sc_node_not_relation -> concept_hybrid_engine;;
+concept_hybrid_engine => nrel_main_idtf:
+[гибридный двигатель](*<-lang_ru;;*);
+[hybrid engine](*<-lang_en;;*);
+	 [гибридная силовая установка](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_transmission_type;;
+concept_transmission_type => nrel_main_idtf:
+[тип трансмиссия](*<-lang_ru;;*);
+	 [transmission type](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_mechanical_energy;;
+nrel_mechanical_energy => nrel_main_idtf:
+[механическая энергия*](*<-lang_ru;;*);
+      [mechanical energy*](*<-lang_en;;*);;	
+sc_node_norole_relation->nrel_driving_wheel;;
+nrel_model=>nrel_main_idtf:
+[приводное колесо*](*<-lang_ru;;*);
+[driving wheel*](*<-lang_en;;*);
+	 [ведущее колесо*](*<-lang_ru;;*);;	 
+sc_node_not_relation -> concept_Nissan_VR;;
+concept_Nissan_VR => nrel_main_idtf:
+	 [Nissan VR](*<-lang_en;;*);;
+sc_node_not_relation -> concept_VR38DETT;;
+concept_VR38DETT => nrel_main_idtf:
+	 [VR38DETT](*<-lang_en;;*);;
+sc_node_not_relation -> concept_series_engines;;
+concept_series_engines => nrel_main_idtf:
+[серия двигателей](*<-lang_ru;;*);
+	 [series engines](*<-lang_en;;*);;
+sc_node_not_relation -> concept_engine_brand;;
+concept_engine_brand => nrel_main_idtf:
+[марка двигателя](*<-lang_ru;;*);
+      [engine brand](*<-lang_en;;*);;
+ 
+concept_engine <= nrel_subdividing: ...
+(*
+->concept_internal_combustion_engine;;  
+->concept_electric_engine;;
+->concept_hybrid_engine;;
+=> nrel_main_idtf: [Разбиение по признаку вид преобразуемой энергии](* <- lang_ru;; *);;
+*);;
+
+concept_engine <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_used_constants: ... 
+	(*
+		->concept_device;; 
+		->nrel_energy;; 
+		->nrel_work;;
+	*);;
+=> nrel_main_idtf: [Опр.(двигатель)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Устройство, преобразующее какой-либо вид энергии в механическую работу.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_engine <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: concept_transmission_type; nrel_mechanical_energy; nrel_driving_wheel;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Передача механической энергии от двигателя на ведущие колеса осуществляется через трансмиссию.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(двигатель, механическая энергия, ведущее колесо*, тип трансмиссии)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: concept_piston_engine;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Передача механической энергии от двигателя на ведущие колеса осуществляется через трансмиссию.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(автомобильный двигатель, поршневой двигатель внутреннего сгорания)](*<-lang_ru;;*);;
+	<-rrel_theorem:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_engine;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/concept_engine.bmp";;
+		*);;
+	*);;

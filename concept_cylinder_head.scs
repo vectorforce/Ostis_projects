@@ -1,0 +1,62 @@
+concept_cylinder_head
+	=> nrel_main_idtf:
+	[головка блока цилиндров] (* <- lang_ru;; *);
+	[cylinder head] (* <- lang_en;; *);
+	=> nrel_idtf: [множество головок блока цилиндров] (* <- lang_ru;; *);
+              [cylinder head] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_cylinder_head_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (головка блока цилиндров)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [В <sc_element sys_idtf="concept_internal_combustion_engine">двигателях внутреннего сгорания</sc_element> <b>головка блока цилиндров</b> (ГБЦ, часто называемая просто головкой) монтируется на <sc_element sys_idtf="concept_cylinder_block">блок цилиндров</sc_element>, запирая <sc_element sys_idtf="concept_engine_cylinder">цилиндр (цилиндры)</sc_element>, и образуя замкнутые <sc_element sys_idtf="concept_combustion_chamber">камеры сгорания</sc_element>.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_cylinder_block;; -> concept_cylinder;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_cylinder_head
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (прокладка головки блока, клапан, пружина, свеча зажигания, форсунка, головка блока цилиндров)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_general_form_statement;;
+		->rrel_key_sc_element: concept_head_gasket; concept_valve; concept_cylinder_block; concept_injector; concept_spark_plug; concept_spring;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [Стык <b>головки</b> и <sc_element sys_idtf="concept_cylinder_block">блока</sc_element> уплотняют прокладкой <b>головки блока</b>. В <b>головке</b> обычно монтируются <sc_element sys_idtf="concept_valve">клапана</sc_element> с пружинами, свечи зажигания, форсунки. В зависимости от типа <sc_element sys_idtf="concept_internal_combustion_engine">двигателя</sc_element> (тактность, система воспламенения, система газораспределения) устройство <b>головки</b> может отличаться в очень больших пределах.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+	
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://cylinder_head.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<- concept_internal_combustion_engine;
+
+<-sc_node_not_relation;;

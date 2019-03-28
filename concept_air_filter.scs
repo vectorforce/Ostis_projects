@@ -1,0 +1,62 @@
+concept_air_filter
+	=> nrel_main_idtf:
+	[воздушный фильтр] (* <- lang_ru;; *);
+	[air filter] (* <- lang_en;; *);
+	=> nrel_idtf: [множество воздушных фильтров] (* <- lang_ru;; *);
+              [air_filter] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_air_filter_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (воздушный фильтр)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Воздушный фильтр</b> — элемент воздухоочистителя (бумажный, матерчатый, войлочный, поролоновый, сетчатый или иной), который служит для очистки от пыли (фильтрования) воздуха в <sc_element sys_idtf="concept_gas_turbine">газовых турбинах</sc_element>, в <sc_element sys_idtf="concept_internal_combustion_engine">двигателях внутреннего сгорания</sc_element> и др. ] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_internal_combustion_engine;; -> concept_gas_turbine;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_air_filter
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (механизм, воздушный фильтр)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_general_form_statement;;
+		->rrel_key_sc_element:concept_mechanism;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [Целью является защита <sc_element sys_idtf="concept_mechanism">механизмов</sc_element> - от износа и повреждения.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+	
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://air_filter.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_filter;
+
+<- sc_node_not_relation;;

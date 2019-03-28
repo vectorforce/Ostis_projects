@@ -1,0 +1,100 @@
+sc_node_norole_relation -> nrel_engine_power;;
+nrel_engine_power => nrel_main_idtf:
+[мощность двигателя*](*<-lang_ru;;*);
+	 [engine power*](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_useful_work;;
+nrel_useful_work => nrel_main_idtf:
+[полезная работа*](*<-lang_ru;;*);
+	 [useful work*](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_unit_of_time;;
+nrel_unit_of_time => nrel_main_idtf:
+[единица времени*](*<-lang_ru;;*);
+	 [unit of time*](*<-lang_en;;*);;
+sc_node_role_relation->rrel_measure_in_SI;;
+rrel_measure_in_SI => nrel_main_idtf:
+[единица измерения в СИ'](*<-lang_ru;;*);
+	 [measure in SI'](*<-lang_en;;*);;	
+sc_node_role_relation->rrel_non_systemic_measure;;
+rrel_non_systemic_measure => nrel_main_idtf:
+[внесистемная единица измерения'](*<-lang_ru;;*);
+	 [non-systemic measure'](*<-lang_en;;*);;
+
+nrel_engine_power <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_used_constants: ... 
+	(*
+		->concept_quantity;; 
+		->concept_engine;; 
+		->nrel_useful_work;;
+		->nrel_unit_of_time;;
+	*);;
+=> nrel_main_idtf: [Опр.(мощность двигателя*)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Величина вырабатываемой двигателем полезной работы в единицу времени.](*<-lang_ru;;*);; 
+	*);; 
+*);;	 
+ 
+nrel_engine_power <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: rrel_measure_in_SI;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Основная единица измерения мощности двигателя в СИ — ватт (Вт).](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(мощность двигателя*, единица измерения в СИ')](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+... 
+	(*
+	->rrel_key_sc_element: rrel_non_systemic_measure;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Распространенная внесистемная единица мощности двигателя — лошадиная сила, равная 0,736 кВт.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(мощность двигателя*, внесистемная единица измерения')](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+... 
+	(*
+	->rrel_key_sc_element: nrel_max_speed;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Чем выше мощность двигателя, тем больше максимальная скорость автомобиля.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(мощность двигателя*, максимальная скорость*)](*<-lang_ru;;*);;
+	<-rrel_theorem:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);;
+	  
+nrel_engine_power => nrel_first_domain: concept_engine;;
+nrel_engine_power => nrel_second_domain: concept_amount;;
+nrel_engine_power => nrel_definitional_domain: ...
+	(*
+		<=nrel_combination: ...																	
+			(*
+				->concept_engine;;
+				->concept_amount;;
+			*);;
+	*);;
+		
+concept_oriented_relation->nrel_engine_power;;
+concept_a_binari_relation->nrel_engine_power;;
+concept_antisymmetric_relation->nrel_engine_power;;
+concept_antitransitive_relation->nrel_engine_power;;
+concept_antireflexive_relation->nrel_engine_power;;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: nrel_engine_power;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/nrel_engine_power.bmp";;
+		*);;
+	*);;

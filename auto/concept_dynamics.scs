@@ -1,0 +1,48 @@
+sc_node_not_relation -> concept_dynamics;;
+concept_dynamics => nrel_main_idtf:
+[динамика](*<-lang_ru;;*);
+[динамика автомобиля](*<-lang_ru;;*);
+[dynamics](*<-lang_en;;*);;
+
+
+sc_node_not_relation -> concept_dynamics;;
+
+concept_dynamics <-rrel_key_sc_element: ...
+(*
+<- definition;;
+<=nrel_used_constants: ... 
+	(*
+		->concept_mechanical_vehicle;; 
+		->concept_transportation;; 
+	*);;
+=> nrel_main_idtf: [Опр.(динамика)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+(*
+		-> rrel_example:
+		[Динамика - техническая характеристика автомобиля, характеризующая состояние движения, ход развития, изменение какой-либо характеристики автомобиля под влиянием действующих на него факторов.](*<-lang_ru;;*);; 
+*);;
+*);;
+
+concept_dynamics <- rrel_key_sc_element: ... 
+     (*
+        ->rrel_key_sc_element: concept_dynamics; concept_car;;
+        <-statement;;
+        <=nrel_sc_text_translation: ... 
+(*
+		-> rrel_example:
+			[Динамика не зависит от типа самого автомобиля и тем более от цены.  Все дело в массе. Как правило, «народные» автомобили, это класс «B», кузова у них легкие, а поэтому двигателю, даже тому который намного слабее, легче нести такой автомобиль, соответственно и динамика разгона будет выше.](* <- lang_ru;; *);;
+*);;
+        =>nrel_main_idtf: [Утв.(динамика, автомобиль)](*<-lang_ru;;*);;
+	   <-rrel_axiom:concept_IHS_by_car;;
+	   <-concept_general_form_statement;;
+     *);;
+
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_dynamics;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/dinamics.png";;
+		*);;
+	*);;

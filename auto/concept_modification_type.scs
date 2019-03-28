@@ -1,0 +1,5 @@
+sc_node_not_relation -> concept_modification_type;;
+concept_modification_type => nrel_main_idtf:
+[тип модификации](*<-lang_ru;;*);
+[тип модификации автомобиля](*<-lang_ru;;*);
+     [modification type](*<-lang_en;;*);;

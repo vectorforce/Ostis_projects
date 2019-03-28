@@ -1,0 +1,80 @@
+sc_node_norole_relation -> nrel_number_of_seats;; 
+nrel_number_of_seats => nrel_main_idtf:
+[количество сидений*](*<-lang_ru;;*);
+[количество мест в автомобиле*](*<-lang_ru;;*);
+	[number of seats*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_be_equipped_with;; 
+nrel_to_be_equipped_with => nrel_main_idtf:
+[быть оснащённым*](*<-lang_ru;;*);
+	[to be equipped with*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_be_calculated;; 
+nrel_to_be_calculated => nrel_main_idtf:
+[быть рассчитанным*](*<-lang_ru;;*);
+	[to be calculated*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_number_of_passengers;; 
+nrel_number_of_passengers => nrel_main_idtf:
+[количество пассажиров*](*<-lang_ru;;*);
+	[number of passengers*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_be_admitted;; 
+nrel_to_be_admitted => nrel_main_idtf:
+[быть допущенным*](*<-lang_ru;;*);
+	[to be admitted*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_overall_ability_of_the_car;;
+concept_overall_ability_of_the_car => nrel_main_idtf:
+[габаритная возможность автомобиля](*<-lang_ru;;*);
+    [overall ability of the car](*<-lang_en;;*);;
+
+nrel_number_of_seats <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_used_constants: ... 
+	(*
+		->number;; 
+		->nrel_to_be_equipped_with;; 
+		->concept_car;;
+	*);;
+=> nrel_main_idtf: [Опр.(количество сидений*)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Число сидений, которыми оснащён данный автомобиль.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+	  
+nrel_number_of_seats <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_to_be_calculated; nrel_number_of_passengers; nrel_to_be_admitted; concept_overall_ability_of_the_car;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Количество мест в автомобиле рассчитано на строго определенное количество пассажиров, которое допускается исходя из габаритных возможностей автомобиля.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(количество мест в автомобиле*, быть расчитанным*, количество пассажиров*, быть допущенным*, габаритная возможность автомобиля)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);;
+	  
+nrel_number_of_seats => nrel_first_domain: concept_car;;
+nrel_number_of_seats => nrel_second_domain: concept_amount;;
+nrel_number_of_seats => nrel_definitional_domain: ...
+	(*
+		<=nrel_combination: ...																	
+			(*
+				->concept_car;;
+				->concept_amount;;
+			*);;
+	*);;
+		
+concept_oriented_relation->nrel_number_of_seats;;
+concept_a_binari_relation->nrel_number_of_seats;;
+concept_antisymmetric_relation->nrel_number_of_seats;;
+concept_antitransitive_relation->nrel_number_of_seats;;
+concept_antireflexive_relation->nrel_number_of_seats;;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: nrel_number_of_seats;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/nrel_number_of_seats.bmp";;
+		*);;
+	*);;

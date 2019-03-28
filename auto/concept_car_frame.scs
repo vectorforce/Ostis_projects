@@ -1,0 +1,233 @@
+sc_node_not_relation -> concept_car_frame;;
+concept_car_frame => nrel_main_idtf:
+[рама автомобиля](*<-lang_ru;;*);
+[разъёмно-разделительная силовая схема](*<-lang_ru;;*);
+[рама а/м](*<-lang_ru;;*);
+[рамная конструкция](*<-lang_ru;;*);
+	[car frame](*<-lang_en;;*);;
+sc_node_not_relation -> concept_spar_frame;;
+concept_spar_frame => nrel_main_idtf:
+[лонжеронная рама](*<-lang_ru;;*);
+	[spar frame](*<-lang_en;;*);;
+sc_node_not_relation -> concept_peripheral_frame;;
+concept_peripheral_frame => nrel_main_idtf:
+[периферийная рама](*<-lang_ru;;*);
+	[peripheral frame](*<-lang_en;;*);;
+sc_node_not_relation -> concept_spinal_frame;;
+concept_spinal_frame => nrel_main_idtf:
+[хребтовая рама](*<-lang_ru;;*);
+	[spinal frame](*<-lang_en;;*);;
+sc_node_not_relation -> concept_fork_spinal_frame;;
+concept_fork_spinal_frame => nrel_main_idtf:
+[вильчато-хребтовая рама](*<-lang_ru;;*);
+	[fork-spinal frame](*<-lang_en;;*);;
+sc_node_not_relation -> concept_x_shaped_frame;;
+concept_x_shaped_frame => nrel_main_idtf:
+[x-образная рама](*<-lang_ru;;*);
+	[x-shaped frame](*<-lang_en;;*);;
+sc_node_not_relation -> concept_support_base;;
+concept_support_base => nrel_main_idtf:
+[несущее основание](*<-lang_ru;;*);
+	[support base](*<-lang_en;;*);;
+sc_node_not_relation -> concept_slatted_frame;;
+concept_slatted_frame => nrel_main_idtf:
+[трубчатая рама](*<-lang_ru;;*);
+[решётчатая рама](*<-lang_ru;;*);
+[пространственная рама](*<-lang_ru;;*);
+[tubular frame](*<-lang_en;;*);
+[spatial frame](*<-lang_en;;*);
+	[slatted frame](*<-lang_en;;*);;
+sc_node_not_relation -> concept_UniFrame;;
+concept_UniFrame => nrel_main_idtf:
+[интегрированная в кузов рама](*<-lang_ru;;*);
+[UniFrame](*<-lang_en;;*);
+	[frame-in-body](*<-lang_en;;*);;
+sc_node_not_relation -> concept_subframe;;
+concept_subframe => nrel_main_idtf:
+[подрамник](*<-lang_ru;;*);
+[полурама](*<-lang_ru;;*);
+[подмоторная рама](*<-lang_ru;;*);
+	[subframe](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_variety;; 
+nrel_variety => nrel_main_idtf:
+[разновидность*](*<-lang_ru;;*);
+	[variety*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_car_skeleton;;
+concept_car_skeleton => nrel_main_idtf:
+[остов](*<-lang_ru;;*);
+[остов автомобиля](*<-lang_ru;;*);
+[carcass](*<-lang_en;;*);
+	[skeleton](*<-lang_en;;*);;
+sc_node_not_relation -> concept_car_aggregate;;
+concept_car_aggregate => nrel_main_idtf:
+[агрегат](*<-lang_ru;;*);
+[агрегат автомобиля](*<-lang_ru;;*);
+[aggregate](*<-lang_en;;*);
+	[car aggregate](*<-lang_en;;*);;
+sc_node_role_relation->rrel_car_main_aggregate;;
+rrel_car_main_aggregate => nrel_main_idtf:
+[основной агрегат автомобиля'](*<-lang_ru;;*);
+	[car main aggregate'](*<-lang_en;;*);;
+sc_node_not_relation -> concept_axle;;
+concept_axle => nrel_main_idtf:
+[мост](*<-lang_ru;;*);
+[мост автомобиля](*<-lang_ru;;*);
+	[axle](*<-lang_en;;*);;
+sc_node_role_relation->concept_all_terrain_car;;
+concept_all_terrain_car => nrel_main_idtf:
+[легковой автомобиль повышенной проходимости](*<-lang_ru;;*);
+	[all terrain car](*<-lang_en;;*);;
+sc_node_not_relation -> concept_truck;;
+concept_truck => nrel_main_idtf:
+[грузовик](*<-lang_ru;;*);
+[грузовой автомобиль](*<-lang_ru;;*);
+	[truck](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_advantage;; 
+nrel_advantage => nrel_main_idtf:
+[преимущество*](*<-lang_ru;;*);
+	[advantage*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_simplicity;; 
+nrel_simplicity => nrel_main_idtf:
+[простота*](*<-lang_ru;;*);
+	[simplicity*](*<-lang_en;;*);;
+sc_node_role_relation->rrel_low_cost;;
+rrel_low_cost => nrel_main_idtf:
+[низкая стоимость'](*<-lang_ru;;*);
+	[low cost'](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_loads_perception;; 
+nrel_loads_perception => nrel_main_idtf:
+[восприятие нагрузок*](*<-lang_ru;;*);
+	[loads perception*](*<-lang_en;;*);;
+sc_node_role_relation->rrel_significant_load;;
+rrel_significant_load => nrel_main_idtf:
+[значительная нагрузка'](*<-lang_ru;;*);
+	[significant load'](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_car_models_unification;; 
+nrel_car_models_unification => nrel_main_idtf:
+[унификация моделей автомобиля*](*<-lang_ru;;*);
+	[car models unification*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_base_car_model;; 
+nrel_base_car_model => nrel_main_idtf:
+[базовая модель автомобиля*](*<-lang_ru;;*);
+	[base car model*](*<-lang_ru;;*);;
+sc_node_norole_relation -> nrel_car_weight_increase;; 
+nrel_car_weight_increase => nrel_main_idtf:
+[увеличение веса автомобиля*](*<-lang_ru;;*);
+	[car weight increase*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_feature;; 
+nrel_feature => nrel_main_idtf:
+[особенность*](*<-lang_ru;;*);
+[отличительная особенность*](*<-lang_ru;;*);
+	[feature*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_physical_separation;; 
+nrel_physical_separation => nrel_main_idtf:
+[физическое разделение*](*<-lang_ru;;*);
+	[physical separation*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_carrier_element;;
+nrel_carrier_element => nrel_main_idtf:
+[несущая элемент*](*<-lang_ru;;*);
+	[carrier element*](*<-lang_en;;*);;
+	
+concept_car_frame <= nrel_subdividing: ...
+(*
+->concept_spar_frame;;  
+->concept_peripheral_frame;;
+->concept_spinal_frame;;
+->concept_fork_spinal_frame;;
+->concept_x_shaped_frame;;
+->concept_support_base;;
+->concept_slatted_frame;;
+->concept_UniFrame;;
+->concept_subframe;;
+=> nrel_main_idtf: [Разбиение по признаку тип используемой несущей структуры](* <- lang_ru;; *);;
+*);;
+
+concept_car_frame <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_used_constants: ... 
+	(*
+		->nrel_variety;; 
+		->concept_carrier_system;; 
+		->concept_car;;
+		->concept_car_skeleton;;
+		->nrel_mounted_to;;
+		->concept_car_body;;
+		->concept_car_aggregate;;
+	*);;
+=> nrel_main_idtf: [Опр.(рама а/м)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Разновидность несущей системы автомобиля, остов для крепления кузова и агрегатов.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_car_frame <- rrel_key_sc_element: ...
+	(*
+	->rrel_key_sc_element: nrel_mounted_to; rrel_car_main_aggregate; concept_engine; concept_transmission_type; concept_axle; concept_car_suspension; concept_steering_system;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [К раме, как правило, крепятся все основные агрегаты автомобиля — двигатель, трансмиссия, мосты, подвески, рулевое управление.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(рама, крепиться к*, основной агрегат автомобиля', двигатель, тип трансмиссии, мост, подвеска, рулевое управление)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...	 
+	(*
+	->rrel_key_sc_element: nrel_use; concept_all_terrain_car; nrel_model; concept_sport_car; concept_truck;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Рама в настоящее время используется на легковых автомобилях повышенной проходимости, некоторых моделях спортивных автомобилей и грузовых автомобилях.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(рама, использовать*, легковой автомобиль повышенной проходимости, модель*, спортивный автомобиль, грузовой автомобиль)](*<-lang_ru;;*);;
+	<-rrel_theorem:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...	 
+	(*
+	->rrel_key_sc_element: nrel_advantage; concept_carrier_system; nrel_simplicity; rrel_low_cost; nrel_loads_perception; rrel_significant_load; nrel_car_models_unification; nrel_base_car_model;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(*
+			-> rrel_example: [Преимуществами рамной конструкции несущей системы являются простота, низкая стоимость, восприятие значительных нагрузок, унификация базовых моделей автомобиля.](*<-lang_ru;;*);; 
+		*);;
+	=>nrel_main_idtf: [Утв.(рамная конструкция, преимущество*, несущая система, простота*, низкая стоимость', восприятие нагрузок*, значительная нагрузка', унификация моделей автомобиля*, базовая модель автомобиля*)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_use; nrel_car_weight_increase; concept_car_weight;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Использование рамы приводит к увеличению массы автомобиля.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(рама, использование*, увеличение веса*, вес автомобиля*)](*<-lang_ru;;*);;
+	<-rrel_theorem:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...	 
+	(*
+	->rrel_key_sc_element: nrel_feature; nrel_physical_separation; nrel_carrier_element; concept_car_body;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(*
+			-> rrel_example: [Отличительная особенность любой рамной конструкции — физическое разделение несущих элементов и самого кузова.](*<-lang_ru;;*);; 
+		*);;
+	=>nrel_main_idtf: [Утв.(рамная конструкция, отличительная особенность*, физическое разделение*, несущий элемент*, кузов)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);;
+	 
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_car_frame;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/concept_car_frame.bmp";;
+		*);;
+	*);;

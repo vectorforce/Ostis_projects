@@ -1,0 +1,43 @@
+sc_node_norole_relation -> nrel_height;;
+nrel_height => nrel_main_idtf:
+[высота*](* <- lang_ru;; *);
+    [height*](* <- lang_en;; *);;
+
+nrel_size=>nrel_inclusion: nrel_height;;
+
+nrel_height<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр.(высота*)]  (* <- lang_ru;; *);;
+	<- definition;;
+    <= nrel_using_constants:...
+	(*
+        -> concept_dimension;;
+        -> concept_car;;
+	*);;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[Высота - внешний предельный габарит автомобиля, характеризующий расстояние от земли до точки, где заканчиватся радиоантенна или спойлер авто.](* <- lang_ru;; 	*);;
+		*);;
+*);;
+
+
+nrel_height=> nrel_first_domain: concept_dimension;;
+nrel_height=> nrel_second_domain: concept_car;;
+
+nrel_height => nrel_domain_of_definition: ...
+	(*
+		<=nrel_union: ...																	
+			(*
+				->concept_dimension;;
+				->concept_car;;
+			*);;
+	*);;
+
+concept_oriented_relation->nrel_height;;
+concept_binari_relation->nrel_height;;
+concept_antisymmetric_relation->nrel_height;;
+concept_antitransitive_relation->nrel_height;;
+concept_antireflexive_relation->nrel_height;;

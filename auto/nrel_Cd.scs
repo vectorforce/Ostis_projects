@@ -1,0 +1,116 @@
+sc_node_norole_relation -> nrel_Cd;; 
+nrel_Cd => nrel_main_idtf:
+[коэффициент лобового сопротивления*](*<-lang_ru;;*);
+[coefficient of drag*](*<-lang_en;;*);
+[Cx*](*<-lang_en;;*);
+	[Cd*](*<-lang_en;;*);;
+sc_node_role_relation->rrel_main_indicator;;
+rrel_main_indicator => nrel_main_idtf:
+[главный показатель'](*<-lang_ru;;*);
+	[main indicator'](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_aerodynamic_property;; 
+nrel_aerodynamic_property => nrel_main_idtf:
+[аэродинамическое свойство*](*<-lang_ru;;*);
+	[aerodynamic property*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_demonstrate;; 
+nrel_to_demonstrate => nrel_main_idtf:
+[демонстрировать*](*<-lang_ru;;*);
+	[to demonstrate*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_slot;; 
+nrel_to_slot => nrel_main_idtf:
+[прорезать*](*<-lang_ru;;*);
+	[to slot*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_air;;
+concept_air => nrel_main_idtf:
+[воздух](*<-lang_ru;;*);
+    [air](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_compare;; 
+nrel_to_compare => nrel_main_idtf:
+[сравнивать*](*<-lang_ru;;*);
+	[to compare*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_cross_sectional_area;; 
+nrel_cross_sectional_area => nrel_main_idtf:
+[площадь поперечного сечения*](*<-lang_ru;;*);
+	[cross-sectional area*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_conventional_cylinder;;
+concept_conventional_cylinder => nrel_main_idtf:
+[условный цилиндр](*<-lang_ru;;*);
+    [conventional cylinder](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_maximum_sectional_area_of_the_car;; 
+nrel_maximum_sectional_area_of_the_car => nrel_main_idtf:
+[максимальная площадь сечения автомобиля*](*<-lang_ru;;*);
+	[maximum sectional area of the car*](*<-lang_en;;*);;
+
+nrel_Cd <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_used_constants: ... 
+	(*
+		->rrel_main_indicator;; 
+		->nrel_aerodynamic_property;; 
+		->concept_car;;
+		->nrel_to_demonstrate;;
+		->nrel_to_slot;; 
+		->concept_air;; 
+		->nrel_to_compare;;
+		->concept_conventional_cylinder;;
+		->nrel_cross_sectional_area;; 
+		->nrel_maximum_sectional_area_of_the_car;; 
+	*);;
+=> nrel_main_idtf: [Опр.(коэффициент лобового сопротивления*)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Главный показателем аэродинамических свойств автомобиля, который демонстрирует, насколько автомобиль легче «прорезает» воздух по сравнению с условным цилиндром, площадь поперечного сечения которого равна максимальной площади сечения автомобиля.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+	  
+nrel_Cd <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: concept_conventional_cylinder;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [У условного цилиндра Cx равен единице.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(Cx*, условный цилиндр)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: rrel_new_car;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [У современных легковых автомобилей Сх чаще всего составляет около 0,3.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(Cx*, современный легковой автомобиль')](*<-lang_ru;;*);;
+	<-rrel_theorem:concept_IHS_by_car;;
+	<-concept_statement_of_the_defining_type;;
+	*);;
+	  
+nrel_Cd => nrel_first_domain: concept_car;;
+nrel_Cd => nrel_second_domain: concept_amount;;
+nrel_Cd => nrel_definitional_domain: ...
+	(*
+		<=nrel_combination: ...																	
+			(*
+				->concept_car;;
+				->concept_quantity;;
+			*);;
+	*);;
+		
+concept_oriented_relation->nrel_Cd;;
+concept_a_binari_relation->nrel_Cd;;
+concept_antisymmetric_relation->nrel_Cd;;
+concept_antitransitive_relation->nrel_Cd;;
+concept_antireflexive_relation->nrel_Cd;;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: nrel_Cd;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/nrel_Cd.bmp";;
+		*);;
+	*);;

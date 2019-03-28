@@ -1,0 +1,63 @@
+concept_intercooler
+	=> nrel_main_idtf:
+	[интеркулер] (* <- lang_ru;; *);
+	[intercooler] (* <- lang_en;; *);
+	=> nrel_idtf: [множество интеркулеров] (* <- lang_ru;; *);
+              [intercooler] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_intercooler_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (интеркулер)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Интеркулер</b> — промежуточный <sc_element sys_idtf="concept_cooler">охладитель</sc_element> наддувочного воздуха, представляющий собой теплообменник (воздухо-воздушный, водо-воздушный), чаще <sc_element sys_idtf="concept_radiator">радиатор</sc_element>, для охлаждения наддувочного воздуха. В основном используется в <sc_element sys_idtf="concept_internal_combustion_engine">двигателях</sc_element> с <sc_element sys_idtf="concept_turbocharging_system">системой турбонаддува</sc_element>.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_cooler;; -> concept_radiator;; -> concept_internal_combustion_engine;; -> concept_turbocharging_system;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_intercooler
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (компрессор, интеркулер, двигатель)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_statement_of_the_defining_type;;
+		->rrel_key_sc_element: concept_compressor; concept_internal_combustion_engine;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [Устройство предназначено для извлечения тепла из воздушного потока, который нагревается при сжатии в <sc_element sys_idtf="concept_compressor">компрессоре</sc_element>. Существует много критериев, которыми руководствуются при создании <b>интеркулера</b>. Основные среди них — это максимальный отвод тепла, минимальные потери давления наддува, увеличения инерции потока. Наличие <b>интеркулера</b> никак не влияет на ресурс <sc_element sys_idtf="concept_internal_combustion_engine">двигателя</sc_element>.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+	
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://intercooler.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<- concept_turbocharging_system;
+=> nrel_composite_part: concept_radiator;
+
+<-sc_node_not_relation;;

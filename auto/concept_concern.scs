@@ -1,0 +1,49 @@
+sc_node_not_relation -> concept_concern;;
+concept_concern => nrel_main_idtf:
+[концерн](*<-lang_ru;;*);
+     [concern](*<-lang_en;;*);;
+
+sc_node_not_relation -> concept_concern;;
+
+concept_concern <-rrel_key_sc_element:...
+(*
+	<- definition;;
+	<=nrel_used_constants: ... 
+	(*
+		->concept_company;;
+		->concept_management;; 
+	*);;
+	=> nrel_main_idtf: [Опр.(концерн)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+(*
+		-> rrel_example:[Концерном называется монополистическое объединение предприятий под общим финансовым руководством.](*<-lang_ru;;*);; 
+*);;
+*);;
+
+concept_concern <- rrel_key_sc_element: ... 
+     (*
+        ->rrel_key_sc_element: concept_company; concept_independence;;
+        <-statement;;
+        <=nrel_sc_text_translation: ... (* -> [Предприятия концерна сохраняют свою самостоятельность.](*<-lang_ru;;*);; *);;
+        =>nrel_main_idtf: [Утв.(концерн, самостоятельность*, предприятия)](*<-lang_ru;;*);;
+	   <-rrel_axiom:concept_IHS_by_car;;
+	   <-concept_statement_of_the_defining_type;;
+     *);
+... 
+    (*
+       ->rrel_key_sc_element:concept_participant;;
+        <-statement;;
+        <=nrel_sc_text_translation: ... (* -> [Участники концерна не могут одновременно входить в состав других концернов.](*<-lang_ru;;*);; *);;
+        =>nrel_main_idtf: [Утв.(концерн, участник)](*<-lang_ru;;*);;
+        <-rrel_axiom:concept_IHS_by_car;;
+	   <-concept_statement_of_the_defining_type;;
+     *);;
+
+concept_concern->rrel_example: concept_Volkswagen;;
+concept_company->concept_Audi;;
+concept_Volkswagen->concept_Audi;;
+
+
+
+
+

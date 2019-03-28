@@ -1,0 +1,161 @@
+sc_node_not_relation -> concept_fuel_system_type;;
+concept_fuel_system_type => nrel_main_idtf:
+[тип топливной системы](*<-lang_ru;;*);
+[fuel system type](*<-lang_en;;*);
+[система подачи топлива](*<-lang_ru;;*);
+[fuel supply system](*<-lang_en;;*);
+[топливная система](*<-lang_ru;;*);
+[fuel system](*<-lang_en;;*);
+[система впрыска](*<-lang_ru;;*);
+	 [injection system](*<-lang_en;;*);;
+sc_node_not_relation->concept_injection_fuel_supply_system;;
+concept_injection_fuel_supply_system => nrel_main_idtf:
+[инжекторная система подачи топлива](*<-lang_ru;;*);
+	 [injection fuel supply system](*<-lang_en;;*);;
+sc_node_not_relation->concept_accumulator_fuel_system;;
+concept_accumulator_fuel_system => nrel_main_idtf:
+[аккумуляторная топливная система](*<-lang_ru;;*);
+	 [accumulator fuel system](*<-lang_en;;*);;
+sc_node_not_relation->concept_fuel_system_of_carburetor_engine;;
+concept_fuel_system_of_carburetor_engine => nrel_main_idtf:
+[топливная система карбюраторного двигателя](*<-lang_ru;;*);
+	 [fuel system of carburetor engine](*<-lang_en;;*);;
+sc_node_not_relation->concept_system;;
+concept_system => nrel_main_idtf:
+[система](*<-lang_ru;;*);
+	 [system](*<-lang_en;;*);;
+sc_node_not_relation->concept_sequential_electronic_injection;;
+concept_sequential_electronic_injection => nrel_main_idtf:
+[последовательный электронный впрыск](*<-lang_ru;;*);
+	 [sequential electronic injection](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_composite_part;;
+nrel_composite_part => nrel_main_idtf:
+[составная часть*](*<-lang_ru;;*);
+[часть*](*<-lang_ru;;*);
+[part*](*<-lang_en;;*);
+	 [composite part*](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_function;;
+nrel_function => nrel_main_idtf:
+[функция*](*<-lang_ru;;*);
+[выполняемая функция*](*<-lang_ru;;*);
+[executed function*](*<-lang_en;;*);
+	 [function*](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_mixture_formation;;
+nrel_mixture_formation => nrel_main_idtf:
+[смесеобразование*](*<-lang_ru;;*);
+[образование смеси*](*<-lang_ru;;*);
+	 [mixture formation*](*<-lang_en;;*);;
+sc_node_not_relation->concept_fuel_air_mixture;;
+concept_fuel_air_mixture => nrel_main_idtf:
+[топливно-воздушная смесь](*<-lang_ru;;*);
+	 [fuel-air mixture](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_fuel_injection;;
+nrel_fuel_injection => nrel_main_idtf:
+[впрыск топлива*](*<-lang_ru;;*);
+	 [fuel injection*](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_fuel_storage;;
+nrel_fuel_storage => nrel_main_idtf:
+[хранение топлива*](*<-lang_ru;;*);
+	 [fuel storage*](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_fuel_purification;;
+nrel_fuel_purification => nrel_main_idtf:
+[очистка топлива*](*<-lang_ru;;*);
+	 [fuel purification*](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_working_pressure;;
+nrel_working_pressure => nrel_main_idtf:
+[рабочее давление*](*<-lang_ru;;*);
+	 [working pressure*](*<-lang_en;;*);;
+sc_node_role_relation->rrel_drivers_door;;
+rrel_drivers_door => nrel_main_idtf:
+[водительская дверь'](*<-lang_ru;;*);
+	 [driver's door'](*<-lang_en;;*);;
+sc_node_not_relation->concept_fuel_pump;;
+concept_fuel_pump => nrel_main_idtf:
+[топливный насос](*<-lang_ru;;*);
+	 [fuel pump](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_fuel_circulation;;
+nrel_fuel_circulation => nrel_main_idtf:
+[циркуляция топлива*](*<-lang_ru;;*);
+	 [fuel circulation*](*<-lang_en;;*);;
+sc_node_not_relation->concept_fuel_line;;
+concept_fuel_line => nrel_main_idtf:
+[топливопровод](*<-lang_ru;;*);
+	 [fuel line](*<-lang_en;;*);;
+sc_node_not_relation -> concept_Nissan;;
+concept_Nissan => nrel_main_idtf:
+[Ниссан](*<-lang_ru;;*);
+	 [Nissan](*<-lang_en;;*);;
+sc_node_not_relation -> concept_Nissan_Z;;
+concept_Nissan_Z => nrel_main_idtf:
+	 [Nissan Z](*<-lang_en;;*);;
+	 
+concept_fuel_system_type <= nrel_subdividing: ...
+(*
+->concept_injection_fuel_supply_system;;  
+->concept_fuel_system_of_carburetor_engine;;
+->concept_accumulator_fuel_system;;
+=> nrel_main_idtf: [Разбиение по признаку устройство и принцип работы](* <- lang_ru;; *);;
+*);;
+
+concept_fuel_system_type <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_used_constants: ... 
+	(*
+		->concept_system;; 
+		->concept_fuel_type;; 
+		->concept_tank;;
+		->concept_engine;;
+	*);;
+=> nrel_main_idtf: [Опр.(тип топливной системы)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Система, предназначенная для подачи топлива из топливного бака в двигатель.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_fuel_system_type <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_function; nrel_mixture_formation; concept_fuel_air_mixture; nrel_fuel_injection; nrel_fuel_storage; nrel_fuel_purification; concept_engine;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Важнейшими функциями системы впрыска являются образование топливно-воздушной смеси за счет впрыска топлива, а также его хранение и очитка перед подачей в двигатель.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(система впрыска, функция*, образование смеси*, топливно-воздушная смесь, впрыск топлива*, хранение топлива*, очистка топлива*, топливо*, двигатель)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: concept_car; nrel_working_pressure; rrel_drivers_door; concept_fuel_pump;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В топливной системе некоторых автомобилей рабочее давление создается при открытии водительской двери, когда включается топливный насос.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(топливная система, автомобиль, рабочее давление*, водительская дверь', топливный насос)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_fuel; nrel_fuel_circulation; concept_fuel_line;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В топливной системе топливо циркулирует по топливопроводам.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(топливная система, топливо*, циркуляция топлива*, топливопровод)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_fuel_system_type;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/concept_fuel_system_type.bmp";;
+		*);;
+	*);;

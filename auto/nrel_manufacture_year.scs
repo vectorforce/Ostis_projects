@@ -1,0 +1,37 @@
+sc_node_norole_relation -> nrel_manufacture_year;;
+nrel_release_year => nrel_main_idtf:
+[год производства*](* <- lang_ru;; *);
+    [manufacture year*](* <- lang_en;; *);;
+
+nrel_manufacture_year<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр.(год производства*)]  (* <- lang_ru;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[Год производства - календарный год, в котором был произведен автомобиль.](* <- lang_ru;; 	*);;
+		*);;
+*);;
+
+nrel_manufacture_year=> nrel_first_domain: concept_car;;
+nrel_manufacture_year=> nrel_second_domain: concept_year;;
+
+nrel_manufacture_year => nrel_domain_of_definition: ...
+	(*
+		<=nrel_union: ...																	
+			(*
+				->concept_car;;
+				->concept_year;;
+			*);;
+	*);;
+
+concept_binari_relation->nrel_manufacture_year;;
+concept_oriented_relation->nrel_manufacture_year;;
+concept_antisymmetric_relation->nrel_manufacture_year;;
+concept_antitransitive_relation->nrel_manufacture_year;;
+concept_antireflexive_relation->nrel_manufacture_year;;
+
+

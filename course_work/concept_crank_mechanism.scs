@@ -1,0 +1,60 @@
+concept_crank_mechanism
+
+<- rrel_key_sc_element:
+	 Definition_of_the_crank_mechanism
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (кривошипно-шатунный механизм)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Кривошипно-шатунный механизм (КШМ)</b> - предназначен для преобразования возвратно-поступательного движения <sc_element sys_idtf="concept_piston">поршня</sc_element> во вращательное движение (например, во вращательное движение <sc_element sys_idtf="concept_crankshaft">коленчатого вала</sc_element> в <sc_element sys_idtf="concept_internal_combustion_engine">двигателях внутреннего сгорания</sc_element>), и наоборот.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_piston;; -> concept_crankshaft;; -> concept_internal_combustion_engine;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_camshaft
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (кривошипно-шатунный механизм, поршень, двигатель внутреннего сгорания)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_statement_of_the_defining_type;;
+		->rrel_key_sc_element: concept_piston; concept_crankshaft; concept_internal_combustion_engine;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [Прямая схема: <sc_element sys_idtf="concept_piston">Поршень</sc_element> под действием давления газов совершает поступательное движение в сторону коленчатого вала. С помощью кинематических пар «поршень-шатун» и «шатун-вал» поступательное движение поршня преобразуется во вращательное движение <sc_element sys_idtf="concept_crankshaft">коленчатого вала</sc_element>.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+	
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_crank_mechanism.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_shaft_construction;
+=> nrel_composite_part: concept_counterbalances;
+=> nrel_composite_part: concept_crank_neck;
+=> nrel_composite_part: concept_root_neck;
+
+<-sc_node_not_relation;;

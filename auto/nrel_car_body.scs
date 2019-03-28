@@ -1,0 +1,92 @@
+ 
+nrel_car_body => nrel_first_domain: concept_car;;
+nrel_car_body => nrel_second_domain: concept_car_body_type;;
+nrel_car_body => nrel_definitional_domain: ...
+	(*
+		<=nrel_combination: ...																	
+			(*
+				->concept_car;;
+				->concept_car_body_type;;
+			*);;
+	*);;
+		
+concept_oriented_relation->nrel_car_body;;
+concept_a_binari_relation->nrel_car_body;;
+concept_antisymmetric_relation->nrel_car_body;;
+concept_antitransitive_relation->nrel_car_body;;
+concept_antireflexive_relation->nrel_car_body;;
+
+nrel_car_body <- rrel_key_sc_element:...
+(*
+<- definition;;
+<= nrel_used_constants: ...
+(*
+->concept_passenger;;
+->nrel_composite_part;;
+->concept_cargo;;
+->concept_car;;
+*);;
+=> nrel_main_idtf: [Опр.(кузов автомобиля*)](*<-lang_ru;;*);;
+<= nrel_sc_text_translation:...
+    (*
+        -> rrel_example: [Кузов автомобиля* - это часть автомобиля, предназначенная для размещения груза либо пассажиров.](*<-lang_ru;;*);; 
+*);; 
+*);;
+
+nrel_car_body <- rrel_key_sc_element: ... 
+     (*
+        ->rrel_key_sc_element: concept_car;;
+        ->rrel_key_sc_element: concept_panel;;
+        ->rrel_key_sc_element: nrel_welding;;
+        ->statement;;
+        <=nrel_sc_text_translation: ... (* -> [Кузов современного легкового автомобиля обычно состоит из отдельных панелей, соединённых сваркой.](*<-lang_ru;;*);; *);;
+        =>nrel_main_idtf: [Утв.(кузов автомобиля*, автомобиль, панель, сварка*)](*<-lang_ru;;*);;
+	   <-rrel_axiom:concept_IHS_by_car;;
+	   <-concept_general_form_statement;;
+     *);;
+
+nrel_car_body <- rrel_key_sc_element: ...
+	(*
+	->rrel_key_sc_element: nrel_function; concept_carrier_system; nrel_element;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В зависимости от выполняемых функций кузов может выступать в качестве несущей системы или быть ее отдельным элементом.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(кузов*, выполняемая функция*, несущая система, отдельный элемент*)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...	 
+	(*
+	->rrel_key_sc_element: nrel_basis; concept_body_shell; nrel_hinging; concept_bonnet; concept_trunk_lid; concept_car_door; concept_front_bumper; concept_rear_bumper; nrel_decorative_overlay;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Основу кузова составляет корпус, к которому шарнирно прикреплены капот, крышка багажника, двери, передний и задний бамперы, декоративные накладные элементы и др.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(кузов*, основа*, корпус кузова, шарнирное крепление*, капот, крышка багажника, дверь, передний бампер, задний бампер, декоративный накладной элемент*)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...	 
+	(*
+	->rrel_key_sc_element: nrel_mounted_to; concept_car_frame; concept_bracket; concept_bolt; concept_thick_rubber_gasket; nrel_reduce; nrel_vibration_level; nrel_influence; rrel_driver; rrel_passenger;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(*
+		-> rrel_example: [Кузов обычно крепится к раме при помощи кронштейнов на болтах с толстыми резиновыми прокладками, служащими для уменьшения уровня вибраций, воздействующих на водителя и пассажиров.](*<-lang_ru;;*);; 
+		*);;
+	=>nrel_main_idtf: [Утв.(кузов*, крепиться к*, рама, кронштейн, болт, толстая резиновая прокладка, уменьшать*, уровень вибрации*, воздействовать*, водитель', пассажир')](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: nrel_car_body;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/nrel_car_body.jpg";;
+		*);;
+	*);; 

@@ -1,0 +1,30 @@
+sc_node_not_relation -> concept_model_type;;
+concept_model_type => nrel_main_idtf:
+[тип модели](*<-lang_ru;;*);
+	[model type](*<-lang_en;;*);;
+
+concept_model_type <- rrel_key_sc_element:...
+(*
+<- definition;;
+<= nrel_used_constants: ...
+(*
+->concept_car;;
+->concept_car_brand;;
+*);;
+=> nrel_main_idtf: [Опр.(тип модели)](*<-lang_ru;;*);;
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Тип модели - конкретная модель какого-либо автомобиля, имеющая свою модификацию, которая отличает данную модель этого автомобиля от других.](*<-lang_ru;;*);; 
+*);; 
+*);;
+
+concept_model_type->rrel_example: concept_Golf3;;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_model_type;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/model_type.bmp";;
+		*);;
+	*);;

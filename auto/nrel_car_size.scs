@@ -1,0 +1,51 @@
+sc_node_norole_relation -> nrel_car_size;;
+nrel_car_size => nrel_main_idtf:
+[размер автомобиля*](* <- lang_ru;; *);
+    [ car size*](* <- lang_en;; *);;
+
+nrel_car_size -> nrel_length; nrel_width;nrel_height; nrel_front_track; nrel_rear_track; nrel_wheelbase; nrel_ground_clearance; nrel_trunk_volume;;
+
+
+nrel_car_size<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр.(размер автомобиля*)]  (* <- lang_ru;; *);;
+	<- definition;;
+    <= nrel_using_constants:...
+	(*
+        -> concept_dimension;;
+        -> concept_car;;
+	*);;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[Размер -  предельные внешние габариты автомобиля (его компонентов), характеризующие его ширину, длину и высоту.](* <- lang_ru;; 	*);;
+		*);;
+*);;
+
+nrel_car_size=> nrel_first_domain: concept_amount;;
+nrel_car_size=> nrel_second_domain: concept_car;;
+nrel_car_size=> nrel_domain_of_definition: ...
+	(*
+		<=nrel_combination: ...													
+			(*
+				->concept_amount;;
+				->concept_car;;
+			*);;
+	*);;
+
+concept_oriented_relation->nrel_car_size;;
+concept_binary_relation->nrel_car_size;;
+concept_antisymmetric_relation->nrel_car_size;;
+concept_antitransitive_relation->nrel_car_size;;
+concept_antireflexive_relation->nrel_car_size;;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: nrel_car_size;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/size.PNG";;
+		*);;
+	*);;

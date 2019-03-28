@@ -1,0 +1,58 @@
+sc_node_norole_relation -> nrel_torque;;
+nrel_torque => nrel_main_idtf:
+[крутящий момент*](* <- lang_ru;; *);
+    [torque*](* <- lang_en;; *);;
+
+nrel_torque<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр.(крутящий момент*)]  (* <- lang_ru;; *);;
+	<- definition;;
+    <= nrel_using_constants:...
+	(*
+        -> nrel_composition;;
+        -> concept_force;;
+        -> concept_arm;;
+	*);;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[Крутящий момент - это произведение силы на плечо рычага, к которому она приложена (М=F*L).](* <- lang_ru;; 	*);;
+		*);;
+*);;
+
+nrel_torque<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Утв.(крутящий момент*)] (* <- lang_ru;; *);;
+	<- statement;;
+	   <-rrel_axiom:concept_IHS_by_car;;
+	   <-concept_general_form_statement;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[Крутящий момент характеризует потенциал двигателя к совершению работы, которую способен выполнить мотор за единицу времени.](* <- lang_ru;; *);;
+		*);;
+	*);;
+
+nrel_torque=> nrel_first_domain: concept_arm;;
+nrel_torque=> nrel_second_domain: concept_force;;
+
+nrel_torque => nrel_domain_of_definition: ...
+	(*
+		<=nrel_union: ...																	
+			(*
+				->concept_arm;;
+				->concept_force;;
+			*);;
+	*);;
+
+concept_oriented_relation->nrel_torque;;
+concept_binari_relation->nrel_torque;;
+concept_antisymmetric_relation->nrel_torque;;
+concept_antitransitive_relation->nrel_torque;;
+concept_antireflexive_relation->nrel_torque;;
+
+

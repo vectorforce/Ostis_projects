@@ -1,0 +1,47 @@
+sc_node_not_relation -> nrel_the_emission_of_CO2;;
+nrel_the_emission_of_CO2 => nrel_main_idtf:
+[выброс СО2*](*<-lang_ru;;*);
+	[the emission of CO2*](*<-lang_en;;*);;
+
+nrel_the_emission_of_CO2 <= nrel_inclusion: nrel_fuel_consumption;;
+
+nrel_the_emission_of_CO2 <- rrel_key_sc_element:...
+(*
+<- definition;;
+<= nrel_used_constants: ...
+(*
+-> nrel_quantity;;
+-> concept_carbon_dioxide;;
+*);;
+=> nrel_main_idtf: [Опр.(выброс СО2*)](*<-lang_ru;;*);;
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Выброс СО2 - количество выброшенного углекислого газа за 1 километр (г/км).](*<-lang_ru;;*);; 
+*);; 
+*);;
+
+nrel_the_emission_of_CO2=> nrel_first_domain: concept_amount;;
+nrel_the_emission_of_CO2=> nrel_second_domain: concept_car;;
+nrel_the_emission_of_CO2=> nrel_domain_of_definition: ...
+	(*
+		<=nrel_combination: ...													
+			(*
+				->concept_amount;;
+				->concept_car;;
+			*);;
+	*);;
+
+concept_oriented_relation->nrel_the_emission_of_CO2;;
+concept_binary_relation->nrel_the_emission_of_CO2;;
+concept_antisymmetric_relation->nrel_the_emission_of_CO2;;
+concept_antitransitive_relation->nrel_the_emission_of_CO2;;
+concept_antireflexive_relation->nrel_the_emission_of_CO2;;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: nrel_the_emission_of_CO2 ;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/CO2.jpg";;
+		*);;
+	*);;

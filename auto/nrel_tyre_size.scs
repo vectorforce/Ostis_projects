@@ -1,0 +1,54 @@
+sc_node_not_relation -> nrel_tyre_size;;
+nrel_tyre_size => nrel_main_idtf:
+[размер шины*](*<-lang_ru;;*);
+	[tyre size*](*<-lang_en;;*);;
+
+nrel_tyre_size <- rrel_key_sc_element:...
+(*
+<- definition;;
+<= nrel_used_constants: ...
+(*
+-> concept_tire;;
+-> concept_parameter;;
+*);;
+=> nrel_main_idtf: [Опр.(размер шины*)](*<-lang_ru;;*);;
+<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example: [Размер шины - величина, характеризующая основные параметры шины (ширина, высота, диаметр).](*<-lang_ru;;*);; 
+*);; 
+*);;
+
+nrel_tyre_size=> nrel_first_domain: concept_amount;;
+nrel_tyre_size=> nrel_second_domain: concept_tire;;
+nrel_tyre_size=> nrel_domain_of_definition: ...
+	(*
+		<=nrel_combination: ...													
+			(*
+				->concept_amount;;
+				->concept_tire;;
+			*);;
+	*);;
+
+concept_oriented_relation->nrel_tyre_size;;
+concept_binary_relation->nrel_tyre_size;;
+concept_antisymmetric_relation->nrel_tyre_size;;
+concept_antitransitive_relation->nrel_tyre_size;;
+concept_antireflexive_relation->nrel_tyre_size;;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: nrel_tyre_size ;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/tyre_size1.bmp";;
+		*);;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: nrel_tyre_size ;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/tyre_size.jpg";;
+		*);;
+	*);;

@@ -1,0 +1,26 @@
+// ОТНОШЕНИЯ 
+//(нужно дополнить идентификацию остальных отношений)
+
+sc_node_not_relation -> concept_relation;;
+concept_relation => nrel_main_idtf:
+[отношение](*<-lang_ru;;*);
+     [relation](*<-lang_en;;*);;
+
+relation=>nrel_inclusion:concept_oriented_relation;;
+relation=>nrel_inclusion:concept_non_oriented_relation;;
+relation=>nrel_inclusion:concept_quasybinary_relation;;
+relation=>nrel_inclusion: concept_a_binari_relation
+(*
+	=>nrel_inclusion:concept_symmetric_relation;;
+	=>nrel_inclusion:concept_transitive_relation;;
+	=>nrel_inclusion:concept_reflexive_relation;;
+	=>nrel_inclusion:concept_antisymmetric_relation;;
+	=>nrel_inclusion:concept_antitransitive_relation;;
+	=>nrel_inclusion:concept_antireflexive_relation;;
+*);;
+
+
+sc_node_not_relation -> concept_a_binari_relation;;
+concept_a_binari_relation => nrel_main_idtf:
+[бинарное отношение](*<-lang_ru;;*);
+ [a binari relation](*<-lang_en;;*);;

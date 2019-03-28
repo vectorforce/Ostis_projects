@@ -1,0 +1,221 @@
+sc_node_norole_relation -> nrel_stroke_stiffness;;
+nrel_stroke_stiffness => nrel_main_idtf:
+[жесткость хода*](* <-lang_ru;; *);
+	[stroke stiffness*](* <- lang_en;; *);;
+
+sc_node_norole_relation -> nrel_circle_moment;;
+nrel_circle_moment => nrel_main_idtf:
+[крутящий момент*](* <- lang_ru;; *);
+    [circle moment*](* <- lang_en;; *);;
+
+sc_node_norole_relation -> nrel_activate;;
+nrel_activate => nrel_main_idtf:
+[приводить в действие*](* <- lang_ru;; *);
+[activate*](* <- lang_en;; *);;
+
+sc_node_norole_relation -> nrel_mechanizm;;
+nrel_mechanizm => nrel_main_idtf:
+[исполнительный механизм*](* <- lang_ru;; *);
+[mechanizm*](* <- lang_en;; *);;
+
+sc_node_norole_relation -> nrel_degree_of_rapidity;;
+nrel_degree_of_rapidity => nrel_main_idtf:
+[степень быстроты*](* <- lang_ru;; *);;
+
+sc_node_norole_relation -> nrel_type_of_energy;;
+nrel_type_of_energy => nrel_main_idtf:
+[тип энергии*](* <- lang_ru;; *);
+    [type of energy*](* <- lang_en;; *);;
+
+sc_node_norole_relation -> nrel_circle_moment;;
+nrel_circle_moment => nrel_main_idtf:
+[крутящий момент*](* <- lang_ru;; *);;
+
+sc_node_norole_relation -> nrel_acceleration_time_up_to_100;;
+nrel_acceleration_time_up_to_100 => nrel_main_idtf:
+[время разгона до 100км/ч*](* <- lang_ru;; *);
+    [acceleration time up to 100km/h*](* <- lang_en;; *);;
+
+sc_node_norole_relation -> nrel_min_time;;
+nrel_min_time => nrel_main_idtf:
+[наименьшее время*](* <- lang_ru;; *);
+    [min time*](* <- lang_en;; *);;
+
+sc_node_role_relation -> nrel_lenght;;
+nrel_lenght => nrel_main_idtf:
+[длина*](* <- lang_ru;; *);
+[lenght*](* <- lang_en;; *);;
+
+sc_node_norole_relation -> nrel_max_speed;;
+nrel_max_speed => nrel_main_idtf:
+[максимальная скорость*](* <- lang_ru;; *);
+    [max speed*](* <- lang_en;; *);;
+
+sc_node_norole_relation -> nrel_maximum_speed;;
+nrel_maximum_speed => nrel_main_idtf:
+[самая высокая скорость*](* <- lang_ru;; *);
+    [maximum speed*](* <- lang_en;; *);;
+
+    sc_node_norole_relation -> nrel_tank_volume;;
+nrel_tank_volume => nrel_main_idtf:
+[объем бака*](* <- lang_ru;; *);
+    [tank volume*](* <- lang_en;; *);;
+
+sc_node_norole_relation -> nrel_tank_architecture;;
+nrel_tank_architecture => nrel_main_idtf:
+[строение бака*](* <- lang_ru;; *);
+    [tank architecture*](* <- lang_en;; *);;
+
+sc_node_norole_relation -> nrel_influence;;
+nrel_influence => nrel_main_idtf:
+[зависеть*](* <- lang_ru;; *);
+    [influence*](* <- lang_en;; *);;
+
+sc_node_role_relation -> nrel_width;;
+nrel_width => nrel_main_idtf:
+[ширина*](* <- lang_ru;; *);
+[width*](* <- lang_en;; *);;
+
+sc_node_norole_relation -> nrel_fuel_consumption;;
+nrel_fuel_consumption => nrel_main_idtf:
+[расход топлива*](* <- lang_ru;; *);
+    [fuel consumption*](* <- lang_en;; *);;
+
+sc_node_norole_relation -> nrel_characteristics;;
+nrel_characteristics => nrel_main_idtf:
+[характеристика*](* <- lang_ru;; *);
+    [characteristics*](* <- lang_en;; *);;
+
+sc_node_norole_relation -> nrel_transmission;;
+nrel_transmission => nrel_main_idtf:
+[трансмиссия*](* <-lang_ru;; *);
+	[transmission*](* <- lang_en;; *);;
+
+sc_node_norole_relation -> nrel_drive_unit;;
+nrel_drive_unit => nrel_main_idtf:
+[привод*](* <-lang_ru;; *);
+	[drive unit*](* <- lang_en;; *);;
+
+sc_node_norole_relation -> nrel_to_be_intended;; 
+nrel_to_be_intended => nrel_main_idtf:
+[быть предназначенным*](*<-lang_ru;;*);
+	[to be intended*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_take_places;; 
+nrel_take_places => nrel_main_idtf:
+[быть размещённым*](*<-lang_ru;;*);
+[размещаться*](*<-lang_en;;*);
+	[take places*](*<-lang_en;;*);;
+
+sc_node_norole_relation -> nrel_cargo;; 
+nrel_cargo => nrel_main_idtf:
+[груз*](*<-lang_ru;;*);
+	[cargo*](*<-lang_en;;*);;
+
+sc_node_norole_relation -> nrel_basis;; 
+nrel_basis => nrel_main_idtf:
+[основа*](*<-lang_ru;;*);
+[основной элемент*](*<-lang_ru;;*);
+	[basis*](*<-lang_en;;*);;
+
+sc_node_norole_relation -> nrel_hinging;; 
+nrel_hinging => nrel_main_idtf:
+[шарнирное крепление*](*<-lang_ru;;*);
+	[hinging*](*<-lang_en;;*);;
+    
+sc_node_norole_relation -> nrel_decorative_overlay;; 
+nrel_decorative_overlay => nrel_main_idtf:
+[декоративный накладной элемент*](*<-lang_ru;;*);
+	[decorative overlay*](*<-lang_en;;*);;
+
+sc_node_norole_relation -> nrel_mounted_to;; 
+nrel_mounted_to => nrel_main_idtf:
+[крепиться к*](*<-lang_ru;;*);
+	[mounted to*](*<-lang_en;;*);;
+
+sc_node_norole_relation -> nrel_vibration_level;; 
+nrel_vibration_level => nrel_main_idtf:
+[уровень вибрации*](*<-lang_ru;;*);
+	[vibration level*](*<-lang_en;;*);;
+
+sc_node_norole_relation -> nrel_reduce;; 
+nrel_reduce => nrel_main_idtf:
+[уменьшать*](*<-lang_ru;;*);
+	[reduce*](*<-lang_en;;*);;
+
+//...
+
+sc_node_role_relation -> nrel_carrying_capacity;;
+nrel_carrying_capacity => nrel_main_idtf:
+[грузоподъемность*](* <- lang_ru;; *);
+[carrying capacity*](* <- lang_en;; *);;
+
+sc_node_norole_relation -> nrel_operational_characteristics;;
+nrel_operational_characteristics => nrel_main_idtf:
+[эксплуатационная характеристика*](* <- lang_ru;; *);
+    [operational characteristics*](* <- lang_en;; *);;
+
+sc_node_role_relation -> nrel_curb_mass;;
+nrel_curb_mass => nrel_main_idtf:
+[снаряженная масса*](* <- lang_ru;; *);
+[curb mass*](* <- lang_en;; *);;
+
+sc_node_role_relation -> nrel_doors_number;;
+nrel_doors_number => nrel_main_idtf:
+[количество дверей*](* <- lang_ru;; *);
+[doors number*](* <- lang_en;; *);;
+
+sc_node_norole_relation -> nrel_ground_clearance;;
+nrel_ground_clearance => nrel_main_idtf:
+[дорожный просвет*](* <-lang_ru;; *);
+[клиренс*](* <-lang_ru;; *);
+	[ground clearance*](* <- lang_en;; *);;
+
+sc_node_norole_relation -> nrel_patency;;
+nrel_patency => nrel_main_idtf:
+[проходимость*](* <-lang_ru;; *);
+	[patency*](* <- lang_en;; *);;
+
+sc_node_role_relation -> nrel_description;;
+nrel_description => nrel_main_idtf:
+[описание*](* <- lang_ru;; *);
+[description*](* <- lang_en;; *);;
+
+sc_node_norole_relation -> nrel_install;;
+nrel_install => nrel_main_idtf:
+[устанавливать*](* <- lang_ru;; *);
+    [install*](* <- lang_en;; *);;
+
+sc_node_norole_relation -> nrel_welding;;
+nrel_welding => nrel_main_idtf:
+[сварка*](* <- lang_ru;; *);
+    [welding*](* <- lang_en;; *);;
+
+sc_node_norole_relation -> nrel_determine;;
+nrel_determine => nrel_main_idtf:
+[определять*](* <- lang_ru;; *);
+    [determine*](* <- lang_en;; *);;
+
+sc_node_norole_relation -> nrel_price;;
+nrel_price => nrel_main_idtf:
+[цена*](* <- lang_ru;; *);
+    [price*](* <- lang_en;; *);;
+
+sc_node_norole_relation -> nrel_sales_market;;
+nrel_sales_market => nrel_main_idtf:
+[рынок сбыта*](* <- lang_ru;; *);
+    [sales market*](* <- lang_en;; *);;
+
+sc_node_norole_relation -> nrel_consumer_quality;;
+nrel_consumer_quality => nrel_main_idtf:
+[потребительское качество*](* <- lang_ru;; *);
+    [consumer quality*](* <- lang_en;; *);;
+
+sc_node_norole_relation -> nrel_car_characteristic;;
+nrel_car_characteristic => nrel_main_idtf:
+[характеристика автомобиля*](* <- lang_ru;; *);
+    [car characteristic*](* <- lang_en;; *);;
+
+sc_node_norole_relation -> nrel_intend;;
+nrel_intend => nrel_main_idtf:
+[предназначать*](* <- lang_ru;; *);
+    [intend*](* <- lang_en;; *);;

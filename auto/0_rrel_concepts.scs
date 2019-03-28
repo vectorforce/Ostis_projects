@@ -1,0 +1,33 @@
+sc_node_role_relation -> rrel_hp;;
+rrel_hp => nrel_main_idtf:
+[лошадиная сила'](* <- lang_ru;; *);
+[hp'](* <- lang_en;; *);;
+
+sc_node_role_relation->rrel_passenger;;
+rrel_passenger => nrel_main_idtf:
+[пассажир'](*<-lang_ru;;*);
+	[passenger'](*<-lang_en;;*);;
+
+
+
+//...
+
+sc_node_role_relation -> rrel_base;;
+rrel_base => nrel_main_idtf:
+[базовый'](* <- lang_ru;; *);
+[base'](* <- lang_en;; *);;
+
+sc_node_role_relation -> rrel_car_front_part;;
+rrel_car_front_part => nrel_main_idtf:
+[передняя часть автомобиля'](* <- lang_ru;; *);
+[car front part'](* <- lang_en;; *);;
+
+sc_node_role_relation -> rrel_car_rear_part;;
+rrel_car_rear_part => nrel_main_idtf:
+[задняя часть автомобиля'](* <- lang_ru;; *);
+[car rear part'](* <- lang_en;; *);;
+
+sc_node_role_relation -> rrel_optional;;
+rrel_optional => nrel_main_idtf:
+[опциональный'](* <- lang_ru;; *);
+[optional'](* <- lang_en;; *);;

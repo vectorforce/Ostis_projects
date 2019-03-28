@@ -1,0 +1,30 @@
+rrel_average <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр.(среднее значение')]  (* <- lang_ru;; *);;
+	<- definition;;
+    <= nrel_using_constants:...
+	(*
+        -> concept_number;;
+	*);;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[<b>Среднее значение'</b> — <sc_element sys_idtf="concept_numerical_characteristic">числовая характеристика</sc_element> <sc_element sys_idtf="set">множества</sc_element> чисел или функций (в математике); — некоторое число, заключённое между наименьшим и наибольшим из их <sc_element sys_idtf="nrel_value">значений</sc_element>.](* <- lang_ru;; => nrel_format: format_html;; *);;
+		*);;
+*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://average.jpg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);;
+

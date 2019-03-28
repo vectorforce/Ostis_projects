@@ -1,0 +1,176 @@
+sc_node_not_relation -> concept_wheel;;
+concept_wheel => nrel_main_idtf:
+[автомобильное колесо](*<-lang_ru;;*);
+[колесо](*<-lang_ru;;*);
+[wheel](*<-lang_en;;*);
+	[car wheel](*<-lang_en;;*);;
+sc_node_not_relation -> concept_spoked_wheel;;
+concept_spoked_wheel => nrel_main_idtf:
+[спицевое колесо](*<-lang_ru;;*);
+	[spoked wheel](*<-lang_en;;*);;
+sc_node_not_relation -> concept_classic_steel_wheel;;
+concept_classic_steel_wheel => nrel_main_idtf:
+[классическое стальное колесо](*<-lang_ru;;*);
+	[spoked wheel](*<-lang_en;;*);;
+sc_node_not_relation -> concept_wheel_of_light_alloy;;
+concept_wheel_of_light_alloy => nrel_main_idtf:
+[колесо из лёгких сплавов](*<-lang_ru;;*);
+	[wheel of light alloy](*<-lang_en;;*);;
+sc_node_not_relation -> concept_composite_wheel;;
+concept_composite_wheel => nrel_main_idtf:
+[композитное колесо](*<-lang_ru;;*);
+	[composite wheel](*<-lang_en;;*);;
+sc_node_not_relation -> concept_propulsion;;
+concept_propulsion => nrel_main_idtf:
+[движитель](*<-lang_ru;;*);
+[propulsion](*<-lang_en;;*);
+[движитель автомобиля](*<-lang_ru;;*);
+    [car propulsion](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_element;;
+nrel_element => nrel_main_idtf:
+[элемент*](*<-lang_ru;;*);
+[отдельный элемент*](*<-lang_ru;;*);
+	[element*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_chassis;;
+concept_chassis => nrel_main_idtf:
+[шасси](*<-lang_ru;;*);
+[chassis](*<-lang_en;;*);
+[ходовая часть](*<-lang_ru;;*);
+	[running part](*<-lang_en;;*);;
+sc_node_not_relation -> concept_road;;
+concept_road => nrel_main_idtf:
+[дорога](*<-lang_ru;;*);
+	[road](*<-lang_en;;*);;
+sc_node_role_relation->rrel_common_terminology;;
+rrel_common_terminology => nrel_main_idtf:
+[общепринятая терминология'](*<-lang_ru;;*);
+	[common terminology'](*<-lang_en;;*);;
+sc_node_not_relation -> concept_terminology;;
+concept_terminology => nrel_main_idtf:
+[терминология](*<-lang_ru;;*);
+	[terminology](*<-lang_en;;*);;
+sc_node_role_relation->rrel_domestic_automobile_industry;;
+rrel_domestic_automobile_industry => nrel_main_idtf:
+[отечественное автомобилестроение'](*<-lang_ru;;*);
+	[domestic automobile industry'](*<-lang_en;;*);;
+sc_node_not_relation -> concept_automobile_industry;;
+concept_automobile_industry => nrel_main_idtf:
+[автомобилестроение](*<-lang_ru;;*);
+	[automobile industry](*<-lang_en;;*);;
+sc_node_not_relation -> concept_car_node;;
+concept_car_node => nrel_main_idtf:
+[автомобильный узел](*<-lang_ru;;*);
+	[car node](*<-lang_en;;*);;
+sc_node_not_relation -> concept_wheel_hub;;
+concept_wheel_hub => nrel_main_idtf:
+[ступица](*<-lang_ru;;*);
+[ступица колеса](*<-lang_ru;;*);
+	[wheel hub](*<-lang_en;;*);;
+sc_node_not_relation -> concept_wheeled_vehicle;;
+concept_wheeled_vehicle => nrel_main_idtf:
+[колёсное транспортное средство](*<-lang_ru;;*);
+	[wheeled vehicle](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_movement;;
+nrel_movement => nrel_main_idtf:
+[движение*](*<-lang_ru;;*);
+	[movement*](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_to_transmit_vertical_loads;;
+nrel_to_transmit_vertical_loads => nrel_main_idtf:
+[передавать вертикальные нагрузки*](*<-lang_ru;;*);
+	[to transmit vertical loads*](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_to_perceive_road_blows;;
+nrel_to_perceive_road_blows => nrel_main_idtf:
+[воспринимать удары*](*<-lang_ru;;*);
+	[to perceive road blows*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_single_wheel;;
+concept_single_wheel => nrel_main_idtf:
+[односкатное колесо](*<-lang_ru;;*);
+	[single wheel](*<-lang_en;;*);;
+sc_node_not_relation -> concept_gable_wheel;;
+concept_gable_wheel => nrel_main_idtf:
+[двускатное колесо](*<-lang_ru;;*);
+	[gable wheel](*<-lang_en;;*);;			
+	
+concept_wheel <= nrel_subdividing: ...
+(*
+->concept_spoked_wheel;;  
+->concept_classic_steel_wheel;;
+->concept_wheel_of_light_alloy;;
+->concept_composite_wheel;;
+=> nrel_main_idtf: [Разбиение по признаку строение и используемые для создания материалы](* <- lang_ru;; *);;
+*);;
+
+concept_wheel => nrel_inclusion:concept_single_wheel;;
+concept_wheel => nrel_inclusion:concept_gable_wheel;;
+
+concept_wheel <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_used_constants: ... 
+	(*
+		->nrel_element;; 
+		->concept_chassis;; 
+		->concept_auto;;
+		->concept_road;;
+	*);;
+=> nrel_main_idtf: [Опр.(колесо)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Элемент ходовой части, связывающий автомобиль с дорогой.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+	
+concept_wheel <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: rrel_common_terminology; concept_terminology; rrel_domestic_automobile_industry; concept_automobile_industry; concept_car_node; concept_wheel_hub; concept_tire;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В общепринятой в отечественном автомобилестроении терминологии, колесом называется только узел, расположенный между ступицей и шиной.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(колесо, общепринятая терминология', терминология, отечественное автомобилестроение', автомобилестроение, автомобильный узел, ступица, шина)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_statement_of_the_defining_type;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_composite_part; concept_car; concept_tire; concept_propulsion; concept_wheeled_vehicle;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Автомобильное колесо является частью автомобиля и совместно с шиной представляют собой движитель колёсного транспортного средства.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(автомобильное колесо, часть*, автомобиль, шина, движитель, колёсное транспортное средство)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_statement_of_the_defining_type;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_movement; nrel_to_transmit_vertical_loads; concept_car; nrel_to_transmit_vertical_loads; nrel_to_perceive_road_blows; concept_road;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [С помощью колес осуществляется движение, передаются вертикальные нагрузки от автомобиля, воспринимаются удары и колебания от дороги.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(колесо, движение*, передавать вертикальные нагрузки*, автомобиль, воспринимать удары*, воспринимать колебания*, дорога)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_wheel;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/concept_wheel.bmp";;
+		*);;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_wheel;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/wheel.png";;
+		*);;
+	*);;

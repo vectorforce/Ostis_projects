@@ -1,0 +1,89 @@
+sc_node_not_relation -> concept_rear_drive;;
+concept_rear_drive => nrel_main_idtf:
+[задний привод](* <-lang_ru;; *);
+	[rear drive](* <- lang_en;; *);;
+sc_node_norole_relation->nrel_to_transmit_torque;;
+nrel_to_transmit_vertical_loads => nrel_main_idtf:
+[передавать крутящий момент*](*<-lang_ru;;*);
+	[to transmit vertical loads*](*<-lang_en;;*);;
+sc_node_role_relation->rrel_rear_wheel;;
+rrel_rear_wheel => nrel_main_idtf:
+[заднее колесо'](*<-lang_ru;;*);
+	[rear wheel'](*<-lang_en;;*);;
+sc_node_role_relation->rrel_front_wheel;;
+rrel_front_wheel => nrel_main_idtf:
+[переднее колесо'](*<-lang_ru;;*);
+	[front wheel'](*<-lang_en;;*);;
+sc_node_not_relation -> concept_drive_shaft;;
+concept_drive_shaft => nrel_main_idtf:
+[приводной вал](* <-lang_ru;; *);
+	[drive shaft](* <- lang_en;; *);;
+sc_node_norole_relation->nrel_to_accelerate;;
+nrel_to_accelerate => nrel_main_idtf:
+[разгоняться*](*<-lang_ru;;*);
+	[to accelerate*](*<-lang_en;;*);;
+	
+concept_rear_drive <= nrel_inclution: concept_drive_unit_type;;
+
+concept_rear_drive <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_used_constants: ... 
+	(*
+		->nrel_design;; 
+		->concept_transmission_type;; 
+		->concept_car;;
+		->nrel_torque;; 
+		->concept_engine;; 
+		->nrel_to_transmit_torque;;
+		->rrel_rear_wheel;;
+	*);;
+=> nrel_main_idtf: [Опр.(задний привод)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Конструкция трансмиссии автомобиля, когда крутящий момент, создаваемый двигателем, передаётся на задние колёса.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+	
+concept_power_steering <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: concept_car; nrel_to_accelerate; concept_front_wheel_drive;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [На сухом асфальте, автомобиль с задним привод разгоняется быстрее автомобиля с передним.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(задний привод, автомобиль, разгоняться*, передний привод)](*<-lang_ru;;*);;
+	<-rrel_theorem:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: concept_car; rrel_front_wheel; concept_drive_shaft;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В автомобилях с задним приводом передние колеса не имеют приводных валов.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(задний привод, автомобиль, переднее колесо', приводной вал)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_rear_drive;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/concept_rear_drive.bmp";;
+		*);;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_rear_drive;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/rear_drive.png";;
+		*);;
+	*);;

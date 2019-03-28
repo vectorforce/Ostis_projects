@@ -1,0 +1,41 @@
+sc_node_not_relation -> concept_rear_suspension;;
+concept_rear_suspension => nrel_main_idtf:
+[задняя подвеска](*<-lang_ru;;*);
+	[rear suspension](*<-lang_en;;*);;
+
+
+concept_suspension <= nrel_type_of_suspension: ...
+(*
+->concept_front_suspension;;  
+->concept_rear_suspension;;
+*);;
+
+concept_rear_suspension <- rrel_key_sc_element:...
+(*
+<- definition;;
+<= nrel_used_constants: ...
+(*
+		->concept_wheel;;
+		->concept_car_body;;  
+*);;
+=> nrel_main_idtf: [Опр.(задняя подвеска)](*<-lang_ru;;*);;
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Задняя подвеска - подвеска автомобиля, предназначеная для связи задних колес с кузовом автомобиля, а так же в гашении вибраций от неровностей дороги. ](*<-lang_ru;;*);; 
+*);; 
+*);;
+
+
+concept_rear_suspension->rrel_example: concept_independent_multilink;;
+
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_rear_suspension;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/suspens.jpg";;
+		*);;
+	*);;
+
+

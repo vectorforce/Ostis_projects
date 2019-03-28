@@ -1,0 +1,46 @@
+concept_defect
+	=> nrel_main_idtf:
+	[неисправность] (* <- lang_ru;; *);
+	[defect] (* <- lang_en;; *);
+	=> nrel_idtf: [множество неисправностей] (* <- lang_ru;; *);
+              [defect] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_defect_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (неисправность)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Неисправность</b> — <sc_element sys_idtf="nrel_state">состояние</sc_element> <sc_element sys_idtf="concept_object">объекта</sc_element>, при котором он <sc_element sys_idtf="nrel_be_out_of_character">не соответствует</sc_element> хотя бы одному из требований нормативно-технической и (или) конструкторской (проектной) документации.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <= nrel_using_constants: ... (* -> nrel_state;; -> nrel_be_out_of_character;; -> concept_object;; *);;
+	*);
+
+<- rrel_key_sc_element:	 
+         Statement_for_the_concept_defect
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (неисправность)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:concept_IHS_by_car;;
+		<-concept_general_form_statement;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [Термин <b>«Неисправность»</b> относится к разряду технических. Данное событие как определение является неотъемлемой частью технической диагностики.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
+<- sc_node_not_relation;;

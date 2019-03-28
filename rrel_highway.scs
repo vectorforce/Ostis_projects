@@ -1,0 +1,31 @@
+rrel_highway <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр.(трасса')]  (* <- lang_ru;; *);;
+	<- definition;;
+    <= nrel_using_constants:...
+	(*
+        -> concept_road;;
+	-> concept_line;;
+	*);;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[<b>Трасса'</b> - участок <sc_element sys_idtf="concept_road">дороги</sc_element>. <sc_element sys_idtf="concept_line">Линия</sc_element>, определяющая путь движения](* <- lang_ru;; => nrel_format: format_html;; *);;
+		*);;
+*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://highway.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);;
+

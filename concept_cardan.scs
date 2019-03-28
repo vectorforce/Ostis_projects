@@ -1,0 +1,63 @@
+concept_cardan
+	=> nrel_main_idtf:
+	[кардан] (* <- lang_ru;; *);
+	[cardan] (* <- lang_en;; *);
+	=> nrel_idtf: [множество карданов] (* <- lang_ru;; *);
+              [cardan] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_cardan_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (кардан)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Кардан</b> - <sc_element sys_idtf="concept_construction">конструкция</sc_element>, передающая <sc_element sys_idtf="nrel_torque">крутящий момент</sc_element> между <sc_element sys_idtf="concept_shaft">валами</sc_element>, пересекающимися в центре карданной передачи, и имеющими возможность взаимного углового перемещения.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_construction;; -> nrel_circle_moment;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_cardan
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (вращающийся элемент*, кардан)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_transmission;;
+		<-concept_general_form_statement;;
+		->rrel_key_sc_element: nrel_rotating_elements;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [Широко используется в различных областях человеческой деятельности, когда трудно обеспечить соосность вращающихся элементов.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+	
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://cardan.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_shaft_construction;
+=> nrel_composite_part: concept_shaft;
+
+<-sc_node_not_relation;;

@@ -1,0 +1,60 @@
+concept_flywheel
+	=> nrel_main_idtf:
+	[маховик] (* <- lang_ru;; *);
+	[flywheel] (* <- lang_en;; *);
+	=> nrel_idtf:
+              [flywheel] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_flywheel_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (маховик)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Маховик</b> (маховое колесо) — массивное вращающееся колесо, использующееся в качестве накопителя (инерционный аккумулятор) <sc_element sys_idtf="nrel_kinetic_energy">кинетической энергии</sc_element> или для создания <sc_element sys_idtf="nrel_inertial_momen">инерционного момента</sc_element> как это используется на космических аппаратах.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> nrel_kinetic_energy;; -> nrel_inertial_momen;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_flywheel
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (маховик, машина, энергия, двигатель, торможение)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_general_form_statement;;
+		->rrel_key_sc_element: concept_car; concept_energy; concept_internal_combustion_engine; concept_braking;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [Используется в <sc_element sys_idtf="concept_car">машинах</sc_element>, имеющих неравномерное поступление или использование энергии, накапливая энергию, когда поступление энергии выше чем расход, и отдавая её, когда потребление превышает поступление энергии. Также используется в гибридном двигателе в качестве накопителя энергии и для рекуперативного <sc_element sys_idtf="nrel_decelerate">торможения</sc_element>. ] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+	
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://flywheel.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<-sc_node_not_relation;;

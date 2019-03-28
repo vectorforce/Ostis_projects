@@ -1,0 +1,5 @@
+sc_node_role_relation->rrel_km_per_h;;
+rrel_km_per_h => nrel_main_idtf:
+[километры в час'](*<-lang_ru;;*);
+[км/ч'](*<-lang_ru;;*);
+	[km per h'](*<-lang_en;;*);;

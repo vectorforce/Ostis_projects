@@ -1,0 +1,40 @@
+
+nrel_fuel_consumption <- binary_relation;;
+nrel_fuel_consumption <- oriented_relation;;
+nrel_fuel_consumption <- antisymmetric_relation;;
+nrel_fuel_consumption <- antitransitive_relation;;
+nrel_fuel_consumption <- antireflexive_relation;;
+
+nrel_fuel_consumption => nrel_first_domain: concept_car;;
+nrel_fuel_consumption => nrel_second_domain: concept_fuel_volume;;
+
+nrel_fuel_consumption => nrel_domain_of_definition: ...
+(*
+	<= nrel_union: ...
+	(*
+		-> concept_car;;
+		-> concept_fuel_volume;; 
+	*);;
+*);;
+
+nrel_fuel_consumption <- rrel_key_sc_element:...(*<- definition;;<=nrel_used_constants: concept_fuel_volume; concept_car; concept_distance;; => nrel_main_idtf: [Опр.(расход топлива*)](*<-lang_ru;;*);; <= nrel_sc_text_translation: ...
+(*-> [Расход топлива* - это объем топлива, который потребуется автомобилю для преодоления дистанции в 100км.](*<-lang_ru;;*);; *);; *);;
+
+nrel_fuel_consumption <- rrel_key_sc_element: ... 
+     (*
+        ->rrel_key_sc_element: concept_car; concept_engine; nrel_characteristics;;
+        ->statement;;
+        <=nrel_sc_text_translation: ... (* -> [В настоящее время расход топлива является одной из важнейших характеристик автомобиля и его двигателя.](*<-lang_ru;;*);; *);;
+        =>nrel_main_idtf: [Утв.(расход топлива*, автомобиль, двигатель, характеристика*)](*<-lang_ru;;*);;
+	   <-rrel_axiom:concept_IHS_by_car;;
+	   <-concept_general_form_statement;;
+     *);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: nrel_fuel_consumption;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/fuel_consumption.jpg";;
+		*);;
+	*);;

@@ -1,0 +1,62 @@
+concept_yoke
+	=> nrel_main_idtf:
+	[коромысло] (* <- lang_ru;; *);
+	[yoke] (* <- lang_en;; *);
+	=> nrel_idtf: [множество коромысел] (* <- lang_ru;; *);
+              [yoke] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_yoke_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (коромысло)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Коромысло</b> (англ. rocker arm, нем. kipphebel) — звено плоского <sc_element sys_idtf="concept_device">механизма</sc_element>, которое образует вращательную пару с неподвижной осью, но не может совершать полный оборот вокруг этой оси. Обычно имеет вид двуплечего рычага и совершает качательное движение.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_yoke;; -> concept_device;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_yoke
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (газораспределительный механизм, двигатель внутреннего сгорания)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_statement_of_the_defining_type;;
+		->rrel_key_sc_element: concept_gas_distribution_mechanism; concept_internal_combustion_engine;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [Одно из применений коромысло находит в <sc_element sys_idtf="concept_internal_combustion_engine">двигателях внутреннего сгорания</sc_element>, где коромысло <sc_element sys_idtf="concept_valve">клапана</sc_element> используется для преобразования движения распределительного <sc_element sys_idtf="concept_shaft">клапана</sc_element> в открытие и закрытие <sc_element sys_idtf="concept_shaft">клапанов</sc_element>.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+	
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_yoke.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_shaft_construction;
+
+<-sc_node_not_relation;;

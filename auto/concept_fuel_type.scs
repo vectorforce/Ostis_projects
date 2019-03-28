@@ -1,0 +1,138 @@
+sc_node_not_relation -> concept_fuel_type;;
+concept_fuel_type => nrel_main_idtf:
+[тип топлива](*<-lang_ru;;*);
+[тип автомобильного топлива](*<-lang_ru;;*);
+[fuel type](*<-lang_en;;*);
+	 [type of car fuel](*<-lang_en;;*);;
+sc_node_not_relation->concept_combustible_substance;;
+concept_combustible_substance => nrel_main_idtf:
+[горючее вещество](*<-lang_ru;;*);
+	 [combustible substance](*<-lang_en;;*);;
+sc_node_not_relation->concept_mixture;;
+concept_mixture => nrel_main_idtf:
+[смесь](*<-lang_ru;;*);
+[смесь веществ](*<-lang_ru;;*);
+[mixture of substances](*<-lang_en;;*);
+	 [mixture](*<-lang_en;;*);;
+sc_node_not_relation->concept_electricity;;
+concept_electricity => nrel_main_idtf:
+[электричество](*<-lang_ru;;*);
+	 [electricity](*<-lang_en;;*);;
+sc_node_not_relation->concept_process;;
+concept_process => nrel_main_idtf:
+[процесс](*<-lang_ru;;*);
+	 [process](*<-lang_en;;*);;
+sc_node_not_relation->concept_lightweight_liquid_fuel;;
+concept_lightweight_liquid_fuel => nrel_main_idtf:
+[легкое жидкое топливо](*<-lang_ru;;*);
+	 [lightweight liquid fuel](*<-lang_en;;*);;
+sc_node_not_relation->concept_heavy_liquid_fuel;;
+concept_heavy_liquid_fuel => nrel_main_idtf:
+[тяжелое жидкое топливо](*<-lang_ru;;*);
+	 [heavy liquid fuel](*<-lang_en;;*);;
+sc_node_not_relation->concept_gas_fuel;;
+concept_gas_fuel => nrel_main_idtf:
+[газовое топливо](*<-lang_ru;;*);
+	 [gas fuel](*<-lang_en;;*);;
+sc_node_not_relation->concept_electric_fuel;;
+concept_electric_fuel => nrel_main_idtf:
+[электрическое топливо](*<-lang_ru;;*);
+	 [electric fuel](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_octane_number;;
+nrel_octane_number => nrel_main_idtf:
+[октановое число*](*<-lang_ru;;*);
+	 [octane number*](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_engine_compression_ratio;;
+nrel_engine_compression_ratio => nrel_main_idtf:
+[степень сжатия двигателя*](*<-lang_ru;;*);
+	 [engine compression ratio*](*<-lang_en;;*);;
+sc_node_not_relation->concept_carburetor_engine;;
+concept_carburetor_engine => nrel_main_idtf:
+[карбюраторный двигатель](*<-lang_ru;;*);
+	 [carburetor engine](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_engine_fuel_quality;;
+nrel_engine_fuel_quality => nrel_main_idtf:
+[качество топлива*](*<-lang_ru;;*);
+	 [fuel quality*](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_engine_car_system_state;;
+nrel_engine_car_system_state => nrel_main_idtf:
+[состояние системы автомобиля*](*<-lang_ru;;*);
+	 [car system state*](*<-lang_en;;*);;
+sc_node_not_relation->concept_fuel_characteristics;;
+concept_fuel_characteristics => nrel_main_idtf:
+[характеристика топлива](*<-lang_ru;;*);
+	 [fuel characteristics](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_combustion_heat;;
+nrel_engine_car_system_state => nrel_main_idtf:
+[теплота сгорания*](*<-lang_ru;;*);
+[теплотворная способность*](*<-lang_ru;;*);
+[combustion heat*](*<-lang_en;;*);
+	 [calorific value*](*<-lang_en;;*);;
+	 
+concept_fuel_type <= nrel_subdividing: ...
+(*
+->concept_lightweight_liquid_fuel;;  
+->concept_heavy_liquid_fuel;;
+->concept_gas_fuel;;
+->concept_electric_fuel;;
+=> nrel_main_idtf: [Разбиение по признаку физико-химический состав](* <- lang_ru;; *);;
+*);;
+	 
+concept_fuel_type <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_used_constants: ... 
+	(*
+		->concept_combustible_substance;; 
+		->concept_mixture;; 
+		->concept_electricity;;
+		->concept_engine;; 
+		->concept_car;; 
+		->nrel_energy;;
+		->concept_process;;
+	*);;
+=> nrel_main_idtf: [Опр.(тип топлива)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Горючее вещество, смесь веществ или электричество, которое применяется в данном двигателе для получения энергии в ходе определённых процессов.](*<-lang_ru;;*);; 
+	*);; 
+*);;		 
+	 
+concept_fuel_type <-rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_octane_number; nrel_engine_compression_ratio; concept_carburetor_engine;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Топливо с большим октановым числом может применяться при высокой степени сжатия карбюраторного двигателя.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(топливо, октановое число*, степень сжатия двигателя*, карбюраторный двигатель)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+... 
+	(*
+	->rrel_key_sc_element: nrel_engine_fuel_quality; nrel_engine_car_system_state; concept_fuel_system_type; concept_car;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [От качества топлива зависит состояние топливной системы автомобиля.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(топливо, качество топлива*, состояние системы автомобиля*, топливная система, автомобиль)](*<-lang_ru;;*);;
+	<-rrel_theorem:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+... 
+	(*
+	->rrel_key_sc_element: concept_fuel_characteristics; nrel_combustion_heat;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Основная характеристика топлива — теплота сгорания.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(топливо, характеристика топлива, теплота сгорания*)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);;
+
+concept_fuel_type -> rrel_example: concept_electricity;;

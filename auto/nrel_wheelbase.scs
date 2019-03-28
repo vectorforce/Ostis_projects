@@ -1,0 +1,111 @@
+sc_node_norole_relation -> nrel_wheelbase;; 
+nrel_wheelbase => nrel_main_idtf:
+[колёсная база*](*<-lang_ru;;*);
+	[wheelbase*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_front_axle;;
+concept_front_axle => nrel_main_idtf:
+[передняя ось](*<-lang_ru;;*);
+    [front axle](*<-lang_en;;*);;
+sc_node_not_relation -> concept_rear_axle;;
+concept_rear_axle => nrel_main_idtf:
+[задняя ось](*<-lang_ru;;*);
+    [rear axle](*<-lang_en;;*);;
+sc_node_not_relation -> concept_central_point_of_the_front_wheel;;
+concept_central_point_of_the_front_wheel => nrel_main_idtf:
+[центральная точка переднего колеса](*<-lang_ru;;*);
+    [central point of the front wheel](*<-lang_en;;*);;
+sc_node_not_relation -> concept_central_point_of_the_rear_wheel;;
+concept_central_point_of_the_rear_wheel => nrel_main_idtf:
+[центральная точка заднего колеса](*<-lang_ru;;*);
+    [central point of the rear wheel](*<-lang_en;;*);;
+sc_node_role_relation->rrel_right_wheel;;
+rrel_right_wheel => nrel_main_idtf:
+[правое колесо'](*<-lang_ru;;*);
+	[right wheel'](*<-lang_en;;*);;
+sc_node_role_relation->rrel_left_wheel;;
+rrel_left_wheel => nrel_main_idtf:
+[левое колесо'](*<-lang_ru;;*);
+	[left wheel'](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_change;; 
+nrel_to_change => nrel_main_idtf:
+[меняться*](*<-lang_ru;;*);
+	[to change*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_suspension_with_trailing_arms;;
+concept_suspension_with_trailing_arms => nrel_main_idtf:
+[подвеска с продольными рычагами](*<-lang_ru;;*);
+    [suspension with trailing arms](*<-lang_en;;*);;
+sc_node_role_relation->rrel_mm;;
+rrel_mm => nrel_main_idtf:
+[мм'](*<-lang_ru;;*);
+[миллиметр'](*<-lang_ru;;*);
+	[millimeter'](*<-lang_en;;*);;
+
+nrel_wheelbase <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_used_constants: ... 
+	(*
+		->nrel_distance;; 
+		->concept_front_axle;; 
+		->concept_rear_axle;;
+		->concept_car;;
+		->concept_central_point_of_the_front_wheel;; 
+		->concept_central_point_of_the_rear_wheel;;
+	*);;
+=> nrel_main_idtf: [Опр.(колёсная база*)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Расстояние между передней и задней осью автомобиля, или расстояние между центральными точками переднего и заднего колеса.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+	  
+nrel_wheelbase <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_difference; rrel_right_wheel; rrel_left_wheel;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В некоторых случаях колёсная база может быть неравной для правых и левых колёс.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(колёсная база*, быть неравным*, правое колесо', левое колесо')](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_to_change; concept_independent_suspension; rrel_example; concept_suspension_with_trailing_arms;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Колёсная база может незначительно меняться при работе некоторых типов независимой подвески, например, с продольными рычагами.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(колёсная база*, меняться*, независимая подвеска, пример', подвеска с продольными рычагами)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);;
+	  
+nrel_wheelbase => nrel_first_domain: concept_suspension_type;;
+nrel_wheelbase => nrel_second_domain: concept_amount;;
+nrel_wheelbase => nrel_definitional_domain: ...
+	(*
+		<=nrel_combination: ...																	
+			(*
+				->concept_suspension_type;;
+				->concept_amount;;
+			*);;
+	*);;
+		
+concept_oriented_relation->nrel_wheelbase;;
+concept_a_binari_relation->nrel_wheelbase;;
+concept_antisymmetric_relation->nrel_wheelbase;;
+concept_antitransitive_relation->nrel_wheelbase;;
+concept_antireflexive_relation->nrel_wheelbase;;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: nrel_wheelbase;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/nrel_wheelbase.bmp";;
+		*);;
+	*);;

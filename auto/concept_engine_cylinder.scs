@@ -1,0 +1,103 @@
+sc_node_not_relation -> concept_engine_cylinder;;
+concept_engine_cylinder => nrel_main_idtf:
+[цилиндр двигателя](*<-lang_ru;;*);
+[цилиндр](*<-lang_ru;;*);
+[cylinder](*<-lang_en;;*);
+	[engine cylinder](*<-lang_en;;*);;
+sc_node_not_relation -> concept_working_chamber_of_volumetric_displacement;;
+concept_working_chamber_of_volumetric_displacement => nrel_main_idtf:
+[рабочая камера объемного вытеснения](*<-lang_ru;;*);
+	[working chamber of volumetric displacement](*<-lang_en;;*);;
+sc_node_not_relation -> concept_two_stroke_engine;;
+concept_two_stroke_engine => nrel_main_idtf:
+[двухтактный двигатель](*<-lang_ru;;*);
+	[two-stroke engine](*<-lang_en;;*);;
+sc_node_not_relation -> concept_four_stroke_engine;;
+concept_four_stroke_engine => nrel_main_idtf:
+[четырёхтактный двигатель](*<-lang_ru;;*);
+	[four-stroke engine](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_design;;
+nrel_design => nrel_main_idtf:
+[конструкция*](*<-lang_ru;;*);
+	[design*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_outlet_window;;
+concept_outlet_window => nrel_main_idtf:
+[выпускное окно](*<-lang_ru;;*);
+	[outlet window](*<-lang_en;;*);;
+sc_node_not_relation -> concept_purge_window;;
+concept_purge_window => nrel_main_idtf:
+[продувочное окно](*<-lang_ru;;*);
+	[purge window](*<-lang_en;;*);;
+sc_node_not_relation -> concept_engines_of_double_action;;
+concept_engines_of_double_action => nrel_main_idtf:
+[двигатели двойного действия](*<-lang_ru;;*);
+	[engines of double acting](*<-lang_en;;*);;
+sc_node_not_relation -> concept_bottom_engine_cover;;
+concept_bottom_engine_cover => nrel_main_idtf:
+[нижняя крышка двигателя](*<-lang_ru;;*);
+	[bottom engine cover](*<-lang_en;;*);;
+sc_node_not_relation -> concept_working_cavity;;
+concept_working_cavity => nrel_main_idtf:
+[рабочая полость](*<-lang_ru;;*);
+	[working cavity](*<-lang_en;;*);;
+sc_node_not_relation -> concept_piston;;
+concept_piston => nrel_main_idtf:
+[поршень](*<-lang_ru;;*);
+	[piston](*<-lang_en;;*);;
+
+concept_electric_engine <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_used_constants: ... 
+	(*
+		->concept_working_chamber_of_volumetric_displacement;;
+	*);;
+=> nrel_main_idtf: [Опр.(цилиндр двигателя)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Рабочая камера объемного вытеснения.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_engine_cylinder <- rrel_key_sc_element: ...
+	(*
+	->rrel_key_sc_element: concept_two_stroke_engine; nrel_design; concept_four_stroke_engine; concept_outlet_window; concept_purge_window;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Цилиндры двухтактных двигателей отличаются по конструкции от цилиндров четырёхтактных двигателей наличием выпускных и продувочных окон.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(цилиндр, двухтактный двигатель, конструкция*, четырёхтактный двигатель, выпускное окно, продувочное окно)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: concept_two_stroke_engine; concept_engines_of_double_action; concept_bottom_engine_cover; concept_working_cavity; concept_piston;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [У цилиндров двухтактных двигателей двойного действия имеется в наличии нижняя крышка для образования рабочей полости под поршнем.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(цилиндр, двухтактный двигатель, двигатели двойного действия, нижняя крышка двигателя, рабочая полость, поршень)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_engine_cylinder;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/concept_engine_cylinder.bmp";;
+		*);;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_engine_cylinder;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/engine_cylinder.png";;
+		*);;
+	*);;

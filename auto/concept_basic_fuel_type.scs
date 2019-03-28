@@ -1,0 +1,99 @@
+sc_node_not_relation -> concept_basic_fuel_type;;
+concept_basic_fuel_type => nrel_main_idtf:
+[базовый тип топлива](*<-lang_ru;;*);
+     [basic fuel type](*<-lang_en;;*);;
+sc_node_not_relation -> concept_diesel;;
+concept_diesel => nrel_main_idtf:
+[ДТ](*<-lang_ru;;*);
+     [diesel](*<-lang_en;;*);;
+sc_node_not_relation -> concept_ai_98;;
+concept_ai_98 => nrel_main_idtf:
+	[АИ-98](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_ai_95;;
+concept_ai_95 => nrel_main_idtf:
+	[АИ-95](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_ai_92;;
+concept_ai_92 => nrel_main_idtf:
+	[АИ-92](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_ai_80;;
+concept_ai_80 => nrel_main_idtf:
+	[АИ-80](*<-lang_ru;;*);;
+sc_node_norole_relation -> nrel_to_recommend;; 
+nrel_to_recommend => nrel_main_idtf:
+[рекомендовать*](*<-lang_ru;;*);
+	[to recommend*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_producer_factory;;
+concept_producer_factory => nrel_main_idtf:
+[завод-изготовитель](*<-lang_ru;;*);
+     [producer factory](*<-lang_en;;*);;
+sc_node_role_relation->rrel_main_case;;
+rrel_main_case => nrel_main_idtf:
+[основной случай'](*<-lang_ru;;*);
+	[main case'](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_ban;; 
+nrel_to_ban => nrel_main_idtf:
+[запрещать*](*<-lang_ru;;*);
+	[to ban*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_pour_fuel;; 
+nrel_to_pour_fuel => nrel_main_idtf:
+[заливать топливо*](*<-lang_ru;;*);
+	[to pour fuel*](*<-lang_en;;*);;
+
+concept_basic_fuel_type <= nrel_subdividing: ...
+(*
+->concept_diesel;;  
+->concept_ai_98;;
+->concept_ai_95;;  
+->concept_ai_92;;
+->concept_ai_80;;
+=> nrel_main_idtf: [Разбиение по признаку предлагаемый тип топлива](* <- lang_ru;; *);;
+*);;
+
+concept_basic_fuel_type <= nrel_inclusion:concept_fuel_type;;
+
+concept_basic_fuel_type <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_used_constants: ... 
+	(*
+		->concept_fuel_type;; 
+		->nrel_to_recommend;;
+		->concept_producer_factory;;
+	*);;
+=> nrel_main_idtf: [Опр.(базовый тип топлива)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Тип топлива, рекомендуемый с завода-изготовителя.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_basic_fuel_type <- rrel_key_sc_element: ...
+	(*
+	->rrel_key_sc_element: nrel_use; rrel_main_case; nrel_to_ban; nrel_to_pour_fuel; concept_gasoline; concept_diesel;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Базовое топлива должно быть использовано в основных случаях. Запрещено заливать бензин вместо дизеля, а дизель вместо бензина.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(базововый тип топлива, использовать*, основной случай', запрещать*, заливать топливо*, бензин, дизель)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_basic_fuel_type;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/concept_basic_fuel_type.bmp";;
+		*);;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_basic_fuel_type;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/basic_fuel_type.png";;
+		*);;
+	*);;

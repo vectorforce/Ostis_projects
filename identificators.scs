@@ -1,0 +1,362 @@
+concept_gas_distribution_mechanism
+=> nrel_main_idtf: [газораспределительный механизм]
+(* <- lang_ru;; *);
+[gas distribution mechanism](*<-lang_en;;*);;
+
+concept_cam_mechanism
+=> nrel_main_idtf: [распределительный механизм]
+(* <- lang_ru;; *);
+[cam mechanism](*<-lang_en;;*);;
+
+concept_odometr
+=> nrel_main_idtf: [одометр]
+(* <- lang_ru;; *);
+[odometr](*<-lang_en;;*);;
+
+concept_speedometr
+=> nrel_main_idtf: [спидометр]
+(* <- lang_ru;; *);
+[speedometr](*<-lang_en;;*);;
+
+concept_reference_system
+=> nrel_main_idtf: [система отсчета]
+(* <- lang_ru;; *);
+[reference system](*<-lang_en;;*);;
+
+concept_number
+=> nrel_main_idtf: [число]
+(* <- lang_ru;; *);
+[number](*<-lang_en;;*);;
+
+concept_value
+=> nrel_main_idtf: [величина]
+(* <- lang_ru;; *);
+[value](*<-lang_en;;*);;
+
+concept_axis
+=> nrel_main_idtf: [ось]
+(* <- lang_ru;; *);
+[axis](*<-lang_en;;*);;
+
+concept_automobile
+=> nrel_main_idtf: [автомобиль]
+(* <- lang_ru;; *);
+[automobile](*<-lang_en;;*);;
+
+concept_crank_mechanism
+=> nrel_main_idtf: [кривошипно-шатунный механизм]
+(* <- lang_ru;; *);
+[crank mechanism](*<-lang_en;;*);;
+
+concept_root_neck
+=> nrel_main_idtf: [коренная шейка]
+(* <- lang_ru;; *);
+[root_ neck](*<-lang_en;;*);;
+
+concept_crank_neck
+=> nrel_main_idtf: [шатунная шейка]
+(* <- lang_ru;; *);
+[crank neck](*<-lang_en;;*);;
+
+concept_cheeks
+=> nrel_main_idtf: [щёки]
+(* <- lang_ru;; *);
+[cheeks](*<-lang_en;;*);;
+
+concept_front_output_shaft
+=> nrel_main_idtf: [передняя выходная часть вала]
+(* <- lang_ru;; *);
+[front output shaft](*<-lang_en;;*);;
+
+concept_back_output_shaft
+=> nrel_main_idtf: [задняя выходная часть вала]
+(* <- lang_ru;; *);
+[back output shaft](*<-lang_en;;*);;
+
+concept_counterbalances
+=> nrel_main_idtf: [противовесы]
+(* <- lang_ru;; *);
+[counterbalances](*<-lang_en;;*);;
+
+concept_connecting_rod
+=> nrel_main_idtf: [шатун]
+(* <- lang_ru;; *);
+[connecting rod](*<-lang_en;;*);;
+
+concept_cooler
+=> nrel_main_idtf: [охладитель]
+(* <- lang_ru;; *);
+[cooler](*<-lang_en;;*);;
+
+concept_radiator
+=> nrel_main_idtf: [радиатор]
+(* <- lang_ru;; *);
+[radiator](*<-lang_en;;*);;
+
+concept_motor
+=> nrel_main_idtf: [двигатель]
+(* <- lang_ru;; *);
+[motor](*<-lang_en;;*);;
+
+concept_electronic_circuits
+=> nrel_main_idtf: [электронные схемы]
+(* <- lang_ru;; *);
+[electronic circuits](*<-lang_en;;*);;
+
+concept_ECM
+=> nrel_main_idtf: [блок управления двигателем]
+(* <- lang_ru;; *);
+[ECM](*<-lang_en;;*);;
+
+concept_combined_gearbox_control_unit
+=> nrel_main_idtf: [совмещенный моторно-трансмиссионный блок управления]
+(* <- lang_ru;; *);
+[combined gearbox control unit](*<-lang_en;;*);;
+
+concept_transmission_control_unit
+=> nrel_main_idtf: [блок управления трансмиссией]
+(* <- lang_ru;; *);
+[transmission control unit](*<-lang_en;;*);;
+
+concept_brake_control_unit
+=> nrel_main_idtf: [блок управления тормозной системой]
+(* <- lang_ru;; *);
+[brake control unit](*<-lang_en;;*);;
+
+concept_central_control_module
+=> nrel_main_idtf: [центральный модуль управления]
+(* <- lang_ru;; *);
+[central control module](*<-lang_en;;*);;
+
+concept_central_synchronization_module
+=> nrel_main_idtf: [центральный модуль синхронизации]
+(* <- lang_ru;; *);
+[central synchronization module](*<-lang_en;;*);;
+
+concept_main_electronic_module
+=> nrel_main_idtf: [главный электронный модуль]
+(* <- lang_ru;; *);
+[main electronic module](*<-lang_en;;*);;
+
+concept_body_controller
+=> nrel_main_idtf: [контроллер кузова]
+(* <- lang_ru;; *);
+[body controller](*<-lang_en;;*);;
+
+concept_suspension_control_module
+=> nrel_main_idtf: [модуль управления подвеской]
+(* <- lang_ru;; *);
+[suspension control module](*<-lang_en;;*);;
+
+concept_exhaust_system
+=> nrel_main_idtf: [выхлопная система]
+(* <- lang_ru;; *);
+[exhaust system](*<-lang_en;;*);;
+
+concept_metal_honeycomb
+=> nrel_main_idtf: [металлическая сотовая конструкция]
+(* <- lang_ru;; *);
+[metal honeycomb](*<-lang_en;;*);;
+
+concept_compressor
+=> nrel_main_idtf: [компрессор]
+(* <- lang_ru;; *);
+[metal compressor](*<-lang_en;;*);;
+
+concept_turbocharging_system
+=> nrel_main_idtf: [система турбонаддува]
+(* <- lang_ru;; *);
+[turbocharging system](*<-lang_en;;*);;
+
+concept_turbine
+=> nrel_main_idtf: [турбина]
+(* <- lang_ru;; *);
+[turbine](*<-lang_en;;*);;
+
+concept_shaft
+=> nrel_main_idtf: [вал]
+(* <- lang_ru;; *);
+[shaft](*<-lang_en;;*);;
+
+concept_construction
+=> nrel_main_idtf: [конструкция]
+(* <- lang_ru;; *);
+[construction](*<-lang_en;;*);;
+
+concept_shaft_construction
+=> nrel_main_idtf: [валовая конструкция]
+(* <- lang_ru;; *);
+[shaft construction](*<-lang_en;;*);;
+
+concept_object
+=> nrel_main_idtf: [объект]
+(* <- lang_ru;; *);
+[object](*<-lang_en;;*);;
+
+concept_gas_turbine
+=> nrel_main_idtf: [газовая турбина]
+(* <- lang_ru;; *);
+[gas turbine](*<-lang_en;;*);;
+
+concept_filter
+=> nrel_main_idtf: [фильтр]
+(* <- lang_ru;; *);
+[filter](*<-lang_en;;*);;
+
+concept_cylinder_block
+=> nrel_main_idtf: [блок цилиндров]
+(* <- lang_ru;; *);
+[cylinder block](*<-lang_en;;*);;
+
+nrel_longitudinal_distance
+=> nrel_main_idtf: [продольное расстояние*]
+(* <- lang_ru;; *);
+[longitudinal distance*](*<-lang_en;;*);;
+
+nrel_distance
+=> nrel_main_idtf: [расстояние*]
+(* <- lang_ru;; *);
+[distance*](*<-lang_en;;*);;
+
+nrel_value
+=> nrel_main_idtf: [значение*]
+(* <- lang_ru;; *);
+[value*](*<-lang_en;;*);;
+
+nrel_central_part
+=> nrel_main_idtf: [центральная часть*]
+(* <- lang_ru;; *);
+[central part*](*<-lang_en;;*);;
+
+nrel_part
+=> nrel_main_idtf: [часть*]
+(* <- lang_ru;; *);
+[part*](*<-lang_en;;*);;
+
+nrel_bearing_surface
+=> nrel_main_idtf: [опорная поверхность*]
+(* <- lang_ru;; *);
+[bearing surface*](*<-lang_en;;*);;
+
+nrel_load_capacity
+=> nrel_main_idtf: [грузоподъемность*]
+(* <- lang_ru;; *);
+[load capacity*](*<-lang_en;;*);;
+
+nrel_main_operational_characteristic
+=> nrel_main_idtf: [основная эксплуатационная характеристика*]
+(* <- lang_ru;; *);
+[main operational characteristic*](*<-lang_en;;*);;
+
+nrel_be_out_of_character
+=> nrel_main_idtf: [не соответствовать*]
+(* <- lang_ru;; *);
+[be out of character*](*<-lang_en;;*);;
+
+nrel_state
+=> nrel_main_idtf: [статус*]
+(* <- lang_ru;; *);
+[state*](*<-lang_en;;*);;
+
+nrel_kinetic_energy
+=> nrel_main_idtf: [кинетическая энергия*]
+(* <- lang_ru;; *);
+[kinetic energy*](*<-lang_en;;*);;
+
+nrel_inertial_momen
+=> nrel_main_idtf: [инерционный момент*]
+(* <- lang_ru;; *);
+[inertial momen*](*<-lang_en;;*);;
+
+nrel_traffic_fumes
+=> nrel_main_idtf: [выхлопные газы*]
+(* <- lang_ru;; *);
+[traffic fumes*](*<-lang_en;;*);;
+
+nrel_platinum_iridium_alloy
+=> nrel_main_idtf: [платиноиридиевый сплав*]
+(* <- lang_ru;; *);
+[platinum iridium alloy*](*<-lang_en;;*);;
+
+nrel_energy_of_gases
+=> nrel_main_idtf: [энергия газов*]
+(* <- lang_ru;; *);
+[energy of gases*](*<-lang_en;;*);;
+
+concept_vector
+=> nrel_main_idtf: [вектор]
+(* <- lang_ru;; *);
+[vector](*<-lang_en;;*);;
+
+concept_cam
+=> nrel_main_idtf: [кулачок]
+(* <- lang_ru;; *);
+[cam](*<-lang_en;;*);;
+
+concept_valve
+=> nrel_main_idtf: [клапан]
+(* <- lang_ru;; *);
+[valve](*<-lang_en;;*);;
+
+nrel_rotating_elements
+=> nrel_main_idtf: [вращающийся элемент*]
+(* <- lang_ru;; *);
+[rotating elements*](*<-lang_en;;*);;
+
+concept_sensor
+=> nrel_main_idtf: [датчик]
+(* <- lang_ru;; *);
+[sensor](*<-lang_en;;*);;
+
+concept_actuator
+=> nrel_main_idtf: [исполнительное устройство*]
+(* <- lang_ru;; *);
+[actuator*](*<-lang_en;;*);;
+
+concept_head_gasket
+=> nrel_main_idtf: [прокладка головки блока]
+(* <- lang_ru;; *);
+[head gasket](*<-lang_en;;*);;
+
+concept_injector
+=> nrel_main_idtf: [форсунка]
+(* <- lang_ru;; *);
+[injector](*<-lang_en;;*);;
+
+concept_spark_plug
+=> nrel_main_idtf: [свеча зажигания]
+(* <- lang_ru;; *);
+[spark plug](*<-lang_en;;*);;
+
+concept_spring
+=> nrel_main_idtf: [пружина]
+(* <- lang_ru;; *);
+[spring](*<-lang_en;;*);;
+
+concept_energy
+=> nrel_main_idtf: [энергия]
+(* <- lang_ru;; *);
+[energy](*<-lang_en;;*);;
+
+concept_braking
+=> nrel_main_idtf:[торможение]
+(*<-lang_ru;;*);
+[braking](*<-lang_en;;*);;
+
+concept_chemical_reaction
+=> nrel_main_idtf:[химическая реакция]
+(*<-lang_ru;;*);
+[chemical reaction](*<-lang_en;;*);;
+
+concept_nuclear_reaction
+=> nrel_main_idtf:[ядерная реакция]
+(*<-lang_ru;;*);
+[nuclear reaction](*<-lang_en;;*);;
+
+
+
+
+
+
+
+

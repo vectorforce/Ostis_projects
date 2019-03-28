@@ -1,0 +1,203 @@
+sc_node_not_relation -> concept_internal_combustion_engine;;
+concept_internal_combustion_engine => nrel_main_idtf:
+[двигатель внутреннего сгорания](*<-lang_ru;;*);
+[internal combustion engine](*<-lang_en;;*);
+	 [ДВС](*<-lang_ru;;*);;
+sc_node_norole_relation -> nrel_combustion;;
+nrel_combustion => nrel_main_idtf:
+[горение*](*<-lang_ru;;*);
+[сгорание*](*<-lang_ru;;*);
+	 [combustion*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_combustion_chamber;;
+concept_combustion_chamber => nrel_main_idtf:
+[камера сгорания](*<-lang_ru;;*);
+     [combustion chamber](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_thermal_energy;;
+nrel_thermal_energy => nrel_main_idtf:
+[тепловая энергия*](*<-lang_ru;;*);
+	 [thermal energy*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_engine_with_external_mixture_formation;;
+concept_engine_with_external_mixture_formation => nrel_main_idtf:
+[двигатель с внешним смесеобразованием](*<-lang_ru;;*);
+     [engine with external mixture formation](*<-lang_en;;*);;
+sc_node_not_relation -> concept_engine_with_internal_mixture_formation;;
+concept_engine_with_internal_mixture_formation => nrel_main_idtf:
+[двигатель с внутренним смесеобразованием](*<-lang_ru;;*);
+     [engine with internal mixture formation](*<-lang_en;;*);;
+sc_node_not_relation -> concept_liquid_cooled_engine;;
+concept_liquid_cooled_engine => nrel_main_idtf:
+[двигатель с жидкостным охлаждением](*<-lang_ru;;*);
+     [liquid cooled engine](*<-lang_en;;*);;
+sc_node_not_relation -> concept_air_cooled_engine;;
+concept_air_cooled_engine => nrel_main_idtf:
+[двигатель с воздушным охлаждением](*<-lang_ru;;*);
+     [air-cooled engine](*<-lang_en;;*);;
+sc_node_not_relation -> concept_single_cylinder_engine;;
+concept_single_cylinder_engine => nrel_main_idtf:
+[одноцилиндровый двигатель](*<-lang_ru;;*);
+     [single-cylinder engine](*<-lang_en;;*);;
+sc_node_not_relation -> concept_in_line_engine;;
+concept_in_line_engine => nrel_main_idtf:
+[рядный двигатель](*<-lang_ru;;*);
+     [in-line engine](*<-lang_en;;*);;
+sc_node_not_relation -> concept_radial_engine;;
+concept_radial_engine => nrel_main_idtf:
+[звездообразный двигатель](*<-lang_ru;;*);
+     [radial engine](*<-lang_en;;*);;
+sc_node_not_relation -> concept_rotary_piston_engine;;
+concept_rotary_piston_engine => nrel_main_idtf:
+[роторно-поршневой двигатель](*<-lang_ru;;*);
+     [rotary-piston engine](*<-lang_en;;*);;
+sc_node_not_relation -> concept_engine_with_forced_ignition_from_spark;;
+concept_engine_with_forced_ignition_from_spark => nrel_main_idtf:
+[двигатель с принудительным зажиганием от искры](*<-lang_ru;;*);
+     [engine with forced ignition from spark](*<-lang_en;;*);;
+sc_node_not_relation -> concept_engine_with_ignition_from_compression;;
+concept_engine_with_ignition_from_compression => nrel_main_idtf:
+[двигатель с самовоспламенением от сжатия](*<-lang_ru;;*);
+     [engine with ignition from compression](*<-lang_en;;*);;
+sc_node_not_relation -> concept_multi_cylinder_engine;;
+concept_multi_cylinder_engine => nrel_main_idtf:
+[многоцилиндровый двигатель](*<-lang_ru;;*);
+     [multi-cylinder engine](*<-lang_en;;*);;
+sc_node_not_relation -> concept_two_cylinder_engine;;
+concept_two_cylinder_engine => nrel_main_idtf:
+[двухцилиндровый двигатель](*<-lang_ru;;*);
+     [two-cylinder engine](*<-lang_en;;*);;
+sc_node_not_relation -> concept_four_cylinder_engine;;
+concept_four_cylinder_engine => nrel_main_idtf:
+[четырёхцилиндровый двигатель](*<-lang_ru;;*);
+     [four-cylinder engine](*<-lang_en;;*);;
+sc_node_not_relation -> concept_effect_of_thermal_expansion_of_gases;;
+concept_effect_of_thermal_expansion_of_gases => nrel_main_idtf:
+[эффект теплового расширения газов](*<-lang_ru;;*);
+     [effect of thermal expansion of gases](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_piston_movement;;
+nrel_piston_movement => nrel_main_idtf:
+[перемещение поршня*](*<-lang_ru;;*);
+	 [piston movement*](*<-lang_en;;*);;
+sc_node_role_relation->rrel_percent;;
+rrel_percent => nrel_main_idtf:
+[процент'](*<-lang_ru;;*);
+	 [percent'](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_coefficient_of_efficiency;;
+nrel_coefficient_of_efficiency => nrel_main_idtf:
+[коэффициент полезного действия*](*<-lang_ru;;*);
+[КПД*](*<-lang_ru;;*);
+	 [coefficient of efficiency*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_gas_turbine_internal_combustion_engine;;
+concept_gas_turbine_internal_combustion_engine => nrel_main_idtf:
+[газотурбинный двигатель внутреннего сгорания](*<-lang_ru;;*);
+     [gas turbine internal combustion engine](*<-lang_en;;*);;
+sc_node_not_relation -> concept_rotary_piston_internal_combustion_engine;;
+concept_rotary_piston_internal_combustion_engine => nrel_main_idtf:
+[роторно-поршневой двигатель внутреннего сгорания](*<-lang_ru;;*);
+     [rotary-piston internal combustion engine](*<-lang_en;;*);;
+	 
+concept_internal_combustion_engine <= nrel_subdividing: ...
+(*
+->concept_piston_internal_combustion_engine;;  
+->concept_gas_turbine_internal_combustion_engine;;
+->concept_rotary_piston_internal_combustion_engine;;
+=> nrel_main_idtf: [Разбиение по признаку устройство и принцип работы](* <- lang_ru;; *);;
+*);;
+
+concept_internal_combustion_engine <= nrel_subdividing: ...
+(*
+->concept_engine_with_external_mixture_formation;;  
+->concept_engine_with_internal_mixture_formation;;
+=>nrel_main_idtf: [Разбиение по признаку способ приготовления горючей смеси](* <- lang_ru;; *);;
+*);;
+
+concept_internal_combustion_engine <= nrel_subdividing: ...
+(*
+->concept_liquid_cooled_engine;;  
+->concept_air_cooled_engine;;
+=>nrel_main_idtf: [Разбиение по признаку способ охлаждения](* <- lang_ru;; *);;
+*);;
+
+concept_internal_combustion_engine <= nrel_subdividing: ...
+(*
+->concept_single_cylinder_engine;;  
+->concept_in_line_engine;;
+->concept_radial_engine;;
+->concept_rotary_piston_engine;;
+=>nrel_main_idtf: [Разбиение по признаку расположение цилиндров](* <- lang_ru;; *);;
+*);;
+
+concept_internal_combustion_engine <= nrel_subdividing: ...
+(*
+->concept_engine_with_forced_ignition_from_spark;;  
+->concept_engine_with_ignition_from_compression;;
+=>nrel_main_idtf: [Разбиение по признаку способ воспламенения горючей смеси](* <- lang_ru;; *);;
+*);;
+
+concept_internal_combustion_engine <= nrel_subdividing: ...
+(*
+->concept_two_stroke_engine;;  
+->concept_four_stroke_engine;;
+=>nrel_main_idtf: [Разбиение по признаку способ осуществления рабочего цикла](* <- lang_ru;; *);;
+*);;
+
+concept_internal_combustion_engine <= nrel_subdividing: ...
+(*
+->concept_multi_cylinder_engine;;  
+->concept_two_cylinder_engine;;
+->concept_four_cylinder_engine;;
+=>nrel_main_idtf: [Разбиение по признаку количество цилиндров](* <- lang_ru;; *);;
+*);;
+
+concept_internal_combustion_engine <= nrel_inclution: concept_engine;;
+
+concept_internal_combustion_engine <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_used_constants: ... 
+	(*
+		->concept_engine;; 
+		->concept_fuel_type;; 
+		->nrel_combustion;;
+		->concept_combustion_chamber;; 
+		->nrel_thermal_energy;; 
+		->nrel_work;;
+	*);;
+=> nrel_main_idtf: [Опр.(двигатель внутреннего сгорания)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Двигатель, в котором топливо сгорает непосредственно в рабочей камере двигателя. Преобразует тепловую энергию сгорания топлива в механическую работу.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+	
+concept_internal_combustion_engine <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: concept_effect_of_thermal_expansion_of_gases; nrel_combustion; concept_fuel_air_mixture; nrel_piston_movement; concept_engine_cylinder;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Принцип работы ДВС основан на эффекте теплового расширения газов, возникающего при сгорании топливно-воздушной смеси и обеспечивающего перемещение поршня в цилиндре.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(ДВС, эффект теплового расширения газов, сгорание*, топливно-воздушная смесь, перемещение поршня*, цилиндр)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_coefficient_of_efficiency; rrel_percent;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [ДВС имеет небольшой коэффициент полезного действия - порядка 40%](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(ДВС, коэффициент полезного действия*, процент')](*<-lang_ru;;*);;
+	<-rrel_theorem:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_internal_combustion_engine;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/concept_internal_combustion_engine.bmp";;
+		*);;
+	*);;

@@ -1,0 +1,114 @@
+sc_node_not_relation -> car;;
+car => nrel_main_idtf:
+[автомобиль](*<-lang_ru;;*);
+     [car](*<-lang_en;;*);;
+car => nrel_idtf:
+[automobile](*<-lang_en;;*);
+[машина](*<-lang_ru;;*);
+[vehicle](*<-lang_en;;*);
+     [auto](*<-lang_en;;*);;
+
+car <-rrel_key_sc_element: ...
+(*
+<- definition;;
+<=nrel_used_constants: ... 
+	(*
+		->concept_mechanical_vehicle;; 
+		->concept_transportation;; 
+	*);;
+=> nrel_main_idtf: [Опр.(автомобиль)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+(*
+		->rrel_example:
+		[<b>Автомобиль</b>  - это моторное дорожное <sc_element sys_idtf="concept_mechanical_vehicle">транспортное средство</sc_element> , используемое для <sc_element sys_idtf="concept_transportation">перевозки</sc_element>  людей или грузов.](*<-lang_ru;; => nrel_format: format_html;;*);;
+*);;
+*);;
+
+car <- rrel_key_sc_element: ... 
+     (*
+        ->rrel_key_sc_element: concept_car; concept_wheel;;
+        <-statement;;
+        <=nrel_sc_text_translation: ... (* -> [Каждый <sc_element sys_idtf="concept_car">автомобиль</sc_element>  имеет не менее четырех <sc_element sys_idtf="concept_wheel">колес</sc_element> .](*<-lang_ru;; => nrel_format: format_html;;*);; *);;
+        =>nrel_main_idtf: [Утв.(автомобиль, колесо)](*<-lang_ru;;*);;
+	   <-rrel_axiom:concept_IHS_by_car;;
+	   <-concept_general_form_statement;;
+     *);
+... 
+     (*
+        ->rrel_key_sc_element: concept_car; concept_registration_plate;;
+        <-statement;;
+        <=nrel_sc_text_translation: ... (* -> [Каждый <sc_element sys_idtf="concept_car">автомобиль</sc_element>  должен иметь индивидуальный <sc_element sys_idtf="concept_registration_plate">регистрационный знак</sc_element>  (или временный номерной знак).](*<-lang_ru;; => nrel_format: format_html;;*);;*);;
+        =>nrel_main_idtf: [Утв.(автомобиль, регистрационный знак)](*<-lang_ru;;*);;
+	   <-rrel_axiom:concept_IHS_by_car;;
+	   <-concept_general_form_statement;;
+     *);
+... 
+     (*
+        ->rrel_key_sc_element: concept_car; concept_axis; concept_wheel;;
+        <-statement;;
+        <=nrel_sc_text_translation: ... (* -> [<sc_element sys_idtf="concept_wheel">Колеса</sc_element> <sc_element sys_idtf="concept_car">автомобиля</sc_element>  располагаются не менее чем на двух <sc_element sys_idtf="concept_axis">осях</sc_element> .](*<-lang_ru;; => nrel_format: format_html;;*);; *);;
+        =>nrel_main_idtf: [Утв.(автомобиль, колесо, ось)](*<-lang_ru;;*);;
+	   <-rrel_axiom:concept_IHS_by_car;;
+	   <-concept_general_form_statement;;
+     *);
+... 
+     (*
+        ->rrel_key_sc_element: concept_car; concept_component;;
+        <-statement;;
+        <=nrel_sc_text_translation: ... (* -> [
+				<p>Система <sc_element sys_idtf="concept_car">автомобиля</sc_element>  включает следующие <sc_element sys_idtf="concept_component">компоненты</sc_element>  (системы):</p> 
+
+	<p>1. Двигатель;</p> 
+
+	<p>2. Трансмиссия;</p>
+
+	<p>3. Ходовая часть (колеса, шины);</p>
+
+	<p>4. Тормозная система;</p>
+
+	<p>5. Подвеска (передняя, задняя);</p>
+
+	<p>6. Рулевое управление;</p>
+
+	<p>7. Электрооборудование, внешние световые приборы;</p>
+
+	<p>8. Кузов, дополнительное оборудование и прочие элементы конструкции транспортного средства.</p>](*<-lang_ru;; => nrel_format: format_html;;*);; *);;
+
+        =>nrel_main_idtf: [Утв.(автомобиль, компоненты)](*<-lang_ru;;*);;
+	   <-rrel_axiom:concept_IHS_by_car;;
+	   <-concept_statement_of_the_defining_type;;
+     *);
+...     
+	(*
+        ->rrel_key_sc_element: concept_car; concept_engine;;
+        <-statement;;
+        <=nrel_sc_text_translation: ... (* -> [<sc_element sys_idtf="concept_engine">Двигатель</sc_element>  <sc_element sys_idtf="concept_car">автомобиля</sc_element>  - его сердце. Наибольшее распространение получили двигатели внутреннего сгорания. Однако в последние годы завоевывают популярность элекрические и гибридные двигатели.](*<-lang_ru;; => nrel_format: format_html;;*);;*);;
+        =>nrel_main_idtf: [Утв.(автомобиль, двигатель)](*<-lang_ru;;*);;
+	   <-rrel_axiom:concept_IHS_by_car;;
+	   <-concept_general_form_statement;;
+     *);
+... 
+    (*
+       ->rrel_key_sc_element: concept_car; concept_engine;;
+        <-statement;;
+        <=nrel_sc_text_translation: ... (* -> [Каждый <sc_element sys_idtf="concept_car">автомобиль</sc_element>  приводится в движение <sc_element sys_idtf="concept_engine">двигателем</sc_element> .](*<-lang_ru;; => nrel_format: format_html;;*);; *);;
+        =>nrel_main_idtf: [Утв.(автомобиль, двигатель)](*<-lang_ru;;*);;
+        <-rrel_axiom:concept_IHS_by_car;;
+	   <-concept_statement_of_the_defining_type;;
+     *);;
+
+
+car->rrel_example: ...;;
+
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: car;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/car.png";;
+		*);;
+	*);;
+
+
+

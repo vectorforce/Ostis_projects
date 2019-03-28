@@ -1,0 +1,64 @@
+concept_catalyst
+	=> nrel_main_idtf:
+	[катализатор] (* <- lang_ru;; *);
+	[catalyst] (* <- lang_en;; *);
+	=> nrel_idtf: [множество катализаторов] (* <- lang_ru;; *);
+              [catalyst] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_catalyst_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (катализатор)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Катализатор</b> (или каталитический нейтрализатор) – это <sc_element sys_idtf="concept_detail">деталь</sc_element> <sc_element sys_idtf="concept_exhaust_system">выхлопной системы</sc_element>, которая снижает содержание вредных веществ в <sc_element sys_idtf="nrel_traffic_fumes">выхлопных газах</sc_element>.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_catalyst;; -> concept_exhaust_system;; -> nrel_traffic_fumes;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_catalyst
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (катализатор, сотовая конструкция)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_exhaust_system;;
+		<-concept_general_form_statement;;
+		->rrel_key_sc_element: concept_metal_honeycomb;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [Внутри корпуса <b>катализатора</b> расположена либо керамическая, либо <sc_element sys_idtf="concept_metal_honeycomb">металлическая сотовая конструкция</sc_element> на которую нанесен тонкий слой <sc_element sys_idtf="nrel_platinum_iridium_alloy">платиноиридиевого сплава</sc_element>. <sc_element sys_idtf="concept_metal_honeycomb">Сотовая конструкция</sc_element> в <b>катализаторе</b> необходима, чтобы увеличить площадь контакта <sc_element sys_idtf="nrel_traffic_fumes">выхлопных газов</sc_element> с поверхностью на которой нанесен каталитический слой. В результате происходит химическая реакция окисления CO и CH, и на выходе получаем вполне безобидные CO2 и N2.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+	
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://catalyst.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<- concept_exhaust_system;
+=> nrel_composite_part: concept_metal_honeycomb;
+=> nrel_composite_part: nrel_platinum_iridium_alloy;
+
+<-sc_node_not_relation;;

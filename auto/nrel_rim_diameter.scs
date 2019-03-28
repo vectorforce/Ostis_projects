@@ -1,0 +1,54 @@
+sc_node_not_relation -> nrel_rim_diameter;;
+nrel_rim_diameter => nrel_main_idtf:
+[диаметр обода*](*<-lang_ru;;*);
+	[rim diameter*](*<-lang_en;;*);;
+
+nrel_rim_diameter <- rrel_key_sc_element:...
+(*
+<- definition;;
+<= nrel_used_constants: ...
+(*
+-> nrel_diameter;;
+-> concept_disc;;
+*);;
+=> nrel_main_idtf: [Опр.(диаметр обода*)](*<-lang_ru;;*);;
+<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example: [Диаметр обода - монтажный диаметр обода колесного диска, измеренный в дюймах.](*<-lang_ru;;*);; 
+*);; 
+*);;
+
+nrel_rim_diameter=> nrel_first_domain: concept_amount;;
+nrel_rim_diameter=> nrel_second_domain: concept_rim;;
+nrel_rim_diameter=> nrel_domain_of_definition: ...
+	(*
+		<=nrel_combination: ...													
+			(*
+				->concept_amount;;
+				->concept_rim;;
+			*);;
+	*);;
+
+concept_oriented_relation->nrel_rim_diameter;;
+concept_binary_relation->nrel_rim_diameter;;
+concept_antisymmetric_relation->nrel_rim_diameter;;
+concept_antitransitive_relation->nrel_rim_diameter;;
+concept_antireflexive_relation->nrel_rim_diameter;;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: nrel_rim_diameter ;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/diameter_rim.bmp";;
+		*);;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: nrel_rim_diameter ;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/rim_diameter.gif";;
+		*);;
+	*);;

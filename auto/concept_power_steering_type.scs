@@ -1,0 +1,83 @@
+sc_node_not_relation -> concept_power_steering_type;;
+concept_power_steering_type => nrel_main_idtf:
+[тип усилителя руля](*<-lang_ru;;*);
+[тип системы рулевого усилителя](*<-lang_ru;;*);
+[wheel strengthener type](*<-lang_en;;*);
+[тип усилителя рулевого управления](*<-lang_ru;;*);
+	[power steering type](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_electric_power_steering;;
+concept_electric_power_steering => nrel_main_idtf:
+[электроусилитель руля](*<-lang_ru;;*);
+[ЭУР](*<-lang_ru;;*);
+	[electric power steering](*<-lang_en;;*);;
+sc_node_not_relation -> concept_electro_hydraulic_power_steering;;
+concept_electro_hydraulic_power_steering => nrel_main_idtf:
+[электрогидроусилитель руля](*<-lang_ru;;*);
+[ЭГУР](*<-lang_ru;;*);
+	[electro hydraulic power steering](*<-lang_en;;*);;
+sc_node_not_relation -> concept_hydraulic_power_steering;;
+concept_hydraulic_power_steering => nrel_main_idtf:
+[гидроусилитель руля](*<-lang_ru;;*);
+[ГУР](*<-lang_ru;;*);
+	[hydraulic power steering](*<-lang_en;;*);;
+sc_node_not_relation -> concept_mechanical_power_steering;;
+concept_mechanical_power_steering => nrel_main_idtf:
+[механический усилитель руля](*<-lang_ru;;*);
+	[mechanical power steering](*<-lang_en;;*);;
+sc_node_not_relation -> concept_pneumatic_power_steering;;
+concept_pneumatic_power_steering => nrel_main_idtf:
+[пневмоусилитель руля](*<-lang_ru;;*);
+	[pneumatic power steering](*<-lang_en;;*);;
+sc_node_role_relation->rrel_rare_car;;
+rrel_rare_car => nrel_main_idtf:
+[раритетный автомобиль'](*<-lang_ru;;*);
+	 [rare car'](*<-lang_en;;*);;
+	 
+concept_power_steering_type <= nrel_subdividing: ...
+(*
+->concept_electric_power_steering;;  
+->concept_electro_hydraulic_power_steering;;
+->concept_hydraulic_power_steering;;
+->concept_mechanical_power_steering;;
+->concept_pneumatic_power_steering;;
+=> nrel_main_idtf: [Разбиение по признаку устройство и принцип работы](* <- lang_ru;; *);;
+*);;
+
+//определение и утверждения используются в nrel_power_steering	
+concept_power_steering_type <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_used_constants: ... 
+	(*
+		->nrel_power_steering;;
+		->nrel_to_use;;
+		->concept_car;; 
+	*);;
+=> nrel_main_idtf: [Опр.(тип усилителя рулевого управления)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Усилитель рулевого управления, использумый в данном автомобиле.](*<-lang_ru;;*);; 
+	*);; 
+*);;		
+
+concept_power_steering_type <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: rrel_rare_car; nrel_to_use; concept_pneumatic_power_steering;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В автомобилях 30-40-ых годовов прошлого столетия преимущественно использовался пневмоусилитель руля.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(раритетный автомобиль', использовать*, пневмоусилитель руля)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);; 
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_power_steering_type;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/concept_power_steering_type.bmp";;
+		*);;
+	*);;

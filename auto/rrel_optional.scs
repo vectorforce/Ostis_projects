@@ -1,0 +1,42 @@
+
+rrel_optional <- binary_relation;;
+rrel_optional <- oriented_relation;;
+rrel_optional <- antisymmetric_relation;;
+rrel_optional <- antitransitive_relation;;
+rrel_optional <- antireflexive_relation;;
+
+/*rrel_optional => nrel_second_domain: concept_number;;
+
+rrel_optional => nrel_domain_of_definition: ...
+	(*
+		<= nrel_union: ...																	
+			(*
+				->concept_number;;
+			*);;
+	*);;*/
+
+nrel_optional <- rrel_key_sc_element:...
+(*
+<- definition;;
+<= nrel_used_constants: ...
+(*
+->nrel_description;;
+->concept_kit;;
+->nrel_install;;
+->concept_customer;;
+*);;
+=> nrel_main_idtf: [Опр.(опциональный')](*<-lang_ru;;*);;
+<= nrel_sc_text_translation:...
+    (*
+        -> rrel_example: [Опциональный' - описание понятия, не входящего в основной комплект и устанавливаемый по желанию заказчика.](*<-lang_ru;;*);; 
+*);; 
+*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: rrel_optional;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/rrel_optional.jpg";;
+		*);;
+	*);;

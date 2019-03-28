@@ -1,0 +1,24 @@
+
+concept_tire <-rrel_key_sc_element:...(*<- definition;;<=nrel_used_constants: concept_disc; concept_sheath;; => nrel_main_idtf: [Опр.(шина)](*<-lang_ru;;*);; <= nrel_sc_text_translation: ...
+(*-> [Шина - это упругая резино-металло-тканевую оболочку, установленная на обод диска.](*<-lang_ru;;*);; *);; *);;
+
+concept_tire <= nrel_inclution: concept_wheel_element;;
+
+concept_tire <- rrel_key_sc_element: ... 
+     (*
+        ->rrel_key_sc_element: concept_wheel;;
+        ->statement;;
+        <=nrel_sc_text_translation: ... (* -> [Шина является одним из основных элементом колеса.](*<-lang_ru;;*);; *);;
+        =>nrel_main_idtf: [Утв.(шина, колесо)](*<-lang_ru;;*);;
+	   <-rrel_axiom:concept_IHS_by_car;;
+	   <-concept_general_form_statement;;
+     *);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_tire;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/concept_tire.jpg";;
+		*);;
+	*);;

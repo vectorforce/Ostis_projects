@@ -1,0 +1,245 @@
+sc_node_not_relation -> concept_electric_engine;;
+concept_electric_engine => nrel_main_idtf:
+[тяговой электродвигатель](*<-lang_ru;;*);
+[тяговой электромотор](*<-lang_ru;;*);
+[traction motor](*<-lang_en;;*);
+[электродвигатель](*<-lang_ru;;*);
+	 [electric engine](*<-lang_en;;*);;	
+sc_node_norole_relation -> nrel_electric_energy;;
+nrel_electric_energy => nrel_main_idtf:
+[электрическая энергия*](*<-lang_ru;;*);
+     [electric energy*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_AC_motor;;
+concept_AC_motor => nrel_main_idtf:
+[двигатель переменного тока](*<-lang_ru;;*);
+     [AC motor](*<-lang_en;;*);;
+sc_node_not_relation -> concept_DC_motor;;
+concept_DC_motor => nrel_main_idtf:
+[двигатель постоянного тока](*<-lang_ru;;*);
+[direct current motor](*<-lang_en;;*);
+     [DC motor](*<-lang_en;;*);;
+sc_node_not_relation -> concept_single_phase_motor;;
+concept_single_phase_motor => nrel_main_idtf:
+[однофазный электродвигатель](*<-lang_ru;;*);
+     [single-phase motor](*<-lang_en;;*);;
+sc_node_not_relation -> concept_two_phase_motor;;
+concept_two_phase_motor => nrel_main_idtf:
+[двухфазный электродвигатель](*<-lang_ru;;*);
+     [two-phase motor](*<-lang_en;;*);;
+sc_node_not_relation -> concept_three_phase_motor;;
+concept_three_phase_motor => nrel_main_idtf:
+[трехфазный электродвигатель](*<-lang_ru;;*);
+     [three-phase motor](*<-lang_en;;*);;
+sc_node_not_relation -> concept_collector_motor;;
+concept_collector_motor => nrel_main_idtf:
+[коллекторный электродвигатель](*<-lang_ru;;*);
+     [collector motor](*<-lang_en;;*);;
+sc_node_not_relation -> concept_brushless_motor;;
+concept_brushless_motor => nrel_main_idtf:
+[двухфазный электродвигатель](*<-lang_ru;;*);
+     [brushless motor](*<-lang_en;;*);;
+sc_node_not_relation -> concept_synchronous_motor;;
+concept_synchronous_motor => nrel_main_idtf:
+[синхронный электродвигатель](*<-lang_ru;;*);
+     [synchronous motor](*<-lang_en;;*);;
+sc_node_not_relation -> concept_asynchronous_motor;;
+concept_asynchronous_motor => nrel_main_idtf:
+[асинхронный электродвигатель](*<-lang_ru;;*);
+     [asynchronous motor](*<-lang_en;;*);;
+sc_node_not_relation -> concept_motor_with_excitation_from_permanent_magnets;;
+concept_motor_with_excitation_from_permanent_magnets => nrel_main_idtf:
+[электродвигатель с возбуждением от постоянных магнитов](*<-lang_ru;;*);
+     [motor with excitation from permanent magnets](*<-lang_en;;*);;
+sc_node_not_relation -> concept_motor_with_parallel_excitation;;
+concept_motor_with_parallel_excitation => nrel_main_idtf:
+[электродвигатель с параллельным возбуждением](*<-lang_ru;;*);
+     [motor with parallel excitation](*<-lang_en;;*);;
+sc_node_not_relation -> concept_motor_with_serial_excitation;;
+concept_motor_with_serial_excitation => nrel_main_idtf:
+[электродвигатель с последовательным возбуждением](*<-lang_ru;;*);
+     [motor with serial excitation](*<-lang_en;;*);;
+sc_node_not_relation -> concept_motor_with_series_parallel_excitation;;
+concept_motor_with_series_parallel_excitation => nrel_main_idtf:
+[электродвигатель с последовательно-параллельным возбуждением](*<-lang_ru;;*);
+     [motor with series-parallel excitation](*<-lang_en;;*);;
+sc_node_role_relation->rrel_modern_motor;;
+rrel_modern_motor => nrel_main_idtf:
+[современный электродвигатель'](*<-lang_ru;;*);
+	 [modern motor'](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_work_basis;;
+nrel_work_basis => nrel_main_idtf:
+[основа работы*](*<-lang_ru;;*);
+	 [work basis*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_electromagnetic_induction_principle;;
+concept_electromagnetic_induction_principle => nrel_main_idtf:
+[принцип электромагнитной индукции](*<-lang_ru;;*);
+     [electromagnetic induction principle](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_assignment;;
+nrel_assignment => nrel_main_idtf:
+[задача*](*<-lang_ru;;*);
+[назначение*](*<-lang_ru;;*);
+	 [assignment*](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_torque_transmission;;
+nrel_torque_transmission => nrel_main_idtf:
+[передача крутящего момента*](*<-lang_ru;;*);
+	 [torque transmission*](*<-lang_en;;*);;
+nrel_torque => nrel_main_idtf:
+[максимальный крутящий момент*](* <- lang_ru;; *);
+     [max torque*](* <- lang_en;; *);;
+sc_node_not_relation -> concept_electric_car;;
+concept_electric_car => nrel_main_idtf:
+[электромобиль](*<-lang_ru;;*);
+     [electric car](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_characteristic;;
+nrel_characteristic => nrel_main_idtf:
+[характеристика*](*<-lang_ru;;*);
+	 [characteristic*](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_motor_voltage;;
+nrel_motor_voltage => nrel_main_idtf:
+[напряжение электродвигателя*](*<-lang_ru;;*);
+	 [motor voltage*](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_motor_amperage;;
+nrel_motor_amperage => nrel_main_idtf:
+[ток электродвигателя*](*<-lang_ru;;*);
+[сила тока электродвигателя*](*<-lang_ru;;*);
+	 [motor amperage*](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_motor_rotation_frequency;;
+nrel_motor_rotation_frequency => nrel_main_idtf:
+[частота вращения электродвигателя*](*<-lang_ru;;*);
+	 [motor rotation frequency*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_Tesla;;
+concept_Tesla => nrel_main_idtf:
+[Тесла](*<-lang_ru;;*);
+[Tesla Motors](*<-lang_en;;*);
+	 [Tesla](*<-lang_en;;*);;
+sc_node_not_relation -> concept_Tesla_Model_S;;
+concept_Tesla_Model_S => nrel_main_idtf:
+	 [Tesla Model S](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_to_convert;;
+nrel_to_convert => nrel_main_idtf:
+[преобразовывать*](*<-lang_ru;;*);
+	 [to convert*](*<-lang_en;;*);;
+	 
+concept_electric_engine <= nrel_subdividing: ...
+(*
+->concept_AC_motor;;  
+->concept_DC_motor;;
+=> nrel_main_idtf: [Разбиение по признаку род питающего напряжения](* <- lang_ru;; *);;
+*);;
+
+concept_electric_engine <= nrel_subdividing: ...
+(*
+->concept_single_phase_motor;;  
+->concept_two_phase_motor;;
+->concept_three_phase_motor;;
+=> nrel_main_idtf: [Разбиение по признаку число фаз питающей сети](* <- lang_ru;; *);;
+*);;
+
+concept_electric_engine <= nrel_subdividing: ...
+(*
+->concept_collector_motor;;  
+->concept_brushless_motor;;
+=> nrel_main_idtf: [Разбиение по признаку конструктивное исполнение](* <- lang_ru;; *);;
+*);;
+
+concept_electric_engine <= nrel_subdividing: ...
+(*
+->concept_synchronous_motor;;  
+->concept_asynchronous_motor;;
+=> nrel_main_idtf: [Разбиение по признаку принцип работы](* <- lang_ru;; *);;
+*);;
+
+concept_electric_engine <= nrel_subdividing: ...
+(*
+->concept_motor_with_excitation_from_permanent_magnets;;  
+->concept_motor_with_parallel_excitation;;
+->concept_motor_with_serial_excitation;;
+->concept_motor_with_series_parallel_excitation;;
+=> nrel_main_idtf: [Разбиение по признаку способ возбуждения](* <- lang_ru;; *);;
+*);;
+
+concept_electric_engine <= nrel_inclution: concept_engine;;
+
+concept_electric_engine <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_used_constants: ... 
+	(*
+		->concept_engine;; 
+		->nrel_to_convert;; 
+		->nrel_electric_energy;; 
+		->nrel_mechanical_energy;;
+	*);;
+=> nrel_main_idtf: [Опр.(электродвигатель)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [<b>Электродвигатель</b> - <sc_element sys_idtf="concept_engine">двигатель</sc_element>, который <sc_element sys_idtf="nrel_to_convert">преобразует</sc_element> <sc_element sys_idtf="nrel_electric_energy">электрическую энергию</sc_element> в <sc_element sys_idtf="nrel_mechanical_energy">механическую энергию движения</sc_element>.](*<-lang_ru;; => nrel_format: format_html;;*);; 
+	*);; 
+*);;	
+
+concept_fuel_system_type <- rrel_key_sc_element: ...
+	(*
+	->rrel_key_sc_element: nrel_work_basis; rrel_modern_motor; concept_electromagnetic_induction_principle;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В <sc_element sys_idtf="nrel_work_basis">основу работы</sc_element> <sc_element sys_idtf="rrel_modern_motor">современного электродвигателя</sc_element> положен <sc_element sys_idtf="concept_electromagnetic_induction_principle">принцип электромагнитной индукции</sc_element>.](*<-lang_ru;; => nrel_format: format_html;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(электродвигатель, основа работы*, современный электродвигатель', принцип электромагнитной индукции)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...	
+	(*
+	->rrel_key_sc_element: nrel_coefficient_of_efficiency; rrel_modern_motor; rrel_percent;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [<sc_element sys_idtf="nrel_coefficient_of_efficiency">Коэффициент полезного действия</sc_element> <sc_element sys_idtf="rrel_modern_motor">современного тягового электродвигателя</sc_element> может составлять 85-95<sc_element sys_idtf="rrel_percent">%</sc_element>.](*<-lang_ru;; => nrel_format: format_html;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(тяговой электродвигатель, коэффициент полезного действия*, современный электродвигатель', процент')](*<-lang_ru;;*);;
+	<-rrel_theorem:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...	
+	(*
+	->rrel_key_sc_element: nrel_assignment; nrel_torque_transmission; nrel_torque; concept_propulsion; concept_electric_car;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Основная <sc_element sys_idtf="nrel_assignment">задача</sc_element> электродвигателя — <sc_element sys_idtf="nrel_torque_transmission">передача крутящего момента</sc_element> на <sc_element sys_idtf="concept_propulsion">движитель</sc_element> <sc_element sys_idtf="concept_electric_car">электромобиля</sc_element>.](*<-lang_ru;; => nrel_format: format_html;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(электродвигатель, задача*, передача крутящего момента*, крутящий момент*, движитель, электромобиль)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);	
+...	
+	(*
+	->rrel_key_sc_element: nrel_characteristic; nrel_engine_power; nrel_torque; nrel_motor_voltage; nrel_motor_amperage; nrel_motor_rotation_frequency;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В качестве <sc_element sys_idtf="nrel_characteristic">характеристик</sc_element> тягового электромотора, кроме <sc_element sys_idtf="nrel_engine_power">мощности</sc_element> и <sc_element sys_idtf="nrel_torque">максимального крутящего момента</sc_element>, учитываются <sc_element sys_idtf="nrel_motor_voltage">напряжение</sc_element>, <sc_element sys_idtf="nrel_motor_amperage">ток</sc_element>, а также <sc_element sys_idtf="nrel_motor_rotation_frequency">частота вращения</sc_element>.](*<-lang_ru;; => nrel_format: format_html;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(тяговой электромотор, характеристика*, мощность двигателя*, максимальный крутящий момент*, напряжение электродвигателя*, ток электродвигателя*, частота вращения электродвигателя*)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_electric_engine;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/concept_electric_engine.bmp";;
+		*);;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_electric_engine;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/electric_engine.png";;
+		*);;
+	*);;

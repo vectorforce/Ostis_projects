@@ -1,0 +1,72 @@
+concept_controller
+	=> nrel_main_idtf:
+	[электронный блок управления] (* <- lang_ru;; *);
+	[controller] (* <- lang_en;; *);
+	=> nrel_idtf: [множество электронных блоков управления] (* <- lang_ru;; *);
+              [controller] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_controller_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (электронный блок управления)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>ЭБУ</b> — электронный блок управления <sc_element sys_idtf="concept_internal_combustion_engine">двигателем</sc_element> <sc_element sys_idtf="concept_car">автомобиля</sc_element>, его другое название — <b>контроллер</b>.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_motor;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_controller
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (датчик, исполнительное устройство*, электронный блок управления)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_statement_of_the_defining_type;;
+		->rrel_key_sc_element: concept_sensor; concept_actuator;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [Он принимает информацию от многочисленных датчиков, обрабатывает ее по особым алгоритмам и, отталкиваясь от полученных данных, отдает команды исполнительным устройствам системы.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_statement_of_the_defining_type;;
+			*);;
+	*);
+	
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://controller.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_electronic_circuits;
+=> nrel_composite_part: concept_ECM;
+=> nrel_composite_part: concept_combined_gearbox_control_unit;
+=> nrel_composite_part: concept_transmission_control_unit;
+=> nrel_composite_part: concept_brake_control_unit;
+=> nrel_composite_part: concept_central_control_module;
+=> nrel_composite_part: concept_central_synchronization_module;
+=> nrel_composite_part: concept_main_electronic_module;
+=> nrel_composite_part: concept_body_controller;
+=> nrel_composite_part: concept_suspension_control_module;
+
+<-sc_node_not_relation;;

@@ -1,0 +1,265 @@
+sc_node_not_relation -> concept_steering_wheel;;
+concept_steering_wheel => nrel_main_idtf:
+[рулевое колесо](*<-lang_ru;;*);
+[steering wheel](*<-lang_en;;*);
+[руль](*<-lang_ru;;*);
+[штурвал](*<-lang_ru;;*);
+	[helm](*<-lang_en;;*);;
+sc_node_not_relation -> concept_control_device;;
+concept_control_device => nrel_main_idtf:
+[устройство управления](*<-lang_ru;;*);
+    [control device](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_driving_direction;;
+nrel_driving_direction => nrel_main_idtf:
+[направление движения*](*<-lang_ru;;*);
+	[driving direction*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_control_system;;
+concept_control_system => nrel_main_idtf:
+[система управления](*<-lang_ru;;*);
+    [control system](*<-lang_en;;*);;
+nrel_composite_part => nrel_main_idtf:
+[часть*](*<-lang_ru;;*);
+	[part*](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_influence;;
+nrel_influence => nrel_main_idtf:
+[воздействовать*](*<-lang_ru;;*);
+	[influence*](*<-lang_en;;*);;
+sc_node_role_relation->rrel_driver;;
+rrel_driver => nrel_main_idtf:
+[водитель'](*<-lang_ru;;*);
+	[driver'](*<-lang_ru;;*);;
+sc_node_role_relation->rrel_new_car;;
+rrel_new_car => nrel_main_idtf:
+[современный автомобиль'](*<-lang_ru;;*);
+[современный легковой автомобиль'](*<-lang_ru;;*);
+	[new car'](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_remote_audio_controller;;
+concept_remote_audio_controller => nrel_main_idtf:
+[дистанционный аудиорегулятор](*<-lang_ru;;*);
+    [remote audio controller](*<-lang_en;;*);;
+sc_node_not_relation->concept_round_wheel;;
+concept_round_wheel => nrel_main_idtf:
+[круглый руль](*<-lang_ru;;*);
+	[round wheel](*<-lang_ru;;*);;
+sc_node_norole_relation->nrel_be_installed;;
+nrel_be_installed => nrel_main_idtf:
+[быть установленным*](*<-lang_ru;;*);
+	[be installed*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_steering_column;;
+concept_steering_column => nrel_main_idtf:
+[рулевая колонка](*<-lang_ru;;*);
+    [steering column](*<-lang_en;;*);;
+sc_node_not_relation -> concept_steering_column_bushing;;
+concept_steering_column_bushing => nrel_main_idtf:
+[втулка рулевой колонки](*<-lang_ru;;*);
+    [steering column bushing](*<-lang_en;;*);;
+sc_node_not_relation -> concept_external_ring_of_wheel;;
+concept_external_ring_of_wheel => nrel_main_idtf:
+[внешнее кольцо руля](*<-lang_ru;;*);
+    [external ring of wheel](*<-lang_en;;*);;
+sc_node_not_relation -> concept_wheels_spoke;;
+concept_wheels_spoke => nrel_main_idtf:
+[спица руля](*<-lang_ru;;*);
+    [wheels spoke](*<-lang_en;;*);;
+sc_node_not_relation -> concept_country;;
+concept_country => nrel_main_idtf:
+[страна](*<-lang_ru;;*);
+    [country](*<-lang_en;;*);;
+sc_node_not_relation->concept_country_with_left_hand_traffic;;
+concept_country_with_left_hand_traffic => nrel_main_idtf:
+[страна с левосторонним движением](*<-lang_ru;;*);
+	[country with left-hand traffic](*<-lang_ru;;*);;
+sc_node_not_relation->concept_country_with_right_hand_traffic;;
+concept_country_with_right_hand_traffic => nrel_main_idtf:
+[страна с правосторонним движением](*<-lang_ru;;*);
+	[country with right-hand traffic](*<-lang_ru;;*);;
+sc_node_norole_relation->nrel_car_side;;
+nrel_car_side => nrel_main_idtf:
+[сторона автомобиля*](*<-lang_ru;;*);
+	[car side*](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_rhd_layout;;
+nrel_rhd_layout => nrel_main_idtf:
+[праворульная компоновка*](*<-lang_ru;;*);
+[right hand drive layout*](*<-lang_en;;*);
+	[RHD layout*](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_lhd_layout;;
+nrel_lhd_layout => nrel_main_idtf:
+[леворульная компоновка*](*<-lang_ru;;*);
+[left hand drive layout*](*<-lang_en;;*);
+	[LHD layout*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_beeps_button;;
+concept_beeps_button => nrel_main_idtf:
+[кнопка подачи звукового сигнала](*<-lang_ru;;*);
+    [beeps button](*<-lang_en;;*);;
+sc_node_not_relation -> concept_manipulator;;
+concept_manipulator => nrel_main_idtf:
+[манипулятор](*<-lang_ru;;*);
+    [manipulator](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_be_built_in;;
+nrel_be_built_in => nrel_main_idtf:
+[быть встроенным*](*<-lang_ru;;*);
+	[be built-in*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_cruise_control;;
+concept_cruise_control => nrel_main_idtf:
+[круиз-контроль](*<-lang_ru;;*);
+    [cruise control](*<-lang_en;;*);;
+sc_node_not_relation -> concept_sport_car;;
+concept_sport_car => nrel_main_idtf:
+[спорткар](*<-lang_ru;;*);
+[гоночный автомобиль](*<-lang_ru;;*);
+[спортивный автомобиль](*<-lang_ru;;*);
+    [sport car](*<-lang_en;;*);;
+sc_node_not_relation -> concept_one_landing_racing_car;;
+concept_one_landing_racing_car => nrel_main_idtf:
+[одно посадочный гоночный автомобиль](*<-lang_ru;;*);
+    [one landing racing car](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_salon_centre;;
+nrel_salon_centre => nrel_main_idtf:
+[центр салона*](*<-lang_ru;;*);
+	[salon centre*](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_produce;;
+nrel_produce => nrel_main_idtf:
+[изготавливать*](*<-lang_ru;;*);
+	[produce*](*<-lang_en;;*);;
+sc_node_not_relation->concept_steel_wheel;;
+concept_steel_wheel => nrel_main_idtf:
+[стальной руль](*<-lang_ru;;*);
+	[steel wheel](*<-lang_ru;;*);;
+sc_node_not_relation->concept_aluminum_wheel;;
+concept_aluminum_wheel => nrel_main_idtf:
+[алюминиевый руль](*<-lang_ru;;*);
+	[aluminum wheel](*<-lang_ru;;*);;
+sc_node_not_relation->concept_plastic_place_of_grip;;
+rrel_plastic_place_of_grip => nrel_main_idtf:
+[пластиковое место хвата](*<-lang_ru;;*);
+	[plastic place of grip](*<-lang_ru;;*);;
+sc_node_not_relation->concept_rubberized_place_of_grip;;
+concept_rubberized_place_of_grip => nrel_main_idtf:
+[прорезиненное место хвата](*<-lang_ru;;*);
+	[rubberized place of grip](*<-lang_ru;;*);;
+sc_node_not_relation->concept_place_of_grip;;
+concept_place_of_grip => nrel_main_idtf:
+[место хвата](*<-lang_ru;;*);
+	[place of grip](*<-lang_en;;*);;
+	
+concept_steering_wheel <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_used_constants: ... 
+	(*
+		->concept_control_device;; 
+		->concept_car;; 
+		->nrel_driving_direction;;
+	*);;
+=> nrel_main_idtf: [Опр.(рулевое колесо)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Устройство для управления движением автомобиля в заданном направлении.](*<-lang_ru;;*);; 
+	*);; 
+*);;		
+
+concept_steering_wheel <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_composite_part; concept_control_system; nrel_influence; rrel_driver;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Рулевое колесо — часть системы управления, на которую непосредственно воздействует водитель.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(рулевое колесо, часть*, система управления, воздействовать*, водитель')](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_statement_of_the_defining_type;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: concept_round_wheel; nrel_be_installed; concept_steering_column_bushing; concept_external_ring_of_wheel; concept_wheels_spoke;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Руль как правило круглый и установлен на рулевую колонку во втулку, присоединенную к внешнему кольцу рулевого колеса одной или несколькими спицами.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(руль, круглый руль, быть установленным*, рулевая колонка, втулка рулевой колонки, внешнее кольцо руля, спица руля)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: concept_country; concept_country_with_left_hand_traffic; nrel_car_side; concept_car; nrel_rhd_layout;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В странах с левосторонним движением руль обычно находится на правой стороне автомобиля (праворульная компоновка).](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(руль, страна с левосторонним движением, страна, сторона автомобиля*, автомобиль, праворульная компоновка*)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: concept_country; concept_country_with_right_hand_traffic; nrel_car_side; concept_car; nrel_lhd_layout;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В странах с правосторонним движением руль обычно находится на левой стороне автомобиля (леворульная компоновка).](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(руль, страна с правосторонним движением, страна, сторона автомобиля*, автомобиль, леворульная компоновка*)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: concept_sport_car; concept_one_landing_racing_car; nrel_salon_centre;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В некоторых спорткарах, например, в McLaren F1, и в большинстве одно посадочных гоночных автомобилях, рулевое колесо расположено в центре салона.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(руль, спорткар, одно посадочный гоночный автомобиль, гоночный автомобиль, центр салона*)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: concept_beeps_button;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [На руле обычно располагается кнопка подачи звукового сигнала.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(руль, кнопка подачи звукового сигнала)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: rrel_new_car; concept_car; concept_manipulator; nrel_be_built_in; concept_cruise_control; concept_remote_audio_controller;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Многие современные автомобили могут иметь разные манипуляторы, встроенные в рулевое колесо, такие, как круиз-контроль и дистанционный аудиорегулятор.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(руль, современный автомобиль', автомобиль, манипулятор, быть втроенным, круиз-контроль, дистанционный аудиорегулятор)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_produce; concept_steel_wheel; concept_aluminum_wheel; concept_plastic_place_of_grip; concept_rubberized_place_of_grip; concept_place_of_grip;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Обычно руль изготавливают из стали или алюминия с пластиковой или прорезиненными местами хвата.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(руль, изготавливать*, стальной руль, алюминиевый руль, пластиковое место хвата, прорезиненное место хвата, место хвата)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_steering_wheel;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/concept_steering_wheel.bmp";;
+		*);;
+	*);;

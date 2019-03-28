@@ -1,0 +1,122 @@
+sc_node_norole_relation -> nrel_power_steering;; 
+nrel_power_steering => nrel_main_idtf:
+[усилитель руля*](*<-lang_ru;;*);
+[система рулевого усилителя*](*<-lang_ru;;*);
+[wheel strengthener*](*<-lang_en;;*);
+[усилитель рулевого управления*](*<-lang_ru;;*);
+	[power steering*](*<-lang_ru;;*);;
+sc_node_not_relation->concept_steering_system;;
+concept_steering_system => nrel_main_idtf:
+[система рулевого управления](*<-lang_ru;;*);
+[рулевое управление](*<-lang_ru;;*);
+	 [steering system](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_control_efforts_reducing;;
+nrel_control_efforts_reducing => nrel_main_idtf:
+[снижение управляющего усилия*](*<-lang_ru;;*);
+     [control efforts reducing*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_comfort_improving;;
+nrel_comfort_improving => nrel_main_idtf:
+[повышение комфорта*](*<-lang_ru;;*);
+     [comfort improving*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_fatigue_reduction;;
+nrel_fatigue_reduction => nrel_main_idtf:
+[снижение утомляемости*](*<-lang_ru;;*);
+     [fatigue reduction*](*<-lang_en;;*);;
+sc_node_role_relation->rrel_option;;
+rrel_option => nrel_main_idtf:
+[опция'](*<-lang_ru;;*);
+[option'](*<-lang_ru;;*);
+[необязательный компонент'](*<-lang_ru;;*);
+	 [optional component'](*<-lang_ru;;*);;
+sc_node_norole_relation -> nrel_use;;
+nrel_use => nrel_main_idtf:
+[использовать*](*<-lang_ru;;*);
+[использование*](*<-lang_ru;;*);
+     [to use*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_hydraulic_pressure;;
+nrel_hydraulic_pressure => nrel_main_idtf:
+[гидравлическое давление*](*<-lang_ru;;*);
+     [hydraulic pressure*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_Nissan_Patrol;;
+concept_Nissan_Patrol => nrel_main_idtf:
+[Ниссан Патрол](*<-lang_ru;;*);
+	[Nissan Patrol](*<-lang_en;;*);;
+	
+nrel_power_steering <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_used_constants: ... 
+	(*
+		->concept_system;; 
+		->concept_steering_system;; 
+		->nrel_control_efforts_reducing;;
+		->concept_steering_wheel;; 
+		->nrel_comfort_improving;; 
+		->nrel_fatigue_reduction;;
+	*);;
+=> nrel_main_idtf: [Опр.(усилитель рулевого управления*)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Система или механизм в рулевом управлении, предназначенная для снижения управляющего усилия, прикладываемого к рулевому колесу, с целью повышения комфорта и снижения утомляемости водителя.](*<-lang_ru;;*);; 
+	*);; 
+*);;		
+
+nrel_power_steering <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_work_basis; rrel_modern_motor; concept_electromagnetic_induction_principle;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Усилители рулевого управления являются, как правило, опцией.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(усилитель рулевого управления*, опция')](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_use; nrel_hydraulic_pressure;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Большинство систем рулевых усилителей используют гидравлическое давление.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(система рулевого усилителя*, использовать*, гидравлическое давление*)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);;
+
+nrel_power_steering => nrel_first_domain: concept_steering_wheel;;
+nrel_power_steering => nrel_second_domain: concept_power_steering_type;;
+nrel_power_steering => nrel_definitional_domain: ...
+	(*
+		<=nrel_combination: ...																	
+			(*
+				->concept_steering_wheel;;
+				->concept_power_steering_type;;
+			*);;
+	*);;
+		
+concept_oriented_relation->nrel_power_steering;;
+concept_a_binari_relation->nrel_power_steering;;
+concept_antisymmetric_relation->nrel_power_steering;;
+concept_antitransitive_relation->nrel_power_steering;;
+concept_antireflexive_relation->nrel_power_steering;;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: nrel_power_steering;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/nrel_power_steering.bmp";;
+		*);;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: nrel_power_steering;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/power_steering.png";;
+		*);;
+	*);;

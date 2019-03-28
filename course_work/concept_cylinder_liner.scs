@@ -1,0 +1,64 @@
+concept_cylinder_liner
+	=> nrel_main_idtf:
+	[гильза цилиндра] (* <- lang_ru;; *);
+	[cylinder liner] (* <- lang_en;; *);
+	=> nrel_idtf: [множество гильз цилиндров] (* <- lang_ru;; *);
+              [cylinder liner] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_cylinder_liner_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (гильза цилиндра)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Гильза цилиндра</b> - сменная цилиндрическая вставка, устанавливаемая в блок-картере поршневых тепловых <sc_element sys_idtf="concept_internal_combustion_engine">двигателей</sc_element> с водяным охлаждением.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_internal_combustion_engine;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_cylinder_liner
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (гильза цилиндра, блок цилиндров)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_statement_of_the_defining_type;;
+		->rrel_key_sc_element: concept_cylinder_block;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Гильзу цилиндра</b> изготовляют из чугуна и применяют в <sc_element sys_idtf="concept_cylinder_block">блоках</sc_element> из алюминиевых сплавов для уменьшения износа трущихся поверхностей и облегчения ремонта.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+	
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_cylinder_liner.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_shaft_construction;
+=> nrel_composite_part: concept_gas_distribution_mechanism;
+=> nrel_composite_part: concept_cam_mechanism;
+
+<-sc_node_not_relation;;

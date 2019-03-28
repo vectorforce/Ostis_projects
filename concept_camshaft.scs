@@ -1,0 +1,64 @@
+concept_camshaft
+	=> nrel_main_idtf:
+	[распредвал] (* <- lang_ru;; *);
+	[camshaft] (* <- lang_en;; *);
+	=> nrel_idtf: [множество распредвалов] (* <- lang_ru;; *);
+              [camshaft] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_camshaft_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (распредвал)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Распредвал</b> - <sc_element sys_idtf="concept_shaft">вал</sc_element> <sc_element sys_idtf="concept_internal_combustion_engine">двигателя внутреннего сгорания</sc_element>, управляющий открытием и закрытием <sc_element sys_idtf="concept_valve">клапанов</sc_element> <sc_element sys_idtf="concept_internal_combustion_engine">двигателя</sc_element>.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_shaft;; -> concept_internal_combustion_engine;; -> concept_valve;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_camshaft
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (распредвал, кулачок, клапан двигателя, деталь, газораспределительный механизм, двигатель внутреннего сгорания)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_statement_of_the_defining_type;;
+		->rrel_key_sc_element: concept_cam; concept_valve; concept_gas_distribution_mechanism; concept_internal_combustion_engine; concept_detail;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Распредвал</b> - основная <sc_element sys_idtf="concept_detail">деталь</sc_element> <sc_element sys_idtf="concept_gas_distribution_mechanism">газораспределительного механизма</sc_element> <sc_element sys_idtf="concept_internal_combustion_engine">двигателя внутреннего сгорания</sc_element>. Составной частью <b>распредвала</b> являются его кулачки, количество которых традиционно соответствует количеству впускных и выпускных <sc_element sys_idtf="concept_valve">клапанов</sc_element> <sc_element sys_idtf="concept_internal_combustion_engine">двигателя</sc_element>.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+	
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://camshaft_picture.jpg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_shaft_construction;
+=> nrel_composite_part: concept_gas_distribution_mechanism;
+=> nrel_composite_part: concept_cam_mechanism;
+
+<-sc_node_not_relation;;

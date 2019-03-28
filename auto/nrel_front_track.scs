@@ -1,0 +1,106 @@
+sc_node_norole_relation -> nrel_front_track;;
+nrel_front_track => nrel_main_idtf:
+[колея передняя*](*<-lang_ru;;*);
+[передняя колея автомобиля*](*<-lang_ru;;*);
+	 [front track*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_transverse_distance;;
+nrel_transverse_distance => nrel_main_idtf:
+[поперечное расстояние*](*<-lang_ru;;*);
+	 [transverse distance*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_central_part_of_the_front_wheel;;
+concept_central_part_of_the_front_wheel => nrel_main_idtf:
+[центральная часть переднего колеса](*<-lang_ru;;*);
+    [central part of the front wheel](*<-lang_en;;*);;
+sc_node_not_relation -> concept_highway;;
+concept_highway => nrel_main_idtf:
+[трасса](*<-lang_ru;;*);
+[магистраль](*<-lang_ru;;*);
+	[highway](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_be_stable_on_sharp_turns;;
+nrel_be_stable_on_sharp_turns => nrel_main_idtf:
+[быть устойчивым на резких поворотах*](*<-lang_ru;;*);
+	 [be stable on sharp turns*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_not_match;;
+nrel_not_match => nrel_main_idtf:
+[не совпадать*](*<-lang_ru;;*);
+[не быть идентичным*](*<-lang_ru;;*);
+	 [not match*](*<-lang_en;;*);;
+
+nrel_front_track <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_used_constants: ... 
+	(*
+		->nrel_transverse_distance;; 
+		->concept_central_part_of_the_front_wheel;;
+		->concept_car;;
+	*);;
+=> nrel_main_idtf: [Опр.(колея передняя*)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Поперечное расстояние между центральной частью передних колёс автомобиля.](*<-lang_ru;;*);; 
+	*);; 
+*);;	 
+ 
+nrel_front_track <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_be_stable_on_sharp_turns; concept_car;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Чем больше передняя колея автомобиля, тем устойчивее данный автомобиль на резких поворотах.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(передняя колея*, быть устойчивым на резких поворотах*, автомобиль)](*<-lang_ru;;*);;
+	<-rrel_theorem:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_rear_track; nrel_not_match; nrel_fuel_consumption;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Если передняя и задняя колеи не совпадают, то расход топлива будет значительно выше, чем при равных колеях.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(колея передняя*, колея задняя*, не совпадать*, расход топлива*)](*<-lang_ru;;*);;
+	<-rrel_theorem:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_rear_track; nrel_not_match; concept_car; concept_single_wheel; concept_gable_wheel;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Передняя и задняя колея, как правило, не идентичны у автомобилей с односкатными и двускатными колесами.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(колея передняя*, колея задняя*, не быть идентичным*, автомобиль, односкатное колесо, двускатное колесо)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);;
+	  
+nrel_front_track => nrel_first_domain: concept_car;;
+nrel_front_track => nrel_second_domain: concept_amount;;
+nrel_front_track => nrel_definitional_domain: ...
+	(*
+		<=nrel_combination: ...																	
+			(*
+				->concept_car;;
+				->concept_amount;;
+			*);;
+	*);;
+		
+concept_oriented_relation->nrel_front_track;;
+concept_a_binari_relation->nrel_front_track;;
+concept_antisymmetric_relation->nrel_front_track;;
+concept_antitransitive_relation->nrel_front_track;;
+concept_antireflexive_relation->nrel_front_track;;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: nrel_front_track;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/nrel_front_track.bmp";;
+		*);;
+	*);;

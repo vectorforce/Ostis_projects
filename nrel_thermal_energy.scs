@@ -1,0 +1,80 @@
+nrel_thermal_energy
+
+<- rrel_key_sc_element:
+	 Definition_of_the_nrel_thermal_energy
+(* 
+	=> nrel_main_idtf: [Опр. (тепловая энергия*)](*<- lang_ru;;*);;
+	<- definition;;
+	<= nrel_sc_text_translation: ...
+		(* 
+			-> [<b>Тепловая энергия*</b> — это суммарная <sc_element sys_idtf="nrel_kinetic_energy">кинетическая энергия</sc_element> структурных элементов вещества] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		*);;
+        <= nrel_using_constants: ... 
+	(* 
+		-> concept_value;; 
+		-> nrel_kinetic_energy;;
+	*);;
+*);
+
+<- rrel_key_sc_element:	 
+         Statement_for_the_nrel_thermal_energy
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (тепловая энергия*, химическая реакция, ядерная реакция)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- rrel_axiom:concept_IHS_by_car;;
+		<-concept_general_form_statement;;
+		->rrel_key_sc_element: concept_chemical_reaction; concept_nuclear_reaction;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Тепловая энергия*</b> может выделяться благодаря химическим реакциям (горение), ядерным реакциям (деление ядра, ядерный синтез), механическим взаимодействиям (трение).] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
+<- binary_relation (* <- arity (* <- concept_parameter;; *);;
+                              => nrel_measurement: 2;; *);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://thermal_energy.jpg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+ 
+=> nrel_first_domain: 
+	... 
+	(* <- concept_value;; <= nrel_value: ... (* <- concept_number;; *);; *);
+
+=> nrel_second_domain: 
+	nrel_kinetic_energy;
+
+=> nrel_definitional_domain: ... 
+(* 
+	<= nrel_combination: ...
+           (* 
+		-> nrel_kinetic_energy;; 
+		-> ... 
+		(* 	
+		<- concept_value;; 
+		<= nrel_value: ... (* <- concept_number;; *);; *);; *);;
+
+
+<- oriented_relation;;
+<- antireflexive_relation;;
+<- antitransitive_relation;;
+<- antisymmetric_relation;;
+
+<- sc_node_norole_relation;;
+*);;

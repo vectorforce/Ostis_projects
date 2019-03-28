@@ -1,0 +1,40 @@
+
+nrel_tank_volume <- binary_relation;;
+nrel_tank_volume <- oriented_relation;;
+nrel_tank_volume <- antisymmetric_relation;;
+nrel_tank_volume <- antitransitive_relation;;
+nrel_tank_volume <- antireflexive_relation;;
+
+nrel_tank_volume => nrel_first_domain: concept_car;;
+nrel_tank_volume => nrel_second_domain: concept_fuel_volume;;
+
+nrel_tank_volume => nrel_domain_of_definition: ...
+(*
+	<= nrel_union: ...
+	(*
+		-> concept_car;;
+		-> concept_fuel_volume;; 
+	*);;
+*);;
+
+nrel_tank_volume <- rrel_key_sc_element:...(*<- definition;;<=nrel_used_constants: concept_car; concept_fuel_volume; concept_tank;; => nrel_main_idtf: [Опр.(тормозная система)](*<-lang_ru;;*);; <= nrel_sc_text_translation: ...
+(*-> [Объем бака* - это максимальный объем топлива, который помещается в баке автомобиля.](*<-lang_ru;;*);; *);; *);;
+
+nrel_tank_volume <- rrel_key_sc_element: ... 
+     (*
+        ->rrel_key_sc_element: nrel_influence; nrel_tank_architecture;;
+        ->statement;;
+        <=nrel_sc_text_translation: ... (* -> [Объем топливного бака во многом зависит от его строения.](*<-lang_ru;;*);; *);;
+        =>nrel_main_idtf: [Утв.(объем бака*, строение бака*, зависеть*)](*<-lang_ru;;*);;
+	   <-rrel_axiom:concept_IHS_by_car;;
+	   <-concept_general_form_statement;;
+     *);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: nrel_tank_volume;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/nrel_tank_volume.jpg";;
+		*);;
+*);;

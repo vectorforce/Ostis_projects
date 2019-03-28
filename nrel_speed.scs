@@ -1,0 +1,60 @@
+nrel_speed
+
+<- rrel_key_sc_element:
+	 Definition_of_the_nrel_speed
+(* 
+	=> nrel_main_idtf: [Опр. (скорость*)](*<- lang_ru;;*);;
+	<- definition;;
+	<= nrel_sc_text_translation: ...
+		(* 
+			-> [<b>Скорость*</b> - векторная <sc_element sys_idtf="concept_physical_quantity">физическая величина</sc_element>, характеризующая быстроту перемещения и <sc_element sys_idtf="nrel_driving_direction">направление движения</sc_element> материальной точки относительно выбранной <sc_element sys_idtf="concept_reference_system">системы отсчёта</sc_element>.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		*);;
+        <= nrel_using_constants: ... 
+	(* 
+		-> concept_value;; 
+		-> nrel_direction;; 
+ 		-> concept_reference_system;;
+	*);;
+*);
+
+<- binary_relation (* <- arity (* <- concept_parameter;; *);;
+                              => nrel_measurement: 2;; *);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://speed.jpg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+ 
+=> nrel_first_domain: 
+	... 
+	(* <- concept_value;; <= nrel_value: ... (* <- concept_number;; *);; *);
+
+=> nrel_second_domain: 
+	concept_speedometr;
+
+=> nrel_definitional_domain: ... 
+(* 
+	<= nrel_combination: ...
+           (* 
+		-> concept_speedometr;; 
+		-> ... 
+		(* 	
+		<- concept_value;; 
+		<= nrel_value: ... (* <- concept_number;; *);; *);; *);;
+
+
+<- oriented_relation;;
+<- antireflexive_relation;;
+<- antitransitive_relation;;
+<- antisymmetric_relation;;
+
+<- sc_node_norole_relation;;
+*);;

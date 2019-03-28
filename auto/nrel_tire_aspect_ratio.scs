@@ -1,0 +1,96 @@
+sc_node_norole_relation -> nrel_tire_fabric_carcass_construction;; 
+nrel_tire_fabric_carcass_construction => nrel_main_idtf:
+[соотношение сторон шины*](*<-lang_ru;;*);
+[серия шины*](*<-lang_ru;;*);
+	[tire aspect ratio*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_ratio;; 
+nrel_ratio => nrel_main_idtf:
+[соотношение*](*<-lang_ru;;*);
+	[ratio*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_tire_profile_height;; 
+nrel_tire_profile_height => nrel_main_idtf:
+[высота профиля шины*](*<-lang_ru;;*);
+	[tire profile height*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_divide_on;; 
+nrel_divide_on => nrel_main_idtf:
+[делиться на*](*<-lang_ru;;*);
+	[divide on*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_full_height_tire;;
+concept_full_height_tire => nrel_main_idtf:
+[полнопрофильная шина](*<-lang_ru;;*);
+    [full height tire](*<-lang_en;;*);;
+sc_node_not_relation -> concept_low_profile_tire;;
+concept_low_profile_tire => nrel_main_idtf:
+[низкопрофильная шина](*<-lang_ru;;*);
+    [low-profile tire](*<-lang_en;;*);;
+sc_node_not_relation -> concept_ultra_low_profile_tire;;
+concept_ultra_low_profile_tire => nrel_main_idtf:
+[сверхнизкопрофильная шина](*<-lang_ru;;*);
+    [ultra low-profile tire](*<-lang_en;;*);;
+
+nrel_tire_aspect_ratio <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_used_constants: ... 
+	(*
+		->nrel_ratio;; 
+		->nrel_tire_profile_height;; 
+		->nrel_tire_nominal_width;;
+	*);;
+=> nrel_main_idtf: [Опр.(соотношение сторон шины*)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Соотношение высоты профиля покрышки и её ширины.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+	  
+nrel_tire_aspect_ratio <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_divide_on; concept_full_height_tire; concept_low_profile_tire; concept_ultra_low_profile_tire;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В зависимости от соотношения сторон шины делятся на полнопрофильные (0,7…0,85), низкопрофильные (0,6…0,7) и сверхнизкопрофильные (менее 0,6).](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(соотношение сторон шины*, полнопрофильная шина, низкопрофильная шина, сверхнизкопрофильная шина)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_statement_of_the_defining_type;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: rrel_measure_in_SI; rrel_percent;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Основная единица измерения соотношения сторон шины в СИ — процент.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(соотношение сторон шины*, единица измерения в СИ', процент')](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);;
+	  
+nrel_tire_aspect_ratio => nrel_first_domain: concept_tire;;
+nrel_tire_aspect_ratio => nrel_second_domain: concept_amount;;
+nrel_tire_aspect_ratio => nrel_definitional_domain: ...
+	(*
+		<=nrel_combination: ...																	
+			(*
+				->concept_tire;;
+				->concept_amount;;
+			*);;
+	*);;
+		
+concept_oriented_relation->nrel_tire_aspect_ratio;;
+concept_a_binari_relation->nrel_tire_aspect_ratio;;
+concept_antisymmetric_relation->nrel_tire_aspect_ratio;;
+concept_antitransitive_relation->nrel_tire_aspect_ratio;;
+concept_antireflexive_relation->nrel_tire_aspect_ratio;;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: nrel_tire_aspect_ratio;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/nrel_tire_aspect_ratio.bmp";;
+		*);;
+	*);;

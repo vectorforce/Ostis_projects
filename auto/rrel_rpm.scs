@@ -1,0 +1,5 @@
+sc_node_role_relation->rrel_rpm;;
+rrel_rpm => nrel_main_idtf:
+[оборотов в минуту'](*<-lang_ru;;*);
+[количество оборотов в минуту'](*<-lang_ru;;*);
+	[rpm'](*<-lang_en;;*);;

@@ -1,0 +1,50 @@
+
+concept_front_suspension <= nrel_subdividing: ...
+(*
+->concept_dependent_suspension;;  
+->concept_independent_suspension;;
+=> nrel_main_idtf: [Разбиение по признаку характера работы](* <- lang_ru;; *);;
+*);;
+
+concept_front_suspension <= nrel_inclusion: concept_car_suspension;;
+concept_back_suspension <= nrel_inclusion: concept_car_suspension;;
+
+concept_front_suspension <- rrel_key_sc_element:...
+(*
+<- definition;;
+<= nrel_used_constants: ...
+(*
+->concept_mechanism;;
+->concept_detail;;
+->concept_car_body;;
+->concept_road;;
+*);;
+=> nrel_main_idtf: [Опр.(передняя подвеска)](*<-lang_ru;;*);;
+<= nrel_sc_text_translation:...
+    (*
+        -> rrel_example: [Передняя подвеска - совокупность деталей и механизмов, играющих роль соединительного звена между кузовом автомобиля и дорогой.](*<-lang_ru;;*);; 
+*);; 
+*);;
+
+concept_front_suspension <- rrel_key_sc_element: ...
+(*
+->rrel_key_sc_element: concept_back_suspension;;
+->rrel_key_sc_element: nrel_stroke_stiffness;;
+<-statement;;
+<=nrel_sc_text_translation: ... 
+(* 
+->rrel_example: [Передняя подвеска должна иметь меньшую жёсткость хода, чем задняя.](*<-lang_ru;;*);; 
+*);;
+=>nrel_main_idtf: [Утв.(передняя подвеска, задняя подвеска, жесткость хода*)](*<-lang_ru;;*);;
+<-rrel_axiom:concept_IHS_by_car;;
+<-concept_general_form_statement;;
+*);;
+
+illustration -> ...
+    (*
+    -> rrel_key_sc_element: concept_front_suspension;;
+     <= nrel_sc_text_translation: ...
+        (*
+        -> rrel_example: "file://content/concept_front_suspension.jpg";;
+        *);;
+    *);;

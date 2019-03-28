@@ -1,0 +1,162 @@
+sc_node_not_relation -> concept_suspension_type;;
+concept_suspension_type => nrel_main_idtf:
+[тип подвеска](*<-lang_ru;;*);
+[тип подвески автомобиля](*<-lang_ru;;*);
+[система подрессоривания](*<-lang_ru;;*);
+[suspension type](*<-lang_en;;*);
+     [suspension bracket](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_suspension;; 
+nrel_suspension => nrel_main_idtf:
+[подвеска*](*<-lang_ru;;*);
+	[suspension*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_dependent_suspension;;
+concept_dependent_suspension => nrel_main_idtf:
+[зависимая подвеска](*<-lang_ru;;*);
+[жёсткая подвеска](*<-lang_ru;;*);
+[rigid suspension](*<-lang_en;;*);
+	[dependent suspension](*<-lang_en;;*);;
+sc_node_not_relation -> concept_independent_suspension;;
+concept_independent_suspension => nrel_main_idtf:
+[независимая подвеска](*<-lang_ru;;*);
+[мягкая подвеска](*<-lang_ru;;*);
+[soft suspension](*<-lang_en;;*);
+	[independent suspension](*<-lang_en;;*);;
+sc_node_not_relation -> concept_active_suspension;;
+concept_active_suspension => nrel_main_idtf:
+[активная подвеска](*<-lang_ru;;*);
+	[active suspension](*<-lang_en;;*);;
+sc_node_not_relation -> concept_detail;;
+concept_detail => nrel_main_idtf:
+[деталь](*<-lang_ru;;*);
+	[detail](*<-lang_en;;*);;
+sc_node_not_relation -> concept_car_connecting_link;;
+concept_car_connecting_link => nrel_main_idtf:
+[соединительное звено автомобиля](*<-lang_ru;;*);
+	[car connecting link](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_elastic_constraint;; 
+nrel_elastic_constraint => nrel_main_idtf:
+[упругая связь*](*<-lang_ru;;*);
+	[elastic constraint*](*<-lang_en;;*);;
+sc_node_role_relation->rrel_active_force;;
+rrel_active_force => nrel_main_idtf:
+[действующая сила'](*<-lang_ru;;*);
+	[active force'](*<-lang_en;;*);;
+sc_node_not_relation -> concept_fluctuation;;
+concept_fluctuation => nrel_main_idtf:
+[колебание](*<-lang_ru;;*);
+	[fluctuation](*<-lang_en;;*);;
+sc_node_role_relation->rrel_direct_element;;
+rrel_direct_element => nrel_main_idtf:
+[направляющий элемент'](*<-lang_ru;;*);
+	[direct element'](*<-lang_en;;*);;
+sc_node_role_relation->rrel_elastic_element;;
+rrel_elastic_element => nrel_main_idtf:
+[упругий элемент'](*<-lang_ru;;*);
+	[elastic element'](*<-lang_en;;*);;
+sc_node_role_relation->rrel_securing_element;;
+rrel_securing_element => nrel_main_idtf:
+[элемент крепления'](*<-lang_ru;;*);
+[крепежный элемент'](*<-lang_ru;;*);
+	[securing element'](*<-lang_en;;*);;
+sc_node_role_relation->rrel_damping_device;;
+rrel_damping_device => nrel_main_idtf:
+[гасящее устройство'](*<-lang_ru;;*);
+	[damping device'](*<-lang_en;;*);;
+sc_node_not_relation -> concept_stabilizer_bar;;
+concept_stabilizer_bar => nrel_main_idtf:
+[стабилизатор поперечной устойчивости](*<-lang_ru;;*);
+	[stabilizer bar](*<-lang_en;;*);;
+sc_node_not_relation -> concept_wheel_support;;
+concept_wheel_support => nrel_main_idtf:
+[опора колеса](*<-lang_ru;;*);
+	[wheel support](*<-lang_en;;*);;
+	
+concept_suspension_type <= nrel_subdividing: ...
+(*
+->concept_front_suspension;;  
+->concept_rear_suspension;;
+=> nrel_main_idtf: [Разбиение по признаку распложение в автомобиле](* <- lang_ru;; *);;
+*);;
+
+concept_suspension_type <= nrel_subdividing: ...
+(*
+->concept_dependent_suspension;;  
+->concept_independent_suspension;;
+->concept_active_suspension;;
+=> nrel_main_idtf: [Разбиение по признаку особенности в конструкции](* <- lang_ru;; *);;
+*);;
+
+concept_suspension_type <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_used_constants: ... 
+	(*
+		->concept_detail;; 
+		->concept_car_node;;
+		->concept_device;;
+		->concept_car;; 
+		->concept_car_connecting_link;;
+		->concept_road;;
+		->concept_car_body;;
+	*);;
+=> nrel_main_idtf: [Опр.(тип подвески)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Совокупность деталей, узлов и механизмов автомобиля, играющих роль соединительного звена между кузовом автомобиля и дорогой.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_suspension_type <- rrel_key_sc_element: ...
+	(*
+	->rrel_key_sc_element: nrel_to_be_intended; nrel_elastic_constraint; concept_wheel; concept_car_body; rrel_active_force; concept_fluctuation;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Подвеска автомобиля предназначена для обеспечения упругой связи между колесами и кузовом автомобиля за счет восприятия действующих сил и гашения колебаний.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(подвеска автомобиля, быть предназначенным*, упругая связь*, колесо, кузов автомобиля, действующая сила', колебание)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...	 
+	(*
+	->rrel_key_sc_element: nrel_composite_part; concept_chassis; concept_car;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Подвеска входит в состав ходовой части автомобиля.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(подвеска, составная частья*, ходовая часть, автомобиль)](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);
+...	 
+	(*
+	->rrel_key_sc_element: nrel_composite_part; rrel_direct_element; rrel_elastic_element; rrel_damping_device; concept_stabilizer_bar; concept_wheel_support; rrel_securing_element;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Подвеска автомобиля состоит из направляющих и упругих элементов, гасящего устройства, стабилизатора поперечной устойчивости, опоры колеса, а также элементов крепления.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(подвеска автомобиля, составная часть*, направляющий элемент', упругий элемент', гасящее устройство', стабилизатор поперечной устойчивости, опора колеса, элемент крепления')](*<-lang_ru;;*);;
+	<-rrel_axiom:concept_IHS_by_car;;
+	<-concept_general_form_statement;;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_suspension_type;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/concept_suspension_type.bmp";;
+		*);;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_suspension_type;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/suspension_type.bmp";;
+		*);;
+	*);;
