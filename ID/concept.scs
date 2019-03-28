@@ -1305,7 +1305,30 @@ concept_transport
 (* <- lang_ru;; *);
 [transport](*<-lang_en;;*);;
 
+concept_bearing
+=> nrel_main_idtf: [подшипник]
+(* <- lang_ru;; *);
+[bearing](*<-lang_en;;*);;
 
+concept_group_yoke_axis
+=> nrel_main_idtf: [групповая ось коромысел]
+(* <- lang_ru;; *);
+[group yoke axix](*<-lang_en;;*);;
+
+concept_individual_yoke_axis
+=> nrel_main_idtf: [индивидуальная ось коромысел]
+(* <- lang_ru;; *);
+[individual yoke axis](*<-lang_en;;*);;
+
+concept_pin
+=> nrel_main_idtf: [штифт]
+(* <- lang_ru;; *);
+[pin](*<-lang_en;;*);;
+
+concept_thrust_washer
+=> nrel_main_idtf: [упорная шайба]
+(* <- lang_ru;; *);
+[thrust washer](*<-lang_en;;*);;
 
 
 

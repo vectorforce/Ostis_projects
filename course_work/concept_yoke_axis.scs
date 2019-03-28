@@ -1,0 +1,78 @@
+concept_yoke_axis
+	=> nrel_main_idtf:
+	[ось коромысел] (* <- lang_ru;; *);
+	[yoke axis] (* <- lang_en;; *);
+	=> nrel_idtf: [множество осей коромысел] (* <- lang_ru;; *);
+              [cylinder liner] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_yoke_axis_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (ось коромысла)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Ось коромысел</b> — <sc_element sys_idtf="concept_detail">деталь</sc_element> <sc_element sys_idtf="concept_gas_distribution_mechanism">газораспределительного механизма</sc_element> <sc_element sys_idtf="concept_piston">поршневых</sc_element> <sc_element sys_idtf="concept_internal_combustion_engine">двигателей внутреннего сгорания</sc_element> с верхним расположением <sc_element sys_idtf="concept_valve">клапанов</sc_element>; полый стержень, удерживающий <sc_element sys_idtf="concept_yoke">коромысла</sc_element> <sc_element sys_idtf="concept_valve">клапанов</sc_element> и сопутствующие <sc_element sys_idtf="concept_detail">детали</sc_element> клапанного <sc_element sys_idtf="concept_device">механизма</sc_element>.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_internal_combustion_engine;; -> concept_piston;; -> concept_detail;; -> concept_gas_distribution_mechanism;; -> concept_valve;;
+                                                                                       -> concept_yoke;; -> concept_device;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_yoke_axis
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (ось коромысел, кулачок, газораспределительный механизм, клапан, коромысло, подшипник, деталь, ось, несущий элемент*)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_statement_of_the_defining_type;;
+		->rrel_key_sc_element:  concept_cam; concept_gas_distribution_mechanism; concept_valve; concept_yoke; concept_bearing; concept_detail; concept_axis; nrel_carrier_element;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Ось коромысел</b> выполняет несколько функций:
+
+ Правильное позиционирование <sc_element sys_idtf="concept_yoke">коромысел</sc_element> относительно толкателей/<sc_element sys_idtf="concept_cam">кулачков</sc_element> <sc_element sys_idtf="concept_gas_distribution_mechanism">газораспределительного механизма</sc_element> и <sc_element sys_idtf="concept_valve">клапанов</sc_element>;
+ Смазывание поверхностей трения <sc_element sys_idtf="concept_yoke">коромысел</sc_element> и их <sc_element sys_idtf="concept_bearing">подшипников</sc_element>, подача масла к другим элементам <sc_element sys_idtf="concept_gas_distribution_mechanism">газораспределительного механизма</sc_element>;
+ Удерживание <sc_element sys_idtf="concept_yoke">коромысел</sc_element>, их пружин и других <sc_element sys_idtf="concept_detail">деталей</sc_element> (<sc_element sys_idtf="concept_axis">ось</sc_element> выступает в роли силового <sc_element sys_idtf="nrel_carrier_element">несущего элемента</sc_element>).] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+	
+<= nrel_subdividing: ...
+(*
+->concept_group_yoke_axis;;  
+->concept_individual_yoke_axis;;
+=> nrel_main_idtf: [Разбиение по признаку количество устанавливаемых коромысел](* <- lang_ru;; *);;
+*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_yoke_axis.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_gas_distribution_mechanism ;
+=> nrel_composite_part: concept_yoke;
+=> nrel_composite_part: concept_spring;
+=> nrel_composite_part: concept_pin;
+=> nrel_composite_part: concept_thrust_washer;
+
+<-sc_node_not_relation;;

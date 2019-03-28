@@ -44,6 +44,27 @@ concept_cylinder_liner
 			*);;
 	*);
 	
+<- rrel_key_sc_element:	 
+         Statement_for_the_cylinder_liner
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (гильза цилиндра, двигатель, цилиндр, поршень, блок цилиндров)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_statement_of_the_defining_type;;
+		->rrel_key_sc_element: concept_cylinder_liner; concept_internal_combustion_engine; concept_cylinder; concept_piston; concept_cylinder_block;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Гильза цилиндра</b> определяет рабочий объём <sc_element sys_idtf="concept_cylinder">цилиндра</sc_element>, в котором перемещается <sc_element sys_idtf="concept_piston">поршень</sc_element> <sc_element sys_idtf="concept_internal_combustion_engine">двигателя</sc_element>. ] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
 <- rrel_key_sc_element: ...
 	(*
 	<-sc_illustration;;
