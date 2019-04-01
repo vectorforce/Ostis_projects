@@ -1,0 +1,62 @@
+concept_throttle
+	=> nrel_main_idtf:
+	[дроссель] (* <- lang_ru;; *);
+	[throttle] (* <- lang_en;; *);
+	=> nrel_idtf: [множество дросселей] (* <- lang_ru;; *);
+              [throttle] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_throttle_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (дроссель)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Дроссель</b> (удушитель, душащий — нем.) — устройство, постоянное проходное сечение которого значительно меньше сечения подводящего трубопровода. Дроссель регулирует расход, изменяя параметры течения среды, протекающей через него. Одним из видов дросселя является жиклёр. Часто дроссели используются в системах теплоснабжения для ограничения расхода первичной горячей воды. ] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_jet;; -> concept_device;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_throttle
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (дроссель, карбюратор, жиклер)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_statement_of_the_defining_type;;
+		->rrel_key_sc_element:  concept_carburetor; concept_jet; concept_valve;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [В горизонтальных карбюраторах <b>дросселем</b> часто является вертикальный шибер, расположенный в зоне малого диффузора и регулирующий его проходное сечение. Поднимаясь, он увеличивает проходное сечение диффузора. В подавляющем большинстве случаев он же регулирует проходное сечение главного топливного жиклера, перемещая в нём регулирующую иглу переменного профиля. ] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_throttle.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_fuel_system_type;
+
+<-sc_node_not_relation;;

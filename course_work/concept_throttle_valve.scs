@@ -1,0 +1,83 @@
+concept_throttle_valve
+	=> nrel_main_idtf:
+	[дроссельная заслонка] (* <- lang_ru;; *);
+	[throttle valve] (* <- lang_en;; *);
+	=> nrel_idtf: [множество дроссельных заслонок] (* <- lang_ru;; *);
+              [throttle valve] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_throttle_valve_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (дроссельная заслонка)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Дроссельная заслонка</b> — механический регулятор проходного сечения канала, изменяющий количество протекающей в канале среды — жидкости или газа. ] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_regulator;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_throttle_valve
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (дроссельная заслонка, карбюратор, цилиндр, двигатель внутреннего сгорания)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_statement_of_the_defining_type;;
+		->rrel_key_sc_element:  concept_throttle_valve; concept_carburetor; concept_cylinder; concept_gas_distribution_mechanism;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Дроссельная заслонка</b> карбюратора регулирует количество горючей смеси, образующейся в карбюраторе и поступающей в цилиндры двигателя внутреннего сгорания.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
+<- rrel_key_sc_element:	 
+         Statement_for_the_throttle_valve
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (дроссельная заслонка, цилиндр, двигатель внутреннего сгорания, коллектор, топливо)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_general_form_statement;;
+		->rrel_key_sc_element:  concept_throttle_valve; concept_cylinder; concept_gas_distribution_mechanism; concept_collector; concept_fuel;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [В системе впрыска топлива <b>дроссельная заслонка</b> представляет собой отдельный узел, стоящий в воздушном тракте последовательно и дозирующий количество воздуха на входе в коллектор. Дело в том, что соотношение «бензин — воздух» в цилиндре впрыскового двигателя должно оставаться стехиометрическим, то есть, система управления должна иметь возможность при работе двигателя на неполных режимах ограничивать не только подачу топлива, но и подачу воздуха. ] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_throttle_valve.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_fuel_system_type;
+
+<-sc_node_not_relation;;

@@ -1,0 +1,41 @@
+concept_crankshaft_gear
+	=> nrel_main_idtf:
+	[дроссельная заслонка] (* <- lang_ru;; *);
+	[crankshaft gear] (* <- lang_en;; *);
+	=> nrel_idtf: [множество шестерней коленвала] (* <- lang_ru;; *);
+              [crankshaft gear] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_crankshaft_gear_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (шестерня коленвала)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Шестерня коленчатого вала</b> — это передача, через которую и осуществляется вращение оборудования двигателя. В зависимости от инженерных решений, она имеет форму шестеренки с зубьями для цепи или ремня.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_internal_combustion_engine;; *);;
+	*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_crankshaft_gear.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_shaft_construction;
+
+<-sc_node_not_relation;;

@@ -1330,6 +1330,61 @@ concept_thrust_washer
 (* <- lang_ru;; *);
 [thrust washer](*<-lang_en;;*);;
 
+concept_regulator
+=> nrel_main_idtf: [регулятор]
+(* <- lang_ru;; *);
+[regulator](*<-lang_en;;*);;
+
+concept_carburetor
+=> nrel_main_idtf: [карбюратор]
+(* <- lang_ru;; *);
+[carburetor](*<-lang_en;;*);;
+
+concept_collector
+=> nrel_main_idtf: [коллектор]
+(* <- lang_ru;; *);
+[collector](*<-lang_en;;*);;
+
+concept_jet
+=> nrel_main_idtf: [жиклер]
+(* <- lang_ru;; *);
+[jet](*<-lang_en;;*);;
+
+concept_cast_pulley
+=> nrel_main_idtf: [литой шкив]
+(* <- lang_ru;; *);
+[cast pulley](*<-lang_en;;*);;
+
+concept_forged_pulley
+=> nrel_main_idtf: [кованый шкив]
+(* <- lang_ru;; *);
+[forged pulley](*<-lang_en;;*);;
+
+concept_stamed_pulley
+=> nrel_main_idtf: [штампованный шкив]
+(* <- lang_ru;; *);
+[stamed pulley](*<-lang_en;;*);;
+
+concept_mechanical_restoration_pulley
+=> nrel_main_idtf: [шкив механической обработки]
+(* <- lang_ru;; *);
+[mechanical restoration pulley](*<-lang_en;;*);;
+
+concept_print_pulley
+=> nrel_main_idtf: [шкив 3D печати]
+(* <- lang_ru;; *);
+[print pulley](*<-lang_en;;*);;
+
+
+
+
+
+
+
+
+
+
+
 
 
 

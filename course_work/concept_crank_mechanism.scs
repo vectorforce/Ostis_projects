@@ -28,7 +28,7 @@ concept_crank_mechanism
 			*);;
 
 		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
-		<-concept_statement_of_the_defining_type;;
+		<-concept_general_form_statement;;
 		->rrel_key_sc_element: concept_piston; concept_crankshaft; concept_internal_combustion_engine;;
 		<- statement;;
 		<= nrel_sc_text_translation:
