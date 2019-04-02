@@ -1,0 +1,62 @@
+concept_ratchet_mechanism
+	=> nrel_main_idtf:
+	[храповой механизм] (* <- lang_ru;; *);
+	[ratchet mechanism] (* <- lang_en;; *);
+	=> nrel_idtf: [множество храповых механизмов] (* <- lang_ru;; *);
+              [ratchet mechanism] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_ratchet_mechanism_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (храповой механизм)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Храпово́й механи́зм</b> (храпови́к) — зубчатый механизм прерывистого движения, предназначенный для преобразования возвратно-вращательного движения в прерывистое вращательное движение в одном направлении. Проще говоря, храповик позволяет оси вращаться в одном направлении и не позволяет вращаться в другом. Храповые механизмы используются достаточно широко — например, в турникетах, гаечных ключах, заводных механизмах, домкратах, лебёдках, замках наручников и т. д.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_mechanism;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_ratchet_mechanism
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (храповик, колесо, пружина)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_general_form_statement;;
+		->rrel_key_sc_element:  concept_ratchet_mechanism; concept_wheel; concept_spring;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Храповик</b> обычно имеет форму зубчатого колеса с несимметричными зубьями, имеющими упор с одной стороны. Движение колеса в обратную сторону ограничивается собачкой, которая прижимается к колесу пружиной или под собственным весом.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://ratchet_mechanism.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_mechanism ;
+
+<-sc_node_not_relation;;
