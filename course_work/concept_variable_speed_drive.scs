@@ -1,0 +1,62 @@
+concept_variable_speed_drive
+=> nrel_main_idtf:
+	[вариатор] (* <- lang_ru;; *);
+	[variable_speed_drive] (* <- lang_en;; *);
+	=> nrel_idtf: [множество вариаторов] (* <- lang_ru;; *);
+              [variable_speed_drive] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_variable_speed_drive_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (вариатор)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Вариа́тор</b> (лат. variātor «изменитель») — устройство, передающее крутящий момент и способное плавно менять передаточное отношение в некотором диапазоне регулирования. Изменение передаточного отношения может производиться автоматически, по заданной программе или вручную.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_device;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_variable_speed_drive
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (вариатор, механизм, автомобиль)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_general_form_statement;;
+		->rrel_key_sc_element:  concept_mechanism; concept_automobile;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Вариатор</b> применяется в механизмах, машинах (агрегатах), где требуется бесступенчато изменять передаточное отношение: автомобилях, мотороллерах, снегоходах, квадроциклах, конвейерах, металлорежущих станках, мешалках и др. В стационарных устройствах вместо вариаторов обычно применяется регулируемый электропривод. В некоторых вариаторах также применяются гидротрансформаторы.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_variable_speed_drive.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_transmission ;
+
+<-sc_node_not_relation;;

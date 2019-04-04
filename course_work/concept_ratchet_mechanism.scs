@@ -57,6 +57,6 @@ concept_ratchet_mechanism
 		*);;
 	*);
 
-<= nrel_inclusion: concept_mechanism ;
+<= nrel_inclusion: concept_mechanism;
 
 <-sc_node_not_relation;;

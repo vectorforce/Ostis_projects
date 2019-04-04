@@ -1,0 +1,41 @@
+concept_starter
+	=> nrel_main_idtf:
+	[стартер] (* <- lang_ru;; *);
+	[starter] (* <- lang_en;; *);
+	=> nrel_idtf: [множество стартеров] (* <- lang_ru;; *);
+              [starter] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_starter_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (стартер)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [В двигателе внутреннего сгорания или газотурбинном двигателе <b>стартёр</b> — устройство, раскручивающее вал двигателя для запуска.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_internal_combustion_engine;; -> concept_device;; concept_shaft;; *);;
+	*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_starter.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_gas_distribution_mechanism ;
+
+<-sc_node_not_relation;;

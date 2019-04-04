@@ -1,0 +1,36 @@
+concept_radiator
+
+<- rrel_key_sc_element:
+	 Definition_of_the_radiator_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (радиатор)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [В двигателе внутреннего сгорания <b>радиатор</b> является теплообменником, объединяющим два контура системы охлаждения. В основном применяются трубчато-пластинчатые и трубчато-ленточные решётки радиаторов. В радиаторе для прохода охлаждающей жидкости применяют шовные или цельнотянутые трубки из латунной ленты толщиной до 0,15 мм. Используются и алюминиевые радиаторы: они дешевле и легче, но теплообменные свойства, при прочих равных условиях (размеры, площадь теплообмена и т. п.), и надёжность ниже.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_internal_combustion_engine;; *);;
+	*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_radiator.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_gas_distribution_mechanism ;
+
+<-sc_node_not_relation;;

@@ -1,0 +1,62 @@
+concept_valve_spring
+	=> nrel_main_idtf:
+	[пружина клапана] (* <- lang_ru;; *);
+	[valve spring] (* <- lang_en;; *);
+	=> nrel_idtf: [множество пружин клапанов] (* <- lang_ru;; *);
+              [valve spring] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_valve_spring_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (пружина клапана)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Пружина клапана</b> - это деталь газораспределительного механизма, взаимодействующая непосредственно с клапанами двигателя внутреннего сгорания.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_internal_combustion_engine;; -> concept_detail;; -> concept_gas_distribution_mechanism;; -> concept_valve;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_valve_spring
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (пружина клапана, клапан, распредвал, механизм, деталь, двигатель)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_general_form_statement;;
+		->rrel_key_sc_element:  concept_valve; concept_camshaft; concept_mechanism; concept_detail; concept_internal_combustion_engine;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Клапанные пружины</b> предназначены для закрытия клапана и возврата его на седло после того, как с него будет снята нагрузка распределительного вала. Кроме того, пружина клапана обеспечивает удержание клапана в закрытом положении, что обеспечивает плотную посадку клапана в седле. Благодаря этому механизму предотвращается разрыв кинематической связи между клапаном и передаточными деталями. В частности, это может произойти, когда двигатель работает на высоких оборотах. В случае, когда возникает риск, что клапан оторвется от толкателя, клапанные пружины возвращают клапан на седло.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_valve_spring.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_gas_distribution_mechanism ;
+
+<-sc_node_not_relation;;

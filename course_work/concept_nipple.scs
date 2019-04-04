@@ -1,0 +1,41 @@
+concept_nipple
+	=> nrel_main_idtf:
+	[патрубок] (* <- lang_ru;; *);
+	[nipple] (* <- lang_en;; *);
+	=> nrel_idtf: [множество патрубков] (* <- lang_ru;; *);
+              [nipple] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_nipple_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (патрубок)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [Па́трубок</b> — небольшой отрезок трубы, присоединённый (вальцованный, приклёпанный, приваренный) к резервуару и др. конструкциям, служащий для подключения к ним трубопроводов и арматуры в целях отвода по нему газа, пара или жидкости. В зависимости от принятого вида соединения свободный конец патрубка снабжают фланцем, резьбой или раструбом. Патрубок называется переходным, когда он имеет неодинаковые по размеру и форме концы. Патрубок — также соединяет трубопроводы, служащие для транспортировки рабочих тел под действием разности давлений.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_internal_combustion_engine;; *);;
+	*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_nipple.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_gas_distribution_mechanism ;
+
+<-sc_node_not_relation;;

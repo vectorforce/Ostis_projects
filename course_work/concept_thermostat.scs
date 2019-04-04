@@ -1,0 +1,62 @@
+concept_thermostat
+	=> nrel_main_idtf:
+	[термостат] (* <- lang_ru;; *);
+	[thermostat] (* <- lang_en;; *);
+	=> nrel_idtf: [множество термостатов] (* <- lang_ru;; *);
+              [thermostat] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_thermostat_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (термостат)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Термоста́т</b> — прибор для поддержания постоянной температуры. Поддержание температуры обеспечивается либо за счёт использования терморегуляторов, либо осуществлением фазового перехода (например, таяние льда). Для уменьшения потерь тепла или холода термостаты, как правило, теплоизолируют. Но не всегда. Широко известны автомобильные двигатели, где летом нет никакой теплоизоляции и за счёт действия восковых термостатов поддерживается постоянная температура.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_internal_combustion_engine;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_thermostat
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (термостат, двигатель)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_general_form_statement;;
+		->rrel_key_sc_element: concept_gas_distribution_mechanism;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [В термостате поддерживается постоянной температура теплоносителя, заполняющего термостат. Исследуемое тело при этом находится в контакте с теплоносителем и имеет его температуру. В качестве теплоносителя обычно используют воздух, спирт (от −110 до 60 °C), воду (10—95 °C), масло (−10 — +300 °C) и др.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_thermostat.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_gas_distribution_mechanism ;
+
+<-sc_node_not_relation;;

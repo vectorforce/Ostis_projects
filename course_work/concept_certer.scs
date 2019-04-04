@@ -1,0 +1,62 @@
+concept_carter
+	=> nrel_main_idtf:
+	[картер] (* <- lang_ru;; *);
+	[carter] (* <- lang_en;; *);
+	=> nrel_idtf: [множество картеров] (* <- lang_ru;; *);
+              [carter] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_carter_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (картер)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [b>Картер</b> является основной корпусной деталью двигателя. Изолированное внутреннее пространство картера образует самую большую полость в двигателе, содержащую коленчатый вал. Верхняя часть картера содержит блок цилиндров.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_internal_combustion_engine;; -> concept_crankshaft;; -> concept_cylinder_block;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_carter_axis
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (картер, двигатель, деталь, гильза цилиндра)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_general_form_statement;;
+		->rrel_key_sc_element:  concept_internal_combustion_engine; concept_detail; concept_cylinder_liner;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [В небольших двигателях, как бензиновых, так и дизельных, картер играет роль корпуса, объединяющего двигатель в единое целое, и представляет собой одну литую деталь (блок-картер). Часто в таком картере заодно отливаются и гильзы цилиндров.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_carter.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_internal_combustion_engine;
+
+<-sc_node_not_relation;;
