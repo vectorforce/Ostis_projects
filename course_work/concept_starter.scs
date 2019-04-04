@@ -20,7 +20,7 @@ concept_starter
 			(* 
 			-> rrel_example: [В двигателе внутреннего сгорания или газотурбинном двигателе <b>стартёр</b> — устройство, раскручивающее вал двигателя для запуска.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
 			*);;
-                <=nrel_using_constants: ... (* -> concept_internal_combustion_engine;; -> concept_device;; concept_shaft;; *);;
+                <=nrel_using_constants: ... (* -> concept_internal_combustion_engine;; -> concept_device;; -> concept_shaft;; *);;
 	*);
 
 <- rrel_key_sc_element: ...

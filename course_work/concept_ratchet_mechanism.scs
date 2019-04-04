@@ -50,7 +50,7 @@ concept_ratchet_mechanism
 	<=nrel_sc_text_translation:
 		...
 		(*
-		->rrel_example: "file://ratchet_mechanism.jpeg"
+		->rrel_example: "file://concept_ratchet_mechanism.jpeg"
 			(*
 			=> nrel_format: format_png;;
 			*);;
