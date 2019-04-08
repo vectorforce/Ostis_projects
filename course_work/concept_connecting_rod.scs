@@ -1,0 +1,57 @@
+concept_connecting_rod
+
+<- rrel_key_sc_element:
+	 Definition_of_the_connecting_rod_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (шатун)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Шату́н</b> (устар. тяговое дышло) — деталь, соединяющая поршень (посредством поршневого пальца) и шатунную шейку коленчатого вала или движущих колёс. Служит для передачи передачи газовых сил возвратно-поступательно движущегося поршня к вращающемуся коленчатому валу.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_detail;; -> concept_piston;; -> ;; -> concept_crankshaft;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_connecting_rod
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (шатун, поршень, коленвал, двигатель, вал)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_general_form_statement;;
+		->rrel_key_sc_element:  concept_piston; concept_crankshaft; concept_internal_combustion_engine; concept_shaft;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Шатун</b> как элемент, необходимый для соединения поршня с коленчатым валом, применяется во всех существующих поршневых двигателях, за исключением двигателя Баландина, где усилие на вал передаётся не шатунным, а ползунным механизмом, а также шайбовых двигателях.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_connecting_rod.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_gas_distribution_mechanism ;
+
+<-sc_node_not_relation;;
