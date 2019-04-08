@@ -1,0 +1,44 @@
+concept_temperature_sensor
+	=> nrel_main_idtf:
+	[температурный датчик] (* <- lang_ru;; *);
+	[temperature_sensor] (* <- lang_en;; *);
+	=> nrel_idtf: [множество температурных датчиков] (* <- lang_ru;; *);
+              [temperature_sensor] (* <- lang_en;; *);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_temperature_sensor
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (температурный датчик, двигатель)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_defenition_form_statement;;
+		->rrel_key_sc_element: concept_internal_combustion_engine;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Датчик температуры</b> охлаждающей жидкости (ДТОЖ) является важнейшим элементом машины, от которого зависит своевременное уведомление водителя о перегреве двигателя.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_temperature_sensor.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_gas_distribution_mechanism;
+
+<-sc_node_not_relation;;

@@ -1,0 +1,62 @@
+concept_bypass_valve
+	=> nrel_main_idtf:
+	[перепускной клапан] (* <- lang_ru;; *);
+	[bypass_valve] (* <- lang_en;; *);
+	=> nrel_idtf: [множество перепускных клапанов] (* <- lang_ru;; *);
+              [bypass_valve] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_bypass_valve_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (перепускной клапан, устройство)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Перепускной клапан</b> (переливной клапан) — это устройство, предназначенное для поддержания давления среды на требуемом уровне путём перепуска её через ответвление трубопровода[] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_device;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_bypass_valve
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (перепускной клапан, клапан)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_general_form_statement;;
+		->rrel_key_sc_element:  concept_valve;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [Перепускной клапан поддерживает давление в системе путём непрерывного отвода жидкости (газа), чем он отличается от предохранительного клапана, который ограничивает повышение давления в системе сверх заданного путём однократного или периодического отвода жидкости (газа) из системы. ] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+	
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_bypass_valve.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_gas_distribution_mechanism ;
+
+<-sc_node_not_relation;;

@@ -1,0 +1,65 @@
+concept_gasket
+	=> nrel_main_idtf:
+	[прокладка] (* <- lang_ru;; *);
+	[gasket] (* <- lang_en;; *);
+	=> nrel_idtf: [множество прокладок] (* <- lang_ru;; *);
+              [gasket] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:	 
+         Statement_for_the_gasket
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (прокладка, механизм)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_general_form_statement;;
+		->rrel_key_sc_element: concept_detail;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Прокладки</b> позволяют не допустить различных утечек рабочих жидкостей и смазок из механизмов, а также предотвратить попадание пыли, влаги и грязи снаружи. Использование прокладок позволяет добиться идеального и плотного прилегания двух поверхностей, нивелируя определенные погрешности их обработки.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_gasket
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (прокладка, устройство, механизм)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_general_form_statement;;
+		->rrel_key_sc_element:  concept_device; concept_detail;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [главной задачей <b>прокладки</b> является обеспечение герметичности того или иного узла, устройства или механизма.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_gasket.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_gas_distribution_mechanism ;
+
+<-sc_node_not_relation;;

@@ -1,0 +1,44 @@
+concept_exhaust_pipe
+	=> nrel_main_idtf:
+	[выпускной трубопровод] (* <- lang_ru;; *);
+	[exhaust pipe] (* <- lang_en;; *);
+	=> nrel_idtf: [множество выпускных трубопроводов] (* <- lang_ru;; *);
+              [exhaust pipe] (* <- lang_en;; *);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_exhaust_pipe
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (впускной трубопровод)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_defenition_form_statement;;
+		->rrel_key_sc_element:  concept_inlet_pipe;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Выпускной трубопровод</b> предназначен для отвода отработавших газов к приемным трубам и глушителю. Выпускной трубопровод отливают из чугуна. Теплоту отработавших газов используют для подогрева горючей смеси на выпуске. Для этой цели впускной и выпускной трубопроводы соединяются шпильками через железо асбестовую прокладку.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_exhaust_pipe.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_gas_distribution_mechanism;
+
+<-sc_node_not_relation;;

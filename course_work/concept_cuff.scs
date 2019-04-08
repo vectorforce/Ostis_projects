@@ -1,0 +1,62 @@
+concept_cuff
+	=> nrel_main_idtf:
+	[манжета] (* <- lang_ru;; *);
+	[cuff] (* <- lang_en;; *);
+	=> nrel_idtf: [множество манжет] (* <- lang_ru;; *);
+              [cuff] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_cuff_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (манжета)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Манжета</b> — основной элемент контактного уплотнительного устройства манжетного типа кольцевой формы из эластичного материала, препятствующего вытеканию рабочей жидкости или газа из области высокого давления в область низкого давления, а также защищает детали от попадания на них грязи и пыли.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_detail;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_cuff
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (манжета)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_general_form_statement;;
+		->rrel_key_sc_element:  concept_cam; concept_gas_distribution_mechanism; concept_valve; concept_yoke; concept_bearing; concept_detail; concept_axis; nrel_carrier_element;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Манжеты</b> изготовляют из кожи, резины, полиуретана, пластика, часто П-подобной формы сечения, таким образом, что цилиндрические поверхности этого кольца прижимаются к уплотняемым поверхностям неподвижной и подвижной деталей.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+	
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_cuff.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_gas_distribution_mechanism ;
+
+<-sc_node_not_relation;;

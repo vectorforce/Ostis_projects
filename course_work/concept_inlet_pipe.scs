@@ -1,0 +1,44 @@
+concept_inlet_pipe
+	=> nrel_main_idtf:
+	[впускной трубопровод] (* <- lang_ru;; *);
+	[inlet pipe] (* <- lang_en;; *);
+	=> nrel_idtf: [множество впускных трубопроводов] (* <- lang_ru;; *);
+              [inlet pipe] (* <- lang_en;; *);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_inlet_pipe
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (впускной трубопровод, карбюратор, цилиндр, двигатель)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_defenition_form_statement;;
+		->rrel_key_sc_element:  concept_carburator; concept_cylinder; concept_gas_distribution_mechanism;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Впускной трубопровод</b> служит для подачи горючей смеси из карбюратора в цилиндры двигателя. Их, как правило, отливают из алюминиевых сплавов. Впускные трубопроводы подогреваются охлаждающей жидкостью или отработавшими газами, что способствует испарению топливной пленки.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_inlet_pipe.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_gas_distribution_mechanism ;
+
+<-sc_node_not_relation;;
