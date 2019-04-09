@@ -1,0 +1,57 @@
+concept_cam
+
+<- rrel_key_sc_element:
+	 Definition_of_the_cam_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (кулачок)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Кулачко́вый механи́зм</b> — механизм, образующий высшую кинематическую пару, имеющий подвижное звено, совершающее вращательное движение, — кулак (кулачок), с поверхностью переменной кривизны или имеющей форму эксцентрика, взаимодействующей с другим подвижным звеном — толкателем, если подвижное звено совершает прямолинейное движение, или коромыслом, если подвижное звено совершает качание.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_internal_combustion_engine;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_cam
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (кулачок)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_general_form_statement;;
+		->rrel_key_sc_element: concept_gas_distribution_mechanism;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [Кулак, совершающий прямолинейное движение, называется копиром.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_cam.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_gas_distribution_mechanism ;
+
+<-sc_node_not_relation;;

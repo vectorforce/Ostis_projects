@@ -15,7 +15,7 @@ concept_connecting_rod
 			(* 
 			-> rrel_example: [<b>Шату́н</b> (устар. тяговое дышло) — деталь, соединяющая поршень (посредством поршневого пальца) и шатунную шейку коленчатого вала или движущих колёс. Служит для передачи передачи газовых сил возвратно-поступательно движущегося поршня к вращающемуся коленчатому валу.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
 			*);;
-                <=nrel_using_constants: ... (* -> concept_detail;; -> concept_piston;; -> ;; -> concept_crankshaft;; *);;
+                <=nrel_using_constants: ... (* -> concept_detail;; -> concept_piston;; -> concept_crankshaft;; *);;
 	*);
 	
 <- rrel_key_sc_element:	 
@@ -52,6 +52,6 @@ concept_connecting_rod
 		*);;
 	*);
 
-<= nrel_inclusion: concept_gas_distribution_mechanism ;
+<= nrel_inclusion: concept_gas_distribution_mechanism;
 
 <-sc_node_not_relation;;

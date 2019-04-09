@@ -1,0 +1,61 @@
+nrel_valve_clearance
+
+<- rrel_key_sc_element:
+	 Definition_of_the_nrel_mass
+(* 
+	=> nrel_main_idtf: [Опр. (зазор клапанов*)](*<- lang_ru;;*);;
+	<- definition;;
+	<= nrel_sc_text_translation: ...
+		(* 
+			-> [<b>Зазор клапанов</b> - это зазор между торцом клапана и коромыслом, между коромыслом и кулачком или между регулировочными прокладками и кулачком.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		*);;
+        <= nrel_using_constants: ... 
+	(* 
+		-> concept_valve;; 
+		-> concept_yoke;;
+		-> concept_cam;;
+		-> concept_gasket;;
+	*);;
+*);
+
+<- binary_relation (* <- arity (* <- concept_parameter;; *);;
+                              => nrel_measurement: 2;; *);
+ 
+=> nrel_first_domain: 
+	... 
+	(* <- concept_value;; <= nrel_value: ... (* <- concept_number;; *);; *);
+
+=> nrel_second_domain: 
+	concept_value;
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://nrel_valve_clearance.jpg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+=> nrel_definitional_domain: ... 
+(* 
+	<= nrel_combination: ...
+           (* 
+		-> concept_value;; 
+		-> ... 
+		(* 	
+		<- concept_value;; 
+		<= nrel_value: ... (* <- concept_number;; *);; *);; *);;
+
+
+<- oriented_relation;;
+<- antireflexive_relation;;
+<- antitransitive_relation;;
+<- antisymmetric_relation;;
+
+<- sc_node_norole_relation;;
+*);;

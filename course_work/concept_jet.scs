@@ -1,0 +1,57 @@
+concept_jet
+
+<- rrel_key_sc_element:
+	 Definition_of_the_jet_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (жиклер)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Жиклёр</b> — калиброванное отверстие для дозирования подачи жидкости или газа. ] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_internal_combustion_engine;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_jet
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (жиклер, единица времени’)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_general_form_statement;;
+		->rrel_key_sc_element: rrel_unit_of_time;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Жиклёр</b> оценивают его пропускной способностью (производительностью), то есть количеством жидкости (обычно воды), которое может пройти через калиброванное отверстие в единицу времени.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_jet.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_gas_distribution_mechanism ;
+
+<-sc_node_not_relation;;

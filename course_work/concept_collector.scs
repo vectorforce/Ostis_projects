@@ -1,0 +1,58 @@
+concept_collector
+
+<- rrel_key_sc_element:
+	 Definition_of_the_collector_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (коллектор)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Коллектор</b> – это часть впускного или выпускного тракта систем автомобиля.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_internal_combustion_engine;; -> concept_piston;; -> concept_detail;; -> concept_gas_distribution_mechanism;; -> concept_valve;;
+                                                                                       -> concept_yoke;; -> concept_device;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_collector
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (коллектор, цилиндр, двигатель, катализатор)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_general_form_statement;;
+		->rrel_key_sc_element:  concept_cylynder; concept_internal_combustion_engine; concept_catalyst;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [Обычно «впускной» служит для подвода и смешения топливной смеси до цилиндров двигателя, а вот «выпускной» наоборот отводит уже сгоревшие газы в катализатор, и после в глушитель.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_collector.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_internal_combustion_engine;
+
+<-sc_node_not_relation;;

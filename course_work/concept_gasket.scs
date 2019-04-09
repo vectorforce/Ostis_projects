@@ -60,6 +60,6 @@ concept_gasket
 		*);;
 	*);
 
-<= nrel_inclusion: concept_gas_distribution_mechanism ;
+<= nrel_inclusion: concept_internal_combustion_engine ;
 
 <-sc_node_not_relation;;

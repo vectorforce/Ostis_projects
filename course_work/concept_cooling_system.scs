@@ -1,0 +1,62 @@
+concept_cooling_system
+=> nrel_main_idtf:
+	[система охлаждения] (* <- lang_ru;; *);
+	[cooling system] (* <- lang_en;; *);
+	=> nrel_idtf: [множество систем охлаждения] (* <- lang_ru;; *);
+              [cooling system] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_cooling_system_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (система охлаждения)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Система охлаждения</b> предназначена для охлаждения деталей двигателя, нагреваемых в результате его работы.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_internal_combustion_engine;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_the_cooling_system
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (система охлаждения)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_internal_combustion_engine;;
+		<-concept_general_form_statement;;
+		->rrel_key_sc_element: concept_gas_distribution_mechanism;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [На автомобилях наибольшее распространение получили система жидкостного охлаждения. Данная система обеспечивает равномерное и эффективное охлаждение, а также имеет меньший уровень шума.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_cooling_system.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_internal_combustion_engine ;
+
+<-sc_node_not_relation;;

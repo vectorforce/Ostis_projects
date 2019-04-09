@@ -1,0 +1,36 @@
+concept_root_neck
+
+<- rrel_key_sc_element:
+	 Definition_of_the_root_neck_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (коренная шейка)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Коренная шейка</b> - это опора вала, расположенная в коренном подшипнике, размещаемом в картере двигателя.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_shaft;; -> concept_connecting_rod;; -> concept_bearing;; -> concept_carter;; -> concept_internal_combustion_engine;; *);;
+	*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_root_neck.jpeg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+<= nrel_inclusion: concept_gas_distribution_mechanism ;
+
+<-sc_node_not_relation;;

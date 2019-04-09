@@ -43,7 +43,7 @@ concept_bypass_valve
 		
 			*);;
 	*);
-	
+
 <- rrel_key_sc_element: ...
 	(*
 	<-sc_illustration;;
@@ -57,6 +57,6 @@ concept_bypass_valve
 		*);;
 	*);
 
-<= nrel_inclusion: concept_gas_distribution_mechanism ;
+<= nrel_inclusion: concept_internal_combustion_engine;
 
 <-sc_node_not_relation;;
