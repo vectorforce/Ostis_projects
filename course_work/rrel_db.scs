@@ -1,0 +1,56 @@
+rrel_db 
+=> nrel_main_idtf:
+[децибел'](*<-lang_ru;;*);
+	[db'](*<-lang_en;;*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр.(децибел')]  (* <- lang_ru;; *);;
+	<- definition;;
+    <= nrel_using_constants:...
+	(*
+        -> concept_unit_of_measurement;;
+	*);;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[<b>Децибе́л'</b> (русское обозначение: дБ; международное: dB) — дольная единица бела, равная одной десятой этой единицы.](* <- lang_ru;; => nrel_format: format_html;; *);;
+		*);;
+*);;
+
+rrel_db <- rrel_key_sc_element:	 
+	...
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (децибел', система)]
+			(*
+			<- lang_ru;;
+			*);; 
+
+		<- rrel_axiom:concept_IHS_by_car;;
+		<-concept_statement_of_the_defining_type;;
+		->rrel_key_sc_element: concept_system;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Децибел'</b> относится к единицам, не входящим в Международную систему единиц (СИ), но в соответствии с решением Международного комитета мер и весов допускается к применению без ограничений совместно с единицами СИ.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://rrel_db.JPG"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);;
+

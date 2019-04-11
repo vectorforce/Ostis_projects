@@ -1,22 +1,20 @@
-nrel_compression_ratio
+nrel_internal_cylinder_diameter
 => nrel_main_idtf:
-[степень сжатия*](*<-lang_ru;;*);
-	[compression ratio*](*<-lang_en;;*);
+[внутренний диаметр цилиндра*](*<-lang_ru;;*);
+	[internal cylinder diameter*](*<-lang_en;;*);
 
 <- rrel_key_sc_element:
-	 Definition_of_the_nrel_compression_ratio
+	 Definition_of_the_nrel_internal_cylinder_diameter
 (* 
-	=> nrel_main_idtf: [Опр. (степень сжатия*)](*<- lang_ru;;*);;
+	=> nrel_main_idtf: [Опр. (внутренний диаметр цилиндра*)](*<- lang_ru;;*);;
 	<- definition;;
 	<= nrel_sc_text_translation: ...
 		(* 
-			-> [<b>Степень сжатия*</b> — отношение полного объёма цилиндра (надпоршневого пространства цилиндра двигателя внутреннего сгорания при положении поршня в нижней мёртвой точке, НМТ) к объёму камеры сгорания (надпоршневого пространства цилиндра при положении поршня в верхней мёртвой точке, ВМТ).] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			-> [Чем больше <b>внутренний диаметр цилиндра*</b>, тем больше площадь поверхности, на которую давят рабочие газы.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
 		*);;
         <= nrel_using_constants: ... 
 	(* 
-		-> concept_internal_combustion_engine;; 
 		-> concept_cylinder;;
-		-> concept_piston;;
 	*);;
 *);
 
@@ -36,7 +34,7 @@ nrel_compression_ratio
 	<=nrel_sc_text_translation:
 		...
 		(*
-		->rrel_example: "file://nrel_comression_ratio.jpg"
+		->rrel_example: "file://nrel_internal_cylinder_diameter.JPG"
 			(*
 			=> nrel_format: format_png;;
 			*);;

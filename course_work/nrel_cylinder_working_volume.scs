@@ -1,22 +1,23 @@
-nrel_compression_ratio
+nrel_cylinder_working_volume
 => nrel_main_idtf:
-[степень сжатия*](*<-lang_ru;;*);
-	[compression ratio*](*<-lang_en;;*);
+[рабочий объем цилиндра*](*<-lang_ru;;*);
+	[cylinder working volume*](*<-lang_en;;*);
 
 <- rrel_key_sc_element:
-	 Definition_of_the_nrel_compression_ratio
+	 Definition_of_the_nrel_cylinder_working_volume
 (* 
-	=> nrel_main_idtf: [Опр. (степень сжатия*)](*<- lang_ru;;*);;
+	=> nrel_main_idtf: [Опр. (рабочий объем цилиндра*)](*<- lang_ru;;*);;
 	<- definition;;
 	<= nrel_sc_text_translation: ...
 		(* 
-			-> [<b>Степень сжатия*</b> — отношение полного объёма цилиндра (надпоршневого пространства цилиндра двигателя внутреннего сгорания при положении поршня в нижней мёртвой точке, НМТ) к объёму камеры сгорания (надпоршневого пространства цилиндра при положении поршня в верхней мёртвой точке, ВМТ).] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			-> [<b>Рабочий объём цилиндра*</b> определяется как произведение площади сечения цилиндра на длину рабочего хода поршня (от НМТ до ВМТ).] (* <-lang_ru;; => nrel_format: format_html;; *);; 
 		*);;
         <= nrel_using_constants: ... 
 	(* 
-		-> concept_internal_combustion_engine;; 
+		-> concept_internal_combustion_engine;;
 		-> concept_cylinder;;
 		-> concept_piston;;
+		-> nrel_power;;
 	*);;
 *);
 
@@ -36,7 +37,7 @@ nrel_compression_ratio
 	<=nrel_sc_text_translation:
 		...
 		(*
-		->rrel_example: "file://nrel_comression_ratio.jpg"
+		->rrel_example: "file://nrel_cylinder_working_volume.JPG"
 			(*
 			=> nrel_format: format_png;;
 			*);;

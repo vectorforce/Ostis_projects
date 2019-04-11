@@ -1,20 +1,19 @@
-nrel_compression_ratio
+nrel_piston_stroke
 => nrel_main_idtf:
-[степень сжатия*](*<-lang_ru;;*);
-	[compression ratio*](*<-lang_en;;*);
+[ход поршня*](*<-lang_ru;;*);
+	[piston stroke*](*<-lang_en;;*);
 
 <- rrel_key_sc_element:
-	 Definition_of_the_nrel_compression_ratio
+	 Definition_of_the_nrel_piston_stroke
 (* 
-	=> nrel_main_idtf: [Опр. (степень сжатия*)](*<- lang_ru;;*);;
+	=> nrel_main_idtf: [Опр. (ход поршня*)](*<- lang_ru;;*);;
 	<- definition;;
 	<= nrel_sc_text_translation: ...
 		(* 
-			-> [<b>Степень сжатия*</b> — отношение полного объёма цилиндра (надпоршневого пространства цилиндра двигателя внутреннего сгорания при положении поршня в нижней мёртвой точке, НМТ) к объёму камеры сгорания (надпоршневого пространства цилиндра при положении поршня в верхней мёртвой точке, ВМТ).] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			-> [<b>Ход поршня*</b> — это некое расстояние между нижним крайним положением поршня и верхним крайними положением поршня в цилиндре.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
 		*);;
         <= nrel_using_constants: ... 
 	(* 
-		-> concept_internal_combustion_engine;; 
 		-> concept_cylinder;;
 		-> concept_piston;;
 	*);;
@@ -36,7 +35,7 @@ nrel_compression_ratio
 	<=nrel_sc_text_translation:
 		...
 		(*
-		->rrel_example: "file://nrel_comression_ratio.jpg"
+		->rrel_example: "file://nrel_piston_stroke.JPG"
 			(*
 			=> nrel_format: format_png;;
 			*);;

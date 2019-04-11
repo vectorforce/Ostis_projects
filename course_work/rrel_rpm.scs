@@ -1,0 +1,56 @@
+rrel_rpm
+=> nrel_main_idtf:
+[оборот в минуту'](*<-lang_ru;;*);
+	[rpm'](*<-lang_en;;*);
+
+ <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр.(оборот в минуту')]  (* <- lang_ru;; *);;
+	<- definition;;
+    <= nrel_using_constants:...
+	(*
+        -> concept_unit_of_measurement;;
+	*);;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[<b>Оборо́т в мину́ту'</b> (обозначение об/мин, 1/мин, мин−1, также часто используется английское обозначение rpm [revolutions per minute]) — единица измерения частоты вращения: количество полных оборотов, совершенных вокруг фиксированной оси.](* <- lang_ru;; => nrel_format: format_html;; *);;
+		*);;
+*);;
+
+rrel_rpm <- rrel_key_sc_element:	 
+	...
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (оборот в минуту', скорость)]
+			(*
+			<- lang_ru;;
+			*);; 
+
+		<- rrel_axiom:concept_IHS_by_car;;
+		<-concept_statement_of_the_defining_type;;
+		->rrel_key_sc_element: nrel_speed;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [Используется для измерения скорости вращения механических компонентов.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://rrel_rpm.JPG"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);;
+

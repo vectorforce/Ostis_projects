@@ -1,17 +1,20 @@
-nrel_useful_work
+nrel_injection_advance_angle
+=> nrel_main_idtf:
+[угол опережения впрыска*](*<-lang_ru;;*);
+	[injection advance angle*](*<-lang_en;;*);
 
 <- rrel_key_sc_element:
-	 Definition_of_the_nrel_useful_work
+	 Definition_of_the_nrel_injection_advance_angle
 (* 
-	=> nrel_main_idtf: [Опр. (полезная работа*)](*<- lang_ru;;*);;
+	=> nrel_main_idtf: [Опр. (угол опережения впрыска*)](*<- lang_ru;;*);;
 	<- definition;;
 	<= nrel_sc_text_translation: ...
 		(* 
-			-> [<b>полезная работа*</b> — работа движущих сил за вычетом работы, затраченной на преодоление сил вредного сопротивления в механизме.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			-> [Величину опережения подачи топлива в дизельном двигателе, выраженную в градусах угла поворота коленчатого вала, называют <b>углом опережения впрыска*</b>.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
 		*);;
         <= nrel_using_constants: ... 
 	(* 
-		-> concept_mechanism;;
+		-> concept_crankshaft;;
 	*);;
 *);
 
@@ -24,19 +27,6 @@ nrel_useful_work
 
 => nrel_second_domain: 
 	concept_value;
-
-<- rrel_key_sc_element: ...
-	(*
-	<-sc_illustration;;
-	<=nrel_sc_text_translation:
-		...
-		(*
-		->rrel_example: "file://nrel_useful_work.JPG"
-			(*
-			=> nrel_format: format_png;;
-			*);;
-		*);;
-	*);
 
 => nrel_definitional_domain: ... 
 (* 

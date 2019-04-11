@@ -1,17 +1,21 @@
-nrel_useful_work
+nrel_idling
+=> nrel_main_idtf:
+[холостой ход*](*<-lang_ru;;*);
+	[idling*](*<-lang_en;;*);
 
 <- rrel_key_sc_element:
-	 Definition_of_the_nrel_useful_work
+	 Definition_of_the_nrel_idling
 (* 
-	=> nrel_main_idtf: [Опр. (полезная работа*)](*<- lang_ru;;*);;
+	=> nrel_main_idtf: [Опр. (холостой ход*)](*<- lang_ru;;*);;
 	<- definition;;
 	<= nrel_sc_text_translation: ...
 		(* 
-			-> [<b>полезная работа*</b> — работа движущих сил за вычетом работы, затраченной на преодоление сил вредного сопротивления в механизме.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			-> [<b>Холостой ход*</b> — специальный режим работы двигателя внутреннего сгорания на неподвижном автомобиле.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
 		*);;
         <= nrel_using_constants: ... 
 	(* 
-		-> concept_mechanism;;
+		-> concept_internal_combustion_engine;;
+		-> concept_automobile;;
 	*);;
 *);
 
@@ -24,19 +28,6 @@ nrel_useful_work
 
 => nrel_second_domain: 
 	concept_value;
-
-<- rrel_key_sc_element: ...
-	(*
-	<-sc_illustration;;
-	<=nrel_sc_text_translation:
-		...
-		(*
-		->rrel_example: "file://nrel_useful_work.JPG"
-			(*
-			=> nrel_format: format_png;;
-			*);;
-		*);;
-	*);
 
 => nrel_definitional_domain: ... 
 (* 

@@ -1,17 +1,22 @@
-nrel_useful_work
+nrel_dead_point
+=> nrel_main_idtf:
+[мертвая точка*](*<-lang_ru;;*);
+	[dead point*](*<-lang_en;;*);
 
 <- rrel_key_sc_element:
-	 Definition_of_the_nrel_useful_work
+	 Definition_of_the_nrel_dead_point
 (* 
-	=> nrel_main_idtf: [Опр. (полезная работа*)](*<- lang_ru;;*);;
+	=> nrel_main_idtf: [Опр. (мертвая точка*)](*<- lang_ru;;*);;
 	<- definition;;
 	<= nrel_sc_text_translation: ...
 		(* 
-			-> [<b>полезная работа*</b> — работа движущих сил за вычетом работы, затраченной на преодоление сил вредного сопротивления в механизме.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			-> [<b>Мёртвая то́чка*</b> — одно из крайних положений поршня в цилиндре паровой машины или двигателя внутреннего сгорания, в момент его возвратно-поступательного движения.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
 		*);;
         <= nrel_using_constants: ... 
 	(* 
-		-> concept_mechanism;;
+		-> concept_internal_combustion_engine;;
+		-> concept_piston;;
+		-> concept_cylinder;;
 	*);;
 *);
 
@@ -24,19 +29,6 @@ nrel_useful_work
 
 => nrel_second_domain: 
 	concept_value;
-
-<- rrel_key_sc_element: ...
-	(*
-	<-sc_illustration;;
-	<=nrel_sc_text_translation:
-		...
-		(*
-		->rrel_example: "file://nrel_useful_work.JPG"
-			(*
-			=> nrel_format: format_png;;
-			*);;
-		*);;
-	*);
 
 => nrel_definitional_domain: ... 
 (* 

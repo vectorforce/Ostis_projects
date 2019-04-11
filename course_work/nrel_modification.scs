@@ -1,0 +1,44 @@
+nrel_modification
+=> nrel_main_idtf:
+[модификация*](*<-lang_ru;;*);
+	[modification*](*<-lang_en;;*);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_nrel_modification
+(* 
+	=> nrel_main_idtf: [Опр. (модификация*)](*<- lang_ru;;*);;
+	<- definition;;
+	<= nrel_sc_text_translation: ...
+		(* 
+			-> [<b>Модификация*</b> — изменение конструкции оборудования, которое позволяет осуществить обработку конкретных материалов более эффективным способом, отличающимся от первоначального, или которое позволяет обрабатывать материалы] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		*);;
+        <= nrel_using_constants: ... 
+	(* 
+		-> concept_construction;;
+	*);;
+*);
+
+<- binary_relation (* <- arity (* <- concept_parameter;; *);;
+                              => nrel_measurement: 2;; *);
+ 
+=> nrel_first_domain: 
+	concept_construction;
+
+=> nrel_second_domain: 
+	concept_object;
+
+=> nrel_definitional_domain: ... 
+(* 
+	<= nrel_combination: ...
+           (* 
+		-> concept_object;; 
+		-> concept_construction;;
+	   *);;
+
+<- oriented_relation;;
+<- antireflexive_relation;;
+<- antitransitive_relation;;
+<- antisymmetric_relation;;
+
+<- sc_node_norole_relation;;
+*);;

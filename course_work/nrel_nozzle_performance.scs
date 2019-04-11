@@ -1,23 +1,21 @@
-nrel_valve_clearance
+nrel_nozzle_performance
 => nrel_main_idtf:
-[зазор клапанов*](*<-lang_ru;;*);
-	[valve clearance*](*<-lang_en;;*);
+[производительность форсунок*](*<-lang_ru;;*);
+	[nozzle performance*](*<-lang_en;;*);
 
 <- rrel_key_sc_element:
-	 Definition_of_the_nrel_mass
+	 Definition_of_the_nrel_nozzle_performance
 (* 
-	=> nrel_main_idtf: [Опр. (зазор клапанов*)](*<- lang_ru;;*);;
+	=> nrel_main_idtf: [Опр. (производительность форсунок*)](*<- lang_ru;;*);;
 	<- definition;;
 	<= nrel_sc_text_translation: ...
 		(* 
-			-> [<b>Зазор клапанов*</b> - это зазор между торцом клапана и коромыслом, между коромыслом и кулачком или между регулировочными прокладками и кулачком.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			-> [<b>Производительность форсунки*</b> — это ее максимальная пропускная способность в открытом состоянии (рассчитывается как подача максимального количества горючего за единицу времени).] (* <-lang_ru;; => nrel_format: format_html;; *);; 
 		*);;
         <= nrel_using_constants: ... 
 	(* 
-		-> concept_valve;; 
-		-> concept_yoke;;
-		-> concept_cam;;
-		-> concept_gasket;;
+		-> concept_injector;;
+		-> concept_combustible_substance;;
 	*);;
 *);
 
@@ -37,7 +35,7 @@ nrel_valve_clearance
 	<=nrel_sc_text_translation:
 		...
 		(*
-		->rrel_example: "file://nrel_valve_clearance.JPG"
+		->rrel_example: "file://nrel_nozzle_performance.JPG"
 			(*
 			=> nrel_format: format_png;;
 			*);;

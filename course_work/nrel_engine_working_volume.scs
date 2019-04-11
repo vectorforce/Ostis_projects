@@ -1,0 +1,64 @@
+nrel_engine_working_volume
+=> nrel_main_idtf:
+[рабочий объем двигателя*](*<-lang_ru;;*);
+	[engine working volume*](*<-lang_en;;*);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_nrel_engine_working_volume
+(* 
+	=> nrel_main_idtf: [Опр. (рабочий объем двигателя*)](*<- lang_ru;;*);;
+	<- definition;;
+	<= nrel_sc_text_translation: ...
+		(* 
+			-> [<b>Рабочий объём двигателя*</b> в значительной степени определяет его мощность и иные рабочие параметры. Рабочий объём равен сумме рабочих объёмов всех цилиндров двигателя. В свою очередь, рабочий объём цилиндра определяется как произведение площади сечения цилиндра на длину рабочего хода поршня (от НМТ до ВМТ).] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		*);;
+        <= nrel_using_constants: ... 
+	(* 
+		-> concept_internal_combustion_engine;;
+		-> concept_cylinder;;
+		-> concept_piston;;
+		-> nrel_power;;
+	*);;
+*);
+
+<- binary_relation (* <- arity (* <- concept_parameter;; *);;
+                              => nrel_measurement: 2;; *);
+ 
+=> nrel_first_domain: 
+	... 
+	(* <- concept_value;; <= nrel_value: ... (* <- concept_number;; *);; *);
+
+=> nrel_second_domain: 
+	concept_value;
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://nrel_engine_working_volume.JPG"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+=> nrel_definitional_domain: ... 
+(* 
+	<= nrel_combination: ...
+           (* 
+		-> concept_value;; 
+		-> ... 
+		(* 	
+		<- concept_value;; 
+		<= nrel_value: ... (* <- concept_number;; *);; *);; *);;
+
+
+<- oriented_relation;;
+<- antireflexive_relation;;
+<- antitransitive_relation;;
+<- antisymmetric_relation;;
+
+<- sc_node_norole_relation;;
+*);;

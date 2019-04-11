@@ -228,6 +228,12 @@ rrel_sec => nrel_main_idtf:
 [s'](*<-lang_en;;*);
 	[sec'](*<-lang_en;;*);;
 
+sc_node_role_relation->rrel_db;;
+rrel_db => nrel_main_idtf:
+[дБ'](*<-lang_ru;;*);
+[Децибел'](*<-lang_ru;;*);
+	[decibel'](*<-lang_en;;*);;
+
 
 
 

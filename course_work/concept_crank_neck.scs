@@ -24,7 +24,7 @@ concept_crank_neck
 	<=nrel_sc_text_translation:
 		...
 		(*
-		->rrel_example: "file://concept_crank_neck.jpeg"
+		->rrel_example: "file://concept_crank_neck.png"
 			(*
 			=> nrel_format: format_png;;
 			*);;
