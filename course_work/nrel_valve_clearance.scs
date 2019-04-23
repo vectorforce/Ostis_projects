@@ -4,7 +4,7 @@ nrel_valve_clearance
 	[valve clearance*](*<-lang_en;;*);
 
 <- rrel_key_sc_element:
-	 Definition_of_the_nrel_mass
+	 Definition_of_the_nrel_valve_clearance
 (* 
 	=> nrel_main_idtf: [Опр. (зазор клапанов*)](*<- lang_ru;;*);;
 	<- definition;;

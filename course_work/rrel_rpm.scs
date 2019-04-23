@@ -1,7 +1,4 @@
 rrel_rpm
-=> nrel_main_idtf:
-[оборот в минуту'](*<-lang_ru;;*);
-	[rpm'](*<-lang_en;;*);
 
  <- rrel_key_sc_element:
 	...
